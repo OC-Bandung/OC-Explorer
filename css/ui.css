@@ -1,0 +1,24 @@
+.bg-primary {
+  background-color: #0bb586; }
+
+.alert {
+  color: #f57c00; }
+
+.list-inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.list-inline > li {
+  float: left; }
+
+.padding-small {
+  margin: 10px; }
+
+.padding-top-small {
+  padding-top: 10px; }
+
+.nudge-to-boundary {
+  margin-left: -25px; }
+
+/*# sourceMappingURL=ui.css.map */
