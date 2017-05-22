@@ -49,6 +49,10 @@ $p-large: 40px;
 	float: right;
 }
 
+.text-center {
+	text-align:center;
+}
+
 .mdc-tab-bar-left {
 	margin: 0;
 }
@@ -61,10 +65,21 @@ $p-large: 40px;
 	display: inline;
 }
 
+.img-thumbnail {
+	width: 50px;
+	height: 50px;
+}
+
 .img-small {
 	width: 200px;
 	height:200px;
 }
+
+.img-full {
+	width: 80%;
+}
+
+ 
 
 
 

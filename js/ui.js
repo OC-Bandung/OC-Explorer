@@ -45,3 +45,44 @@ $(function () {
     myChart.setSize(250, 250);
 
 });
+
+$(function () { 
+    var myChart = Highcharts.chart('chart-contract', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+        	text: ''
+        },
+        xAxis: {
+            categories: ['Contract', 'Award' , 'Tender' , 'Budget']
+        },
+        yAxis: {
+            title: {
+                text: ''
+            }
+        },
+        plotOptions: {
+	        bar: {
+	            dataLabels: {
+	                enabled: true
+	            }
+	        }
+	    },
+        legend: {
+        	enabled: false
+    	},
+    	credits: {
+		      enabled: false
+		},
+		colors: ['#0bb586', '#00bcd4' , "#2196f3" , "#f44336"],
+        series: [{
+            name: 'tender',
+            data: [19.16, 25 , 30, 32],
+            colorByPoint: true
+        } ]
+    });
+
+    myChart.setSize(250, 250);
+
+});
