@@ -1,10 +1,16 @@
 $(".mdc-tab").click(function() {
-
-	console.log("hi");
 	$(this).parent().find('a.mdc-tab').removeClass("mdc-tab--active");
 	$(this).addClass("mdc-tab--active");
 
+	var link = $(this).attr("href");
+
+	$("#panels-award").find('.panel').hide();
+	$("#panels-award").find(link).show();
+
+
 });
+
+
 
 $(function () { 
     var myChart = Highcharts.chart('chart-tender', {
@@ -39,5 +45,3 @@ $(function () {
     myChart.setSize(250, 250);
 
 });
-
- 

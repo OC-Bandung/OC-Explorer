@@ -1,7 +1,9 @@
 $primary: #0bb586;
 $alert: #f57c00;
 
-$p-small: 10px;
+$p-small: 5px;
+$p-medium: 20px;
+$p-large: 40px;
 
 .bg-primary {
 	background-color: $primary
@@ -25,9 +27,15 @@ $p-small: 10px;
 	margin: $p-small;
 }
 
+
 .padding-top-small {
 	padding-top: $p-small;
 }
+
+.padding-top-medium {
+	padding-top: $p-medium;
+}
+
 
 .nudge-to-boundary {
 	margin-left: -25px;;
@@ -40,3 +48,23 @@ $p-small: 10px;
 .pull-right {
 	float: right;
 }
+
+.mdc-tab-bar-left {
+	margin: 0;
+}
+
+.panel {
+	display: none;
+}
+
+.panel.active {
+	display: inline;
+}
+
+.img-small {
+	width: 200px;
+	height:200px;
+}
+
+
+

@@ -13,10 +13,13 @@
   float: left; }
 
 .padding-small {
-  margin: 10px; }
+  margin: 5px; }
 
 .padding-top-small {
-  padding-top: 10px; }
+  padding-top: 5px; }
+
+.padding-top-medium {
+  padding-top: 20px; }
 
 .nudge-to-boundary {
   margin-left: -25px; }
@@ -26,5 +29,18 @@
 
 .pull-right {
   float: right; }
+
+.mdc-tab-bar-left {
+  margin: 0; }
+
+.panel {
+  display: none; }
+
+.panel.active {
+  display: inline; }
+
+.img-small {
+  width: 200px;
+  height: 200px; }
 
 /*# sourceMappingURL=ui.css.map */
