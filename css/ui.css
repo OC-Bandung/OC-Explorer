@@ -1,24 +1,170 @@
-.bg-primary {
-  background-color: #0bb586; }
+body {
+	font-family: 'Roboto', sans-serif;
+}
 
-.alert {
-  color: #f57c00; }
+a , a.visited  {
+	text-decoration: none;
+}
+ 
+section {
+   --mdc-theme-primary: #eff9e6;
+
+}
+
+div , a {
+	--mdc-theme-accent: #6e8e4b;
+	font-weight: 300;
+	font-size: 14px;
+	color: #1d2531;
+}   
+
+p {
+	font-weight: 300;
+}
+
+hr {
+  border:none;
+  border-top:2px dashed #f2f2f2;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+  width:100%;
+}
+
+.accent-color-text {
+	color: #6e8e4b;
+}
+
+.mdc-typography--subheading3 { 
+	font-size: 1em;
+	font-weight: 400;
+ }
+
+ .icons span {
+ 	font-size: 12px;
+    vertical-align: super;
+ }
 
 .list-inline {
   list-style-type: none;
+  display: flex;
+  padding: 0;
   margin: 0;
-  padding: 0; }
+}
 
-.list-inline > li {
-  float: left; }
+.img-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.pull-right {
+	margin-left: auto;
+	float: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.warning {
+	color: #b13a3a;
+}
+
+.icon-large{
+	height: 36px;
+}
+
+.icon-large-label {
+	font-size: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	font-weight: 300;
+}
+
+.icon-medium {
+	height: 25px;
+}
+
+.icon-medium-label {
+	font-size: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	font-weight: 300;
+}
+
+
+.border-bottom {
+	border-bottom: 1px solid #e9eff4;
+}
+
+.border-left {
+	border-left: 1px solid #e9eff4;
+}
+
+.border-right {
+	border-right: 1px solid #e9eff4;
+}
+
+.mdc-typography--display1 {
+	font-weight: 300;
+}
+/*. --mdc-theme-primary: #795548;*/
+/*mdc-theme--primary	black*/
+/*mdc-theme--accent	 6e8e4b*/
+
+
+/*mdc-theme--background	eff9e6*/
+/*mdc-theme--accent-bg	 a8da71*/
+
+/*.bg-primary {
+  background-color: #9ab083; }
+
+.bg-secondary {
+	background-color: #eff9e6;
+}*/
+.text-primary , .text-primary a  {
+	color: #9ab083;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.text-black {
+	color: #000;
+}
+.alert {
+  color: #f57c00; }
+
+
 
 .padding-small {
-  margin: 10px; }
+  padding: 10px; }
+
+ .padding-large {
+ 	padding: 25px;
+ }
+
+.padding-top-large {
+  padding-top: 25px; }
 
 .padding-top-small {
   padding-top: 10px; }
 
+.padding-bottom-small {
+	padding-bottom: 10px;
+}
+
+.padding-right-small {
+	padding-right: 10px;
+}
+
+.padding-right-large {
+	padding-right: 25px;
+}
+
+
 .nudge-to-boundary {
-  margin-left: -25px; }
+  margin-left: -25px;
+  margin-right: -25px;
+  }
 
 /*# sourceMappingURL=ui.css.map */
