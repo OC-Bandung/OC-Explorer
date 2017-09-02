@@ -1,18 +1,28 @@
 body {
 	font-family: 'Roboto', sans-serif;
+	
+}
+
+section {
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 a , a.visited  {
 	text-decoration: none;
 }
  
-section {
+section , div  {
    --mdc-theme-primary: #eff9e6;
+   --mdc-theme-secondary: #eff9e6;
 
 }
 
+div {
+
+}
 div , a {
-	--mdc-theme-accent: #6e8e4b;
+	--mdc-theme-accent: #0bb586;
 	font-weight: 300;
 	font-size: 14px;
 	color: #1d2531;
@@ -31,6 +41,10 @@ hr {
   width:100%;
 }
 
+.no-padding {
+	padding: 0;
+}
+
 .accent-color-text {
 	color: #6e8e4b;
 }
@@ -40,6 +54,9 @@ hr {
 	font-weight: 400;
  }
 
+.mdc-card__actions {
+	background-color: #f8f8f8;
+}
  .icons span {
  	font-size: 12px;
     vertical-align: super;
@@ -60,6 +77,7 @@ hr {
 .pull-right {
 	margin-left: auto;
 	float: right;
+	left: 0;
 }
 
 .text-center {
@@ -70,6 +88,7 @@ hr {
 	color: #b13a3a;
 }
 
+ 
 .icon-large{
 	height: 36px;
 }
@@ -131,6 +150,10 @@ hr {
 .text-black {
 	color: #000;
 }
+
+.text-white {
+	color: #fff;
+}
 .alert {
   color: #f57c00; }
 
@@ -163,8 +186,8 @@ hr {
 
 
 .nudge-to-boundary {
-  margin-left: -25px;
-  margin-right: -25px;
-  }
+  margin-left: -5px;
+  margin-right: -5px;
+ }
 
 /*# sourceMappingURL=ui.css.map */

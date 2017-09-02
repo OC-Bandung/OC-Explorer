@@ -9,13 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel=stylesheet href="css/timeline.css">
-    <link rel=stylesheet href="css/timeline-2.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
 <body>
     <section>
-        <div class="mdc-layout-grid accent-color-text">
+        <div class="mdc-layout-grid no-padding">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
                     <ul class="list-inline  mdc-typography--subheading2">
@@ -28,18 +27,44 @@
             </div>
         </div>
     </section>
-    <section>
+    <div class="nudge-to-boundary">
         <div class="mdc-layout-grid mdc-theme--primary-bg ">
             <div class="mdc-layout-grid__inner mdc-theme--accent">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-8-tablet">GLOSSARY</div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-6-tablet">FAQ</div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-6-tablet"> </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-6-tablet">SUBSCRIBE</div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-6-tablet pull-right">JSON</div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mdc-layout-grid__cell--span-6-tablet pull-right">ADD TO CSV</div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-1-tablet">
+                    <ul class="list-inline">
+                        <li class="padding-right-large list-inline">
+                            <span class="padding-right-small">
+                        <a href="#"> <img class="icon" src="img/icon-glossary.png"> </a>
+                    </span>
+                            <span>
+                     <a href="#">  GLOSSARY </a></span>
+                        </li>
+                        <li class="padding-right-large list-inline">
+                            <span class="padding-right-small"> 
+                      <a href="#">  <img class="icon" src="img/icon-information.png"> </a></span>
+                            <span> <a href="#"> FAQ </a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 pull-right">
+                    <ul class="list-inline">
+                        <li class="padding-right-large list-inline">
+                            <span class="padding-right-small"><a href="#"> <img class="icon" src="img/icon-subscribe.png"> </a></span>
+                            <span> <a href="#">  Subscribe </a></span>
+                        </li>
+
+                        <li class="padding-right-large list-inline">
+                            <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-json.png"> </a></span> <span> <a href="#"> Connect to JSON </a></span>
+                        </li>
+
+                        <li class="padding-right-large list-inline">
+                            <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-add-csv.png"> </a></span> <span> <a href="#"> Get the data </a></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
@@ -69,13 +94,13 @@
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <div class="mdc-card">
                         <section class="mdc-card__primary">
                             <div>Key Information</div>
                         </section>
                         <section class="mdc-card__supporting-text">
-                            <div class="mdc-theme--primary-bg padding-large nudge-to-boundary">
+                            <div class="mdc-theme--secondary-bg padding-large nudge-to-boundary">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </div>
                             <div class="mdc-layout-grid">
@@ -143,7 +168,7 @@
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <span class="mdc-typography--display1">Progress Timeline</span>
                     <span class="pull-right">
                   <ul class="list-inline">
@@ -153,7 +178,7 @@
                     </ul>
                     </span>
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="padding-right-large">
                             <a href="#"> 
@@ -182,50 +207,50 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11">
-                    <div class="timeline">
-                        <svg height="12" width="50">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="50" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event1">
-                            <img src="img/icon-on-time.png" alt="on time">
-                        </div>
-                        <svg height="12" width="75">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="75" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event2">
-                            <img src="img/icon-late.png" alt="late">
-                        </div>
-                        <svg height="12" width="150">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="150" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event1">
-                            <img src="img/icon-late.png" alt="late">
-                        </div>
-                        <svg height="12" width="50">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="50" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event1">
-                            <img src="img/icon-on-time.png" alt="on time">
-                        </div>
-                        <svg height="12" width="150">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="150" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event1">
-                            <img src="img/icon-on-time.png" alt="on time">
-                        </div>
-                        <svg height="12" width="50">
-                            <line style="stroke:#a8da71;stroke-width:12" x1="0" x2="50" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <div class="event1">
-                            <img src="img/icon-next-milestone.png" alt="next milestone">
-                        </div>
-                        <svg height="12" width="250">
-                            <line style="stroke:rgba(162, 164, 163, 0.37);stroke-width:12" x1="0" x2="250" y1="0" y2="0"></line>Sorry, your browser does not support inline SVG.</svg>
-                        <svg height="12" width="50">
-                            <line style="stroke:rgba(162, 164, 163, 0.37);stroke-width:12" x1="0" x2="50" y1="0" y2="0"></line>
-                        </svg>
-                        <svg height="27" width="42">
-                            <line style="stroke:rgba(162, 164, 163, 0.37);stroke-width:2" x1="1" x2="1" y1="0" y2="20"></line>
-                            <circle cx="11" cy="10" fill="#e9eff4" r="3"></circle>
-                            <circle cx="21" cy="10" fill="#e9eff4" r="3"></circle>
-                            <circle cx="31" cy="10" fill="#e9eff4" r="3"></circle>
-                            <line style="stroke:rgba(162, 164, 163, 0.37);stroke-width:2" x1="41" x2="41" y1="0" y2="20"></line>
-                        </svg>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <div>
+                        <ul class="timeline" id="timeline">
+                            <li class="li complete">
+                                <div class="timestamp">
+                                    <span class="date">HPS</span>
+                                </div>
+                                <div class="status on-time">
+                                    <p>Tender announcement</p>
+                                </div>
+                            </li>
+                            <li class="li complete">
+                                <div class="timestamp">
+                                    <span class="date">11/15/2014</span>
+                                </div>
+                                <div class="status late">
+                                    <p> Prequalitifaction notice</p>
+                                </div>
+                            </li>
+                            <li class="li complete">
+                                <div class="timestamp">
+                                    <span class="date">11/15/2014</span>
+                                </div>
+                                <div class="status">
+                                    <p> Prequalification results </p>
+                                </div>
+                            </li>
+                            <li class="li">
+                                <div class="timestamp">
+                                    <span class="date">11/15/2014</span>
+                                </div>
+                                <div class="status">
+                                    <p>Download bidding documents</p>
+                                </div>
+                            </li>
+                            <li class="li">
+                                <div class="timestamp">
+                                    <span class="date">11/15/2014</span>
+                                </div>
+                                <div class="status">
+                                    <p>Bid submission deadline</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -235,7 +260,7 @@
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="mdc-typography--display1 padding-right-large border-right"> Planning</li>
                         <li class="padding-small">
@@ -245,86 +270,251 @@
                             <span id="total-flags-planning" class="icon-medium-label warning"> 3 </span>
                         </li>
                         <li class="padding-small">
-                            <span  class="icon-medium-label"> FLAGS </span>
+                            <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right"><img src="img/icon-information.png" alt="information"></li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
                             <div class="mdc-layout-grid">
-                                <div class="mdc-layout-grid__inner">
-                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                <div class="mdc-layout-grid__inner ">
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large ">
                                         <div> Category </div>
-                                        <div class="mdc-typography--title">Public Works</div>
+                                        <div class="mdc-typography--title  ">Public Works</div>
                                     </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div> Budget </div>
                                         <div class="mdc-typography--title">19.16</div>
                                     </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>Implementation</div>
                                         <div class="mdc-typography--subheading2">Road Construction</div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                         <section class="mdc-card__supporting-text">
+                        <section class="mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
                                 <div class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
-                                         <div><u>Key Information</u></div>
-                                          <div class="padding-top-small">
-                                              <div>Budget Source</div>
-                                              <div class="mdc-typography--body2">APBD</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Budget Code</div>
-                                              <div class="mdc-typography--body2">4.03.4.03.01.17.03.5.2.2.17.01</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Budget Year</div>
-                                              <div class="mdc-typography--body2">2016</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Procurement Method</div>
-                                              <div class="mdc-typography--body2">Competitive</div>
-                                          </div>
+                                        <div><u>Key Information</u></div>
+                                        <div class="padding-top-small">
+                                            <div>Budget Source</div>
+                                            <div class="mdc-typography--body2">APBD</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Budget Code</div>
+                                            <div class="mdc-typography--body2">4.03.4.03.01.17.03.5.2.2.17.01</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Budget Year</div>
+                                            <div class="mdc-typography--body2">2016</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Procurement Method</div>
+                                            <div class="mdc-typography--body2">Competitive</div>
+                                        </div>
                                     </div>
-
-                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-3 padding-right-large">
-                                    
-                                          <div><u>Planned Dates</u></div>
-                                          <div class="padding-top-small">
-                                              <div>Tender Start</div>
-                                              <div class="mdc-typography--body2">10 May 2015</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Tender End Date</div>
-                                              <div class="mdc-typography--body2">20 June 2015</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Contract Start</div>
-                                              <div class="mdc-typography--body2">30 June 2016</div>
-                                          </div>
-                                          <div class="padding-top-small">
-                                              <div>Completion Date</div>
-                                              <div class="mdc-typography--body2">01 January 2018</div>
-                                          </div>
-
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                        <div><u>Planned Dates</u></div>
+                                        <div class="padding-top-small">
+                                            <div>Tender Start</div>
+                                            <div class="mdc-typography--body2">10 May 2015</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Tender End Date</div>
+                                            <div class="mdc-typography--body2">20 June 2015</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Contract Start</div>
+                                            <div class="mdc-typography--body2">30 June 2016</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Completion Date</div>
+                                            <div class="mdc-typography--body2">01 January 2018</div>
+                                        </div>
                                     </div>
-
-                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-5 padding-right-large">
-                                    
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                        <div><u>Project Links</u></div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="#">Budget Implementation Document</a></li>
+                                                <li><a href="#">Environmental Assessment (UPL/RKL/AMDAL)</a></li>
+                                                <li><a href="#">Other Documents</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                         </section>
+                        </section>
+                        <section class="mdc-card__actions">
+                            <div>
+                                <ul class="timeline" id="timeline">
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status on-time">
+                                            <p>Tender announcement</p>
+                                        </div>
+                                    </li>
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status late">
+                                            <p> Prequalitifaction notice</p>
+                                        </div>
+                                    </li>
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p> Prequalification results </p>
+                                        </div>
+                                    </li>
+                                    <li class="li">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p>Download bidding documents</p>
+                                        </div>
+                                    </li>
+                                    <li class="li">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p>Bid submission deadline</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-  
+    <hr>
+    <section>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <ul class="list-inline">
+                        <li class="mdc-typography--display1">Tender</li>
+                        <li class="pull-right">
+                            <img src="img/icon-information.png" alt="information">
+                            <img src="img/icon-message.png" alt="information">
+                        </li>
+                    </ul>
+                    <div class="mdc-card">
+                        <section class="mdc-card__primary mdc-theme--primary-bg">
+                            <div class="mdc-layout-grid">
+                                <div class="mdc-layout-grid__inner ">
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large ">
+                                        <div> Tender Status </div>
+                                        <div class="mdc-typography--title">Active</div>
+                                    </div>
+                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                        <div> Tender Amount </div>
+                                        <div class="mdc-typography--title">Rp 19.16 M </div>
+                                    </div>
+                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                        <div>Award Criteria</div>
+                                        <div class="mdc-typography--subheading2">Lowest Bid</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mdc-card__supporting-text">
+                            <div class="mdc-layout-grid">
+                                <div class="mdc-layout-grid__inner">
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                        <div><u>Key Information</u></div>
+                                        <div class="padding-top-small">
+                                            <div>Tender ID</div>
+                                            <div class="mdc-typography--body2">242492</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Procurement Method</div>
+                                            <div class="mdc-typography--body2">Competitive</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Item Classification</div>
+                                            <div class="mdc-typography--body2">7263515</div>
+                                        </div>
+                                        <div class="padding-top-small">
+                                            <div>Item Description</div>
+                                            <div class="mdc-typography--body2">Highway and Road paving service</div>
+                                        </div>
+                                    </div>
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                        <img src="img/temp-chart-tender.jpg">
+                                    </div>
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
+                                        <div><u>Project Documents</u></div>
+                                        <ul>
+                                            <li>Short list (Pre-Qualification report)</li>
+                                            <li>Other Documents</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mdc-card__actions">
+                            <div>
+                                <ul class="timeline" id="timeline">
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status on-time">
+                                            <p>Tender announcement</p>
+                                        </div>
+                                    </li>
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status late">
+                                            <p> Prequalitifaction notice</p>
+                                        </div>
+                                    </li>
+                                    <li class="li complete">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p> Prequalification results </p>
+                                        </div>
+                                    </li>
+                                    <li class="li">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p>Download bidding documents</p>
+                                        </div>
+                                    </li>
+                                    <li class="li">
+                                        <div class="timestamp">
+                                            <span class="date">11/15/2014</span>
+                                        </div>
+                                        <div class="status">
+                                            <p>Bid submission deadline</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
     window.mdc.autoInit();
