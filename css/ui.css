@@ -41,6 +41,17 @@ hr {
   width:100%;
 }
 
+md-checkbox .md-icon {
+    background: red;
+}
+md-checkbox.md-default-theme.md-checked .md-icon {
+    background: orange;
+}
+
+.mdc-checkbox__checkmark__path {
+	stroke: #000 !important;
+}
+
 .no-padding {
 	padding: 0;
 }
@@ -78,6 +89,10 @@ hr {
 	margin-left: auto;
 	float: right;
 	left: 0;
+}
+
+.pull-left {
+	float: left;
 }
 
 .text-center {
@@ -165,6 +180,12 @@ hr {
  .padding-large {
  	padding: 25px;
  }
+
+ .padding-left-large {
+ 	padding-left: 25px;
+ }
+
+
 
 .padding-top-large {
   padding-top: 25px; }

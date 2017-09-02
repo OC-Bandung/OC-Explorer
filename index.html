@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel=stylesheet href="css/timeline.css">
+    <link rel=stylesheet href="css/checkout.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
@@ -30,7 +31,7 @@
     <div class="nudge-to-boundary">
         <div class="mdc-layout-grid mdc-theme--primary-bg ">
             <div class="mdc-layout-grid__inner mdc-theme--accent">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-1-tablet">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-1-tablet">
                     <ul class="list-inline">
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small">
@@ -46,20 +47,78 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 pull-right">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 pull-right">
                     <ul class="list-inline">
+                       
+
                         <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"><a href="#"> <img class="icon" src="img/icon-subscribe.png"> </a></span>
-                            <span> <a href="#">  Subscribe </a></span>
+                          
+                          <span > <img class="padding-right-small" src="img/icon-download.png">Download CSVs</span>
+
+                           <div class="checkout">
+                             <a class="checkout__button" href="#">   </a> 
+
+                          <div class="checkout__order">
+                            <div class="checkout__order-inner">
+
+
+                                <table class="checkout__summary">
+                                    <thead>
+                                        
+                                        </th></tr>
+                                        <tr><th>Contracts</th><th>File Size</th></tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr><th colspan="2">Total <span class="checkout__total">10 MB</span></th></tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr><td>Contract Name 1 </td><td>5.90 MB</td></tr>
+                                        <tr><td>Contract Name 2 <span> + files </span></td><td>1.10 MB</td></tr>
+                                        <tr><td>Contract Name 3</td><td>1 MB</td></tr>
+                                        <tr><td>Contract Name 4 </td><td>0.8 MB</td></tr>
+                                        <tr><td>+ 3 more ...</td><td>1.1 MB</td></tr>
+                                    </tbody>
+                                </table><!-- /checkout__summary -->
+
+                                <div class="mdc-form-field pull-left">
+                                  <div class="mdc-checkbox">
+                                    <input type="checkbox"
+                                           id="my-checkbox"
+                                           class="mdc-checkbox__native-control"/>
+                                    <div class="mdc-checkbox__background">
+                                      <svg class="mdc-checkbox__checkmark"
+                                           viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark__path"
+                                              fill="none"
+                                              stroke="black"
+                                              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                                      </svg>
+                                      <div class="mdc-checkbox__mixedmark"></div>
+                                    </div>
+                                  </div>
+
+                                  <label for="my-checkbox">Include supporting documents</label>
+                                </div>
+
+                                <button class="checkout__option checkout__option--silent checkout__cancel"><i class="fa fa-angle-left"></i> Continue Reading</button><button class="checkout__option">Download</button>
+                                <button class="checkout__close checkout__cancel"><i class="material-icons">close</i></button>
+                            </div><!-- /checkout__order-inner -->
+                        </div><!-- /checkout__order -->
+
                         </li>
 
+                        
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-json.png"> </a></span> <span> <a href="#"> Connect to JSON </a></span>
                         </li>
 
-                        <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-add-csv.png"> </a></span> <span> <a href="#"> Get the data </a></span>
+                         <li class="padding-right-large list-inline">
+                            <span class="padding-right-small"><a href="#"> <img class="icon" src="img/icon-subscribe.png"> </a></span>
+                            <span> <a href="#">  Subscribe </a></span>
                         </li>
+
+
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -69,7 +128,9 @@
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-1-tablet">
+                
                     <ul class="list-inline">
+
                         <li class="border-bottom padding-small">
                             <img class="icon-large" src="img/flag.svg" alt="flag">
                         </li>
@@ -77,9 +138,13 @@
                             <span id="total-flags" class="icon-large-label warning"> 3 </span>
                         </li>
                     </ul>
-                    <div class="text-center padding-top-small">FLAGS </div>
+                    <div class="text-center padding-top-small ">FLAGS </div> 
+
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-large">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
+                    <div>
+                        <a href="#"><img src="img/icon-add-csv.png"> </a> <a href="#">   add to downloads </a>
+                    </div>
                     <div class="mdc-typography--display1"> Contract Name</div>
                     <div>
                         <p> <span class="mdc-typography--subheading3"> Identification No: </span> ID-PAKET+ID-CONTRACT </p>
@@ -520,6 +585,7 @@
     window.mdc.autoInit();
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
 </body>
 
