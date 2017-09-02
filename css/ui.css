@@ -187,6 +187,15 @@ md-checkbox.md-default-theme.md-checked .md-icon {
 
 
 
+ 
+.fixedElement {
+    background-color: transparent;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
 .padding-top-large {
   padding-top: 25px; }
 
@@ -209,6 +218,11 @@ md-checkbox.md-default-theme.md-checked .md-icon {
 .nudge-to-boundary {
   margin-left: -5px;
   margin-right: -5px;
+ }
+
+ .nudge-to-boundary-15 {
+ 	 margin-left: -15px;
+ 	 margin-right: -15px;
  }
 
 /*# sourceMappingURL=ui.css.map */
