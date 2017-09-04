@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel=stylesheet href="css/timeline.css">
     <link rel=stylesheet href="css/checkout.css">
+    <link rel=stylesheet href="css/tooltip.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
@@ -29,7 +30,7 @@
         </div>
     </section>
     <div class="nudge-to-boundary">
-        <div class="mdc-layout-grid mdc-theme--primary-bg fixedElement">
+        <div class="mdc-layout-grid mdc-theme--primary-bg ">
             <div class="mdc-layout-grid__inner mdc-theme--accent">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-1-tablet">
                     <ul class="list-inline">
@@ -276,44 +277,90 @@
                         <ul class="timeline" id="timeline">
                             <li class="li complete">
                                 <div class="timestamp">
-                                    <span class="date">HPS</span>
+                                    <span>HPS issued</span>
                                 </div>
-                                <div class="status on-time">
-                                    <p>Tender announcement</p>
-                                </div>
+                               
+                               <div class="status on-time tooltip-wrapper">
+                                       <div class="tooltip">
+                                           <div>Date:01/01/2016</div>
+                                           <div>Status: Late by 3 days.</div>
+                                       </div>
+                                </div> 
+
                             </li>
                             <li class="li complete">
                                 <div class="timestamp">
-                                    <span class="date">11/15/2014</span>
+                                   <span>DPA issued</span>
                                 </div>
-                                <div class="status late">
-                                    <p> Prequalitifaction notice</p>
-                                </div>
+                                   
+                                <div class="status late tooltip-wrapper">
+                                       <div class="tooltip">I am a tooltip! lorem</div>
+                                </div> 
+
                             </li>
                             <li class="li complete">
                                 <div class="timestamp">
-                                    <span class="date">11/15/2014</span>
+                                    <span>SIRUP publication</span>
                                 </div>
-                                <div class="status">
-                                    <p> Prequalification results </p>
-                                </div>
+                                <div class="status"></div>
                             </li>
+
+                             <li class="li complete">
+                                <div class="timestamp">
+                                    <span>Tender</span>
+                                </div>
+                                <div class="status"> </div>
+                            </li>
+
+                            <li class="li complete">
+                                <div class="timestamp">
+                                    <span>Invitation published</span>
+                                </div>
+                                <div class="status"> </div>
+                            </li>
+                            <li class="li complete">
+                                <div class="timestamp">
+                                   <span>Submission deadline</span>
+                                </div>
+                                <div class="status"></div>
+                            </li>
+
                             <li class="li">
                                 <div class="timestamp">
-                                    <span class="date">11/15/2014</span>
+                                   <span>Award Decision</span>
                                 </div>
-                                <div class="status">
-                                    <p>Download bidding documents</p>
-                                </div>
+                                <div class="status"></div>
                             </li>
+
                             <li class="li">
                                 <div class="timestamp">
-                                    <span class="date">11/15/2014</span>
+                                   <span>Contract Signing</span>
                                 </div>
-                                <div class="status">
-                                    <p>Bid submission deadline</p>
-                                </div>
+                                <div class="status"></div>
                             </li>
+
+                            <li class="li">
+                                <div class="timestamp">
+                                   <span>Implementation</span>
+                                </div>
+                                <div class="status"></div>
+                            </li>
+
+                            <li class="li">
+                                <div class="timestamp">
+                                   <span>Commencement</span>
+                                </div>
+                                <div class="status"></div>
+                            </li>
+
+                            <li class="li">
+                                <div class="timestamp">
+                                   <span>Completion/Delivery</span>
+                                </div>
+                                <div class="status"></div>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>

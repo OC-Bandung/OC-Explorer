@@ -23,21 +23,21 @@ $(".mdc-tab").click(function() {
 					} );
 				} );
 			})();
+ 
 
-
-			$(window).scroll(function(e){ 
-  var $el = $('.fixedElement'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 100 && !isPositionFixed){ 
-    $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
- 	$('.fixedElement').css('background-color', '#eff9e6');
-  }
-  if ($(this).scrollTop() < 100 && isPositionFixed)
-  {
-    $('.fixedElement').css({'position': 'static', 'top': '0px'}); 
-    $('.fixedElement').css('background-color', 'transparent');
-  } 
-});
+// 			$(window).scroll(function(e){ 
+//   var $el = $('.fixedElement'); 
+//   var isPositionFixed = ($el.css('position') == 'fixed');
+//   if ($(this).scrollTop() > 100 && !isPositionFixed){ 
+//     $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
+//  	$('.fixedElement').css('background-color', '#eff9e6');
+//   }
+//   if ($(this).scrollTop() < 100 && isPositionFixed)
+//   {
+//     $('.fixedElement').css({'position': 'static', 'top': '0px'}); 
+//     $('.fixedElement').css('background-color', 'transparent');
+//   } 
+// });
 			
 
  
