@@ -8,8 +8,14 @@ section {
 	padding-right: 40px;
 }
 
-a , a.visited  {
+a , a.visited {
 	text-decoration: none;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
  
 section , div  {
@@ -83,6 +89,10 @@ a:hover.tooltips span {
   z-index: 999;
 }
 
+ul.project-links li a  {
+  vertical-align: super;
+  border-bottom: 1px dotted #ccc;
+}
 
 .mdc-checkbox__checkmark__path {
 	stroke: #000 !important;
@@ -162,7 +172,18 @@ a:hover.tooltips span {
 	font-weight: 300;
 }
 
+.date {
+  font-size: 16px;
+}
+.icon-small {
+  height: 20px;
+  font-size: 20px;
+  
+}
 
+.faded {
+  color: #d1d1d1;
+}
 .border-bottom {
 	border-bottom: 1px solid #e9eff4;
 }
