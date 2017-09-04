@@ -47,6 +47,10 @@ hr {
   width:100%;
 }
 
+.mdc-tab {
+  font-weight: lighter;
+}
+
 md-checkbox .md-icon {
     background: red;
 }
@@ -182,7 +186,7 @@ ul.project-links li a  {
 }
 
 .faded {
-  color: #d1d1d1;
+  color: #d1d1d1
 }
 .border-bottom {
 	border-bottom: 1px solid #e9eff4;
