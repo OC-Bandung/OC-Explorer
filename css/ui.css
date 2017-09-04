@@ -98,8 +98,15 @@ ul.project-links li a  {
   border-bottom: 1px dotted #ccc;
 }
 
+.even {
+  background-color: #f8f8f8;
+}
 .mdc-checkbox__checkmark__path {
 	stroke: #000 !important;
+}
+
+.mdc-list {
+  padding: 0;
 }
 
 .no-padding {
@@ -246,6 +253,9 @@ ul.project-links li a  {
  	padding-left: 25px;
  }
 
+ .padding-left-small {
+  padding-left: 15px;
+ }
 
 
  
