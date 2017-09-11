@@ -19,8 +19,8 @@ ul {
 }
  
 section , div  {
-   --mdc-theme-primary: #eff9e6;
-   --mdc-theme-secondary: #eff9e6;
+   --mdc-theme-primary: #7ccdbd;
+   --mdc-theme-secondary: #7ccdbd;
 
 }
 
@@ -28,7 +28,7 @@ div {
 
 }
 div , a {
-	--mdc-theme-accent: #0bb586;
+	--mdc-theme-accent: #7ccdbd;
 	font-weight: 300;
 	font-size: 14px;
 	color: #1d2531;
@@ -196,15 +196,15 @@ ul.project-links li a  {
   color: #d1d1d1
 }
 .border-bottom {
-	border-bottom: 1px solid #e9eff4;
+	border-bottom: 1px solid #7ccdbd;
 }
 
 .border-left {
-	border-left: 1px solid #e9eff4;
+	border-left: 1px solid #7ccdbd;
 }
 
 .border-right {
-	border-right: 1px solid #e9eff4;
+	border-right: 1px solid #7ccdbd;
 }
 
 .mdc-typography--display1 {
@@ -241,6 +241,15 @@ ul.project-links li a  {
   color: #f57c00; }
 
 
+ 
+.fixedElement {
+    background-color: transparent;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+
 
 .padding-small {
   padding: 10px; }
@@ -258,14 +267,6 @@ ul.project-links li a  {
  }
 
 
- 
-.fixedElement {
-    background-color: transparent;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-}
 
 .padding-top-large {
   padding-top: 25px; }
@@ -294,6 +295,16 @@ ul.project-links li a  {
  .nudge-to-boundary-15 {
  	 margin-left: -15px;
  	 margin-right: -15px;
+ }
+
+ #chart-tender  ul li {
+    height: 50px;
+    width: 15px;
+    padding: 10px;
+    margin: 10px;
+    display: inline;
+    float: left;
+    background-color: #ff00ff;
  }
 
 /*# sourceMappingURL=ui.css.map */

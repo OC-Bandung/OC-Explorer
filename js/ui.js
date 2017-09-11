@@ -23,7 +23,20 @@ $(".mdc-tab").click(function() {
 					} );
 				} );
 			})();
- 
+
+
+// $( document ).ready(function() {
+
+// $( "#chart-tender.bar-chart ul li" ).each(function( index ) {
+  	
+//   	$(this).css("height", $( this ).attr("data") );
+// });
+
+
+	 
+// });
+
+
 
 // 			$(window).scroll(function(e){ 
 //   var $el = $('.fixedElement'); 

@@ -147,13 +147,17 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
                         <a href="#"><img src="img/icon-add-csv.png"> </a> <a href="#">   add to downloads </a>
-                        <div class="mdc-typography--display1"> Contract Name</div>
+                        <div class="mdc-typography--display1"> Belanja Makanan dan Minuman Kegiatan : Pertemuan Integrasi pembinaan pelayanan kesehatan khusus
+                             <!--  (tbl_pekerjaan.namapekerjaan) , (tender.tender_title) -->
+                        </div>
                     </div>
                     <div>
-                        <p> <span class="mdc-typography--subheading3"> Identification No: </span> ID-PAKET+ID-CONTRACT </p>
-                        <p class="mdc-typography--subheading3"> CITY OF BANDUNG / PACKAGE NAME</p>
-                        <p class="mdc-typography--subheading3"> PROGRAM NAME</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p> <span class="mdc-typography--subheading3"> Identification No: </span> ocds-afzrfb-18  </p>
+                       <!-- prefix + skpdid ,  ocid -->
+                        <p class="mdc-typography--subheading3">Kota Bandung / RUMAH SAKIT KHUSUS IBU DAN ANAK</p>
+                         <!-- CITY OF BANDUNG = tender.buyer_contactpoint_name-->
+                         <span class="mdc-typography--subheading3">Rationale: </span> Berkembangnya  ekonomi  kreatif  untuk  mendukung  tercapainya Bandung sebagai Kota Kreatif.</p>
+                        <p> This contract is executed under the program "Program Penyelenggaraan Sekolah Gratis" and it is part of the activity "Penyediaan Jasa Kebersihan Kantor". </p>
                     </div>
                 </div>
             </div>
@@ -164,13 +168,14 @@
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                   
                     <div class="mdc-card">
                         <section class="mdc-card__primary">
                             <div class="mdc-typography--subheading1">Key Information</div>
                         </section>
                         <section class="mdc-card__supporting-text">
                             <div class="mdc-theme--secondary-bg padding-large nudge-to-boundary-15">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                               A future contracting process is being considered. Early information about the process may be provided in the tender section. A process with this status may provide information on early engagement or consultation opportunities, during which the details of a subsequent tender can be shaped.
                             </div>
                             <div class="mdc-layout-grid">
                                 <div class="mdc-layout-grid__inner">
@@ -180,12 +185,13 @@
                                             <div class="mdc-typography--body2">Tender / Active</div>
                                         </div>
                                         <div class="padding-top-large">
-                                            <div>Planned Start</div>
-                                            <div class="mdc-typography--body2">01/May/2015</div>
+                                            <div>Planned Procurement Start</div>
+                                            <div class="mdc-typography--body2">01.01.2017</div>
+
                                         </div>
                                         <div class="padding-top-large">
-                                            <div>Planned End</div>
-                                            <div class="mdc-typography--body2">01/June/2016</div>
+                                            <div>Planned Procurement End</div>
+                                            <div class="mdc-typography--body2">01.01.2017</div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>{{stage}} Amount</div>
@@ -200,16 +206,19 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>
                                             <div>Procurement Category</div>
-                                            <div class="mdc-typography--body2">Goods / Services</div>
+                                            <div class="mdc-typography--body2">Goods / Works / Services</div>
                                         </div>
+
+                                         <div class="padding-top-large">
+                                            <div>Procurement Method</div>
+                                            <div class="mdc-typography--body2">Open / Selective / Limited / Direct</div>
+                                        </div>
+
                                         <div class="padding-top-large">
                                             <div>Implementation Unit</div>
                                             <div class="mdc-typography--body2">Satuan Kerja Perangkat Daerah (SKPD)</div>
                                         </div>
-                                        <div class="padding-top-large">
-                                            <div>Procurement Method</div>
-                                            <div class="mdc-typography--body2">Lelang Umim / Pengadaan Langsung</div>
-                                        </div>
+                                            
                                         <div class="padding-top-large">
                                             <div>Procuring Entity</div>
                                             <div class="mdc-typography--body2">Pokja ULP / Pejabat Pengadaan</div>
@@ -219,7 +228,7 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
                                         <div>Location</div>
                                         <div>
-                                            <span class="mdc-typography--body2">Kematan Bandung Kulon </span>
+                                            <span class="mdc-typography--body2">RS Khusus Ibu dan Anak Kota Bandung </span>
                                             <span class="pull-right"> <img src="img/icon-view-interactive-map.png" alt="view map"> <a class="accent-color-text" href="#"> view interactive map </a></span>
                                         </div>
                                         <img class="img-responsive" alt="map" src="map/bandung-map.png">
@@ -444,16 +453,9 @@
                                             <ul class="project-links">
                                                 <li>
                                                     <i class="material-icons icon-small">web</i>
-                                                    <a href="#"> Budget Implementation Document</a>
+                                                    <a href="#">portal.bandung.go.id</a>
                                                 </li>
-                                                <li>
-                                                    <i class="material-icons icon-small">picture_as_pdf</i>
-                                                    <a href="#">Environmental Assessment</a>
-                                                </li>
-                                                <li>
-                                                    <i class="material-icons icon-small">link</i>
-                                                    <a href="#">Other Documents</a>
-                                                </li>
+                                                 
                                             </ul>
                                         </div>
                                     </div>
@@ -473,6 +475,16 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="mdc-typography--display1 padding-right-large border-right">Tender</li>
+                        <li>
+                            <div class="mdc-toolbar__section--table-style-wrapper">
+                                    <nav class="mdc-tab-bar ">
+                                        <a class="mdc-tab mdc-tab--active" href="#one">Details</a>
+                                        <a class="mdc-tab" href="#two">Schedule</a>
+                                        
+                                        <span class="mdc-tab-bar__indicator"></span>
+                                    </nav>
+                                </div>
+                        </li>
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
                         </li>
@@ -483,6 +495,7 @@
                             <img src="img/icon-information.png" alt="information">
                             <img src="img/icon-message.png" alt="information">
                         </li>
+
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -983,6 +996,18 @@
             </div>
         </div>
     </section>
+
+<!-- 
+    <section>
+            <div id="chart-tender" class="bar-chart">
+                <ul>
+                <li data="23"></li>
+                <li data="50"></li>
+                </ul>
+            </div>
+
+    </section> -->
+ 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
     window.mdc.autoInit();
