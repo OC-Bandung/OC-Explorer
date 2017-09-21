@@ -23,13 +23,15 @@
 }
 
 
-button {
-  
+.glossary__term , .glossary-button {
   background-color: #eff9e6;
   border: 1px solid #eff9e6;
   
-   
-  
+}
+
+
+.glossary__defintion {
+
 }
 
 .js-accordion button {
