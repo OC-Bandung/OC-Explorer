@@ -11,6 +11,7 @@
     <link rel=stylesheet href="css/timeline.css">
     <link rel=stylesheet href="css/checkout.css">
     <link rel=stylesheet href="css/tooltip.css">
+    <link rel=stylesheet href="css/glossary.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
@@ -41,7 +42,7 @@
                         <a href="#"> <img class="icon" src="img/icon-glossary.png"> </a>
                     </span>
                             <span>
-                     <a href="#">  GLOSSARY </a></span>
+                     <button class="js-glossary-toggle button">  GLOSSARY </button></span>
                         </li>
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small"> 
@@ -983,6 +984,26 @@
             </div>
         </div>
     </section>
+
+
+  <!-- glossary section -->
+    <section>
+          <div id="glossary" class="glossary" aria-describedby="glossary-result" aria-hidden="true">
+            <button title="Close glossary"  class="js-glossary-close button button--close toggle" >
+                <span class="u-visually-hidden">Hide glossary</span>
+            </button>
+            <h2>Glossary</h2>
+            
+            <label for="glossary-search" class="label">Filter glossary terms</label>
+            <input id="glossary-search" class="js-glossary-search" type="search" placeholder="e.g. SKPD">
+            <div class="glossary__content" id="glossary-result">
+              <ul class="js-glossary-list"></ul>
+            </div>
+          </div>    
+
+    </section>
+
+
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
     window.mdc.autoInit();
@@ -990,6 +1011,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
+    <script type="text/javascript" src="js/glossary.js"></script>
 </body>
 
 </html>
