@@ -15,6 +15,10 @@
   color: white;
 }
 
+.glossary__definition   {
+  color: white;
+}
+
 .glossary[aria-hidden=true] {
   left: -30rem;
 }
