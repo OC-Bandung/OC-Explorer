@@ -39,14 +39,14 @@
                     <ul class="list-inline">
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small">
-                        <a href="#"> <img class="icon" src="img/icon-glossary.png"> </a>
+                        <a href="#"> <i class="material-icons">chrome_reader_mode</i> </a>
                     </span>
                             <span>
                      <a class="js-glossary-toggle">  GLOSSARY </a></span>
                         </li>
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small"> 
-                      <a href="#">  <img class="icon" src="img/icon-information.png"> </a></span>
+                      <a href="#">  <i class="material-icons">help</i> </a></span>
                             <span> <a href="#"> FAQ </a></span>
                         </li>
                     </ul>
@@ -54,8 +54,11 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 pull-right">
                     <ul class="list-inline">
                         <li class="padding-right-large list-inline">
-                            <span> <img class="padding-right-small" src="img/icon-download.png">Download CSVs</span>
-                            <div class="checkout">
+                            <span>
+                                <span class="inline-left"> <i class="material-icons">file_download</i></span>
+                                <span class="inline-left" >Download CSVs</span>
+                            </span>
+                            <div data-count="0" class="checkout">
                                 <a class="checkout__button" href="#">   </a>
                                 <div class="checkout__order">
                                     <div class="checkout__order-inner">
@@ -118,10 +121,10 @@
                                 <!-- /checkout__order -->
                         </li>
                         <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-json.png"> </a></span> <span> <a href="#"> Connect to JSON </a></span>
+                            <span class="padding-right-small"> <a href="#"> <i class="material-icons">code</i> </a></span> <span> <a href="#"> Connect to JSON </a></span>
                         </li>
                         <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"><a href="#"> <img class="icon" src="img/icon-subscribe.png"> </a></span>
+                            <span class="padding-right-small"><a href="#"> <i class="material-icons">rss_feed</i></a></span>
                             <span> <a href="#">  Subscribe </a></span>
                         </li>
                         </div>
@@ -147,7 +150,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
-                        <a href="#"><img src="img/icon-add-csv.png"> </a> <a href="#">   add to downloads </a>
+                        <a id="add-to-csv" class="active" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text"  href="#">   add to downloads </a>
                         <div class="mdc-typography--display1"> Contract Name</div>
                     </div>
                     <div>

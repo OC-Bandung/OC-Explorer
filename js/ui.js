@@ -1,10 +1,24 @@
 $(".mdc-tab").click(function() {
-
-	console.log("hi");
+ 
 	$(this).parent().find('a.mdc-tab').removeClass("mdc-tab--active");
 	$(this).addClass("mdc-tab--active");
 
 });
+
+$("#add-to-csv").click(function() {
+ 
+	$(this).html('<i class="material-icons">playlist_add_check</i>');
+	$(this).removeClass('active');
+	$(this).addClass('added');
+	$("#add-to-csv-text").text ("contract was added");
+	$("#add-to-csv-text").css("color" , "darkgray");
+	var cnt = $(".checkout").attr("data-count"); 
+	cnt = parseInt(cnt);
+	$(".checkout").attr("data-count" , cnt + 1);
+	
+});
+
+
 
 (function() {
 				[].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
