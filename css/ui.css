@@ -19,18 +19,23 @@ ul {
 }
  
 section , div  {
-   --mdc-theme-primary: #7ccdbd;
-   --mdc-theme-secondary: #7ccdbd;
+   --mdc-theme-primary: #eff9e6;
+   --mdc-theme-secondary: #eff9e6;
 
 }
 
-div {
-
+#add-to-csv.active {
+  color: #b13a3a;
 }
+
+#add-to-csv.added {
+  color: #8fb368;
+}
+
+
 div , a {
-	--mdc-theme-accent: #7ccdbd;
+	--mdc-theme-accent: #eff9e6;
 	font-weight: 300;
-	font-size: 14px;
 	color: #1d2531;
 }   
 
@@ -45,6 +50,11 @@ hr {
   background-color:#fff;
   height:1px;
   width:100%;
+}
+
+.inline-left {
+  display: inline;
+  float: left;
 }
 
 .mdc-tab {
@@ -73,6 +83,7 @@ a.tooltips span {
   visibility: hidden;
   border-radius: 6px;
 }
+
 a.tooltips span:after {
   content: '';
   position: absolute;
@@ -196,15 +207,15 @@ ul.project-links li a  {
   color: #d1d1d1
 }
 .border-bottom {
-	border-bottom: 1px solid #7ccdbd;
+	border-bottom: 1px solid #eff9e6;
 }
 
 .border-left {
-	border-left: 1px solid #7ccdbd;
+	border-left: 1px solid #eff9e6;
 }
 
 .border-right {
-	border-right: 1px solid #7ccdbd;
+	border-right: 1px solid #eff9e6;
 }
 
 .mdc-typography--display1 {

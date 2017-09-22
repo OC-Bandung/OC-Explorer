@@ -11,6 +11,7 @@
     <link rel=stylesheet href="css/timeline.css">
     <link rel=stylesheet href="css/checkout.css">
     <link rel=stylesheet href="css/tooltip.css">
+    <link rel=stylesheet href="css/glossary.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
@@ -38,14 +39,14 @@
                     <ul class="list-inline">
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small">
-                        <a href="#"> <img class="icon" src="img/icon-glossary.png"> </a>
+                        <a href="#"> <i class="material-icons">chrome_reader_mode</i> </a>
                     </span>
                             <span>
-                     <a href="#">  GLOSSARY </a></span>
+                     <a class="js-glossary-toggle">  GLOSSARY </a></span>
                         </li>
                         <li class="padding-right-large list-inline">
                             <span class="padding-right-small"> 
-                      <a href="#">  <img class="icon" src="img/icon-information.png"> </a></span>
+                      <a href="#">  <i class="material-icons">help</i> </a></span>
                             <span> <a href="#"> FAQ </a></span>
                         </li>
                     </ul>
@@ -53,8 +54,11 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 pull-right">
                     <ul class="list-inline">
                         <li class="padding-right-large list-inline">
-                            <span> <img class="padding-right-small" src="img/icon-download.png">Download CSVs</span>
-                            <div class="checkout">
+                            <span>
+                                <span class="inline-left"> <i class="material-icons">file_download</i></span>
+                                <span class="inline-left" >Download CSVs</span>
+                            </span>
+                            <div data-count="0" class="checkout">
                                 <a class="checkout__button" href="#">   </a>
                                 <div class="checkout__order">
                                     <div class="checkout__order-inner">
@@ -117,10 +121,10 @@
                                 <!-- /checkout__order -->
                         </li>
                         <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"> <a href="#">  <img class="icon" src="img/icon-json.png"> </a></span> <span> <a href="#"> Connect to JSON </a></span>
+                            <span class="padding-right-small"> <a href="#"> <i class="material-icons">code</i> </a></span> <span> <a href="#"> Connect to JSON </a></span>
                         </li>
                         <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"><a href="#"> <img class="icon" src="img/icon-subscribe.png"> </a></span>
+                            <span class="padding-right-small"><a href="#"> <i class="material-icons">rss_feed</i></a></span>
                             <span> <a href="#">  Subscribe </a></span>
                         </li>
                         </div>
@@ -146,10 +150,10 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
-                        <a href="#"><img src="img/icon-add-csv.png"> </a> <a href="#">   add to downloads </a>
-                        <div class="mdc-typography--display1"> Belanja Makanan dan Minuman Kegiatan : Pertemuan Integrasi pembinaan pelayanan kesehatan khusus
-                             <!--  (tbl_pekerjaan.namapekerjaan) , (tender.tender_title) -->
-                        </div>
+ 
+                        <a id="add-to-csv" class="active" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text"  href="#">   add to downloads </a>
+                        <div id="contract_name" class="mdc-typography--display1"> Contract Name</div>
+ 
                     </div>
                     <div>
                         <p> <span class="mdc-typography--subheading3"> Identification No: </span> ocds-afzrfb-18  </p>
@@ -997,16 +1001,24 @@
         </div>
     </section>
 
-<!-- 
-    <section>
-            <div id="chart-tender" class="bar-chart">
-                <ul>
-                <li data="23"></li>
-                <li data="50"></li>
-                </ul>
-            </div>
+ 
 
-    </section> -->
+  <!-- glossary section -->
+    <section>
+          <div id="glossary" class="glossary" aria-describedby="glossary-result" aria-hidden="true">
+            <button title="Close glossary-button"  class="js-glossary-close glossary-button button--close toggle" >
+                <span class="u-visually-hidden">Hide glossary</span>
+            </button>
+            <h2>Glossary</h2>
+            
+            <label for="glossary-search" class="label">Filter glossary terms</label>
+            <input id="glossary-search" class="js-glossary-search" type="search" placeholder="e.g. SKPD">
+            <div class="glossary__content" id="glossary-result">
+              <ul class="js-glossary-list "></ul>
+            </div>
+          </div>    
+
+    </section>
  
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
@@ -1015,6 +1027,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/glossary.js"></script>
 </body>
 
 </html>

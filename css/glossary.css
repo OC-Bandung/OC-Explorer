@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.glossary {
+  background: #000;
+  border-left: 1px solid #205493;
+  width: 30rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5rem;
+  transition: left .2s;
+  color: white;
+}
+
+.glossary__definition   {
+  color: white;
+}
+
+.glossary[aria-hidden=true] {
+  left: -30rem;
+}
+
+.glossary div[aria-hidden=true] {
+  display: none !important;
+}
+
+
+.glossary__term , .glossary-button {
+  background-color: #eff9e6;
+  border: 1px solid #eff9e6;
+  
+}
+
+
+.glossary__defintion {
+  color: white;
+}
+
+.js-accordion button {
+  width: 100%;
+}
+
+.accordion-trigger--expanded {
+  background-color: #112e51;
+}

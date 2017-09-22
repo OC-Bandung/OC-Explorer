@@ -10,6 +10,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.checkout:after {
+  content: attr(data-count);
+  position: absolute;
+  background: #b13a3a;
+  height: 20px;
+  top: -10px;
+  font-size: 10px;
+  left: -10px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid #b13a3a;
+  font-weight: bold;
+}
+
 .checkout__button {
     color: transparent;
     position: relative;
