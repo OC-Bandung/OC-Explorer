@@ -24,6 +24,21 @@ section , div  {
 
 }
 
+.calendar i {
+  vertical-align: middle;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.month {
+  border-bottom: 1px solid lightgray;
+
+}
+ 
+
 #add-to-csv.active {
   color: #b13a3a;
 }

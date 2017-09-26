@@ -1,53 +1,66 @@
 $(".mdc-tab").click(function() {
- 
-	$(this).parent().find('a.mdc-tab').removeClass("mdc-tab--active");
-	$(this).addClass("mdc-tab--active");
+
+    $(this).parent().find('a.mdc-tab').removeClass("mdc-tab--active");
+    $(this).addClass("mdc-tab--active");
 
 });
 
 $("#add-to-csv").click(function() {
- 
-	$(this).html('<i class="material-icons">playlist_add_check</i>');
-	$(this).removeClass('active');
-	$(this).addClass('added');
-	$("#add-to-csv-text").text ("contract was added");
-	$("#add-to-csv-text").css("color" , "darkgray");
-	var cnt = $(".checkout").attr("data-count"); 
-	cnt = parseInt(cnt);
-	$(".checkout").attr("data-count" , cnt + 1);
-	
+
+    $(this).html('<i class="material-icons">playlist_add_check</i>');
+    $(this).removeClass('active');
+    $(this).addClass('added');
+    $("#add-to-csv-text").text("contract was added");
+    $("#add-to-csv-text").css("color", "darkgray");
+    var cnt = $(".checkout").attr("data-count");
+    cnt = parseInt(cnt);
+    $(".checkout").attr("data-count", cnt + 1);
+
+});
+
+$("#planning-schedule").click(function(e) {
+    e.preventDefault();
+    $("#planning-schedule-inner").removeClass("hidden");
+    $("#planning-details-inner").addClass("hidden");
+
+});
+
+$("#planning-details").click(function(e) {
+    e.preventDefault();
+    $("#planning-schedule-inner").addClass("hidden");
+    $("#planning-details-inner").removeClass("hidden");
+
 });
 
 
-
 (function() {
-				[].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
-					var openCtrl = el.querySelector( '.checkout__button' ),
-						closeCtrls = el.querySelectorAll( '.checkout__cancel' );
+    [].slice.call(document.querySelectorAll('.checkout')).forEach(function(el) {
+        var openCtrl = el.querySelector('.checkout__button'),
+            closeCtrls = el.querySelectorAll('.checkout__cancel');
 
-					openCtrl.addEventListener( 'click', function(ev) {
-						ev.preventDefault();
-						classie.add( el, 'checkout--active' );
-					} );
+        openCtrl.addEventListener('click', function(ev) {
+            ev.preventDefault();
+            classie.add(el, 'checkout--active');
+        });
 
-					[].slice.call( closeCtrls ).forEach( function( ctrl ) {
-						ctrl.addEventListener( 'click', function() {
-							classie.remove( el, 'checkout--active' );
-						} );
-					} );
-				} );
-			})();
+        [].slice.call(closeCtrls).forEach(function(ctrl) {
+            ctrl.addEventListener('click', function() {
+                classie.remove(el, 'checkout--active');
+            });
+        });
+    });
+})();
 
 
 // $( document ).ready(function() {
 
 // $( "#chart-tender.bar-chart ul li" ).each(function( index ) {
-  	
+
 //   	$(this).css("height", $( this ).attr("data") );
 // });
 
 
-	 
+
 // });
 
 
@@ -65,6 +78,3 @@ $("#add-to-csv").click(function() {
 //     $('.fixedElement').css('background-color', 'transparent');
 //   } 
 // });
-			
-
- 
