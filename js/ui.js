@@ -33,6 +33,27 @@ $("#planning-details").click(function(e) {
 });
 
 
+$("#tender-schedule").click(function(e) {
+    e.preventDefault();
+    console.log("sced");
+    $("#tender-schedule-inner").removeClass("hidden");
+    $("#tender-details-inner").addClass("hidden");
+
+});
+
+$("#tender-details").click(function(e) {
+    e.preventDefault();
+    console.log("sced");
+    $("#tender-schedule-inner").addClass("hidden");
+    $("#tender-details-inner").removeClass("hidden");
+
+});
+
+
+
+
+
+
 (function() {
     [].slice.call(document.querySelectorAll('.checkout')).forEach(function(el) {
         var openCtrl = el.querySelector('.checkout__button'),
@@ -51,30 +72,4 @@ $("#planning-details").click(function(e) {
     });
 })();
 
-
-// $( document ).ready(function() {
-
-// $( "#chart-tender.bar-chart ul li" ).each(function( index ) {
-
-//   	$(this).css("height", $( this ).attr("data") );
-// });
-
-
-
-// });
-
-
-
-// 			$(window).scroll(function(e){ 
-//   var $el = $('.fixedElement'); 
-//   var isPositionFixed = ($el.css('position') == 'fixed');
-//   if ($(this).scrollTop() > 100 && !isPositionFixed){ 
-//     $('.fixedElement').css({'position': 'fixed', 'top': '0px'}); 
-//  	$('.fixedElement').css('background-color', '#eff9e6');
-//   }
-//   if ($(this).scrollTop() < 100 && isPositionFixed)
-//   {
-//     $('.fixedElement').css({'position': 'static', 'top': '0px'}); 
-//     $('.fixedElement').css('background-color', 'transparent');
-//   } 
-// });
+ 

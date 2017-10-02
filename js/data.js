@@ -22,6 +22,7 @@ function load_data(data) {
     planning = release.planning;
     tender = release.tender;
     parties = release.parties;
+
     // award = release.award;
 
     if (release.hasOwnProperty('implementation')) {
@@ -66,7 +67,7 @@ function load_data(data) {
 
     $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")" );
    
-    $("#tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")" );
+    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")" );
 
     var party=[];
 
@@ -86,10 +87,10 @@ function load_data(data) {
 
     $("#planning-budget-year").text(d.getFullYear());
 
+   
+    // progress
     var month_data=[];
     var mn ;
-
-   
 
     for (i=0 ; i< planning.forecasts.length; i++) {
        
@@ -113,6 +114,23 @@ function load_data(data) {
        
     }
  
+    $("#tender-status").text(tender.status);
+    $("#tender-amount-value").text(tender.value.amount);
+    $("#tender-awardCriteria").text(tender.awardCriteriaDetails);
+   
+    var html = "";
+    for (i=0;i<tender.milestones.length; i++) {
+        html = "<li>";
+        html += "<span class='mdc-typography--body2 border-right padding-right-small'>" + tender.milestones[i].dueDate.substring(0, 10) + "</span>";
+        html += "<span class='mdc-typography--body2 padding-left-small'>" + tender.milestones[i].title + "</span>"; 
+        html += "</li>";
+
+        $("ul#tender-milestones").append(html);
+      
+    }
+ 
+    
+    
 
 
 }

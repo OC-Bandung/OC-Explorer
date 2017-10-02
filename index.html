@@ -216,7 +216,7 @@
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Procurement Method</div>
-                                            <div  id="tender-procurementMethod" class="capitalize mdc-typography--body2"></div>
+                                            <div   class="tender-procurementMethod capitalize mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Implementation Unit  </div>
@@ -642,8 +642,8 @@
                         <li>
                             <div class="mdc-toolbar__section--table-style-wrapper">
                                 <nav class="mdc-tab-bar ">
-                                    <a class="mdc-tab mdc-tab--active" href="#one">Details</a>
-                                    <a class="mdc-tab" href="#two">Schedule</a>
+                                    <a id="tender-details" class="mdc-tab mdc-tab--active" href="#">Details</a>
+                                    <a id="tender-schedule" class="mdc-tab" href="#">Schedule</a>
                                     <span class="mdc-tab-bar__indicator"></span>
                                 </nav>
                             </div>
@@ -665,22 +665,22 @@
                                 <div class="mdc-layout-grid__inner ">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large ">
                                         <div> Tender Status </div>
-                                        <div class="mdc-typography--title">Active</div>
+                                        <div id="tender-status" class="capitalize mdc-typography--title"></div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div> Tender Amount </div>
-                                        <div class="mdc-typography--title">Rp 19.16 M </div>
+                                        <div id="tender-amount-value" class="mdc-typography--title"> </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>Award Criteria</div>
-                                        <div class="mdc-typography--subheading2">Lowest Bid</div>
+                                        <div id="tender-awardCriteria" class="mdc-typography--subheading2">Lowest Bid</div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <section class="mdc-card__supporting-text">
+                        <section id="tender-details-inner" class="hidden mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
-                                <div class="mdc-layout-grid__inner">
+                                <div   class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Key Information</u></div>
                                         <div class="padding-top-small">
@@ -689,7 +689,7 @@
                                         </div>
                                         <div class="padding-top-small">
                                             <div>Procurement Method</div>
-                                            <div class="mdc-typography--body2">Competitive</div>
+                                            <div class="tender-procurementMethod capitalize mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-small">
                                             <div>Item Classification</div>
@@ -719,6 +719,24 @@
                                 </div>
                             </div>
                         </section>
+
+                         <section>
+
+                            <div id="tender-schedule-inner"  class="hidden mdc-layout-grid">
+                                <div class=" mdc-layout-grid__inner">
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12">
+                                        <ul id="tender-milestones" class="mdc-list">
+                                        
+                                             
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </section>
+
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline-tender">
@@ -770,6 +788,8 @@
                                 </ul>
                             </div>
                         </section>
+
+                       
                     </div>
                 </div>
             </div>
