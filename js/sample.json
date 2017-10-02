@@ -56,6 +56,38 @@
             "implementationUnit"
           ]
         },
+       
+        {
+          "id": "288",
+          "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)",
+          "tax": "027/1.6/01.08/PBJ/2013",
+          "roles": [
+            "supplier"  
+          ]
+        },
+        {
+          "id": "5",
+          "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON",
+          "tax": "027/1.6/01.08/PBJ/2013",
+          "address": {
+            "streetAddress": "Jl. Terusan Jakarta No. 109"
+          },
+          "roles": [
+            "supplier"  
+          ]
+        },
+        {
+          "id": "s1",
+          "name": "CV. Warna Maripari",
+          "taxid": "027/1.6/01.08/PBJ/2013",
+          "address" : {
+            "streetAddress": "Jl. AH. Nasution no 304"
+
+          },
+          "roles": [
+            "supplier"  
+          ]
+        },
         {
           "id": "1",
           "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK",
@@ -353,20 +385,65 @@
             ]
           }
         ],
+        "numberOfTenderers": 3,
         "tenderers": [
           {
-            "id": "2161260",
-            "name": ""
+            "id": "5",
+            "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON"
           },
           {
-            "id": "GB-COH-22222222",
-            "name": "Lelang Sudah Selesai"
+          "id": "supplier-1",
+          "name": "CV. Warna Maripari",
+          "tax": "027/1.6/01.08/PBJ/2013"
+          },
+         {
+          "id": "288",
+          "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)"
           }
         ]
       },
       "awards": {
         "id": "KodeLelang-2161260",
-        "title": "Belanja Bahan Makanan Dan Minuman Pasien Bulan Januari - Juni 2015"
+        "title": "Belanja Bahan Makanan Dan Minuman Pasien Bulan Januari - Juni 2015",
+        "status": "active",
+        "date": "2017-04-04T00:00:00Z",
+        "value" : {
+          "amount": 2300000,
+          "currency": "IDR"
+        },
+        "suppliers": {
+          "id": "s1",
+          "name": "CV. Warna Maripari"
+        },
+        "items": [
+          {
+            "id": "311336",
+            "name": "Dinding",
+            "quantity": "13.2|1",
+            "unit": [
+                {
+                  "measure": "m2"
+                }
+              ]
+          },
+          {
+            "id": "311334",
+            "name": "pintu kamar mandi",
+            "quantity": "3|1",
+            "unit": [
+                {
+                  "measure": "unit"
+                }
+              ]
+          }
+
+        ],
+        "contractPeriod": [
+          { 
+            "startDate": "2017-03-04T00:00:00Z",
+            "endDate": "2018-08-04T00:00:00Z"
+          }
+        ]
       }
     }
   ]

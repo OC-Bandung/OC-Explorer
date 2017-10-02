@@ -13,7 +13,13 @@ var jqxhr = $.getJSON("js/sample.json", function(data) {
         console.log("complete");
     });
 
- 
+
+function getPartyByID(data,id) {
+  return data.filter(
+      function(data){ return data.id == id }
+  );
+}
+
 
 function load_data(data) {
 
@@ -22,6 +28,7 @@ function load_data(data) {
     planning = release.planning;
     tender = release.tender;
     parties = release.parties;
+    awards = release.awards;
 
     // award = release.award;
 
@@ -130,8 +137,15 @@ function load_data(data) {
       
     }
  
+     $("#awards-supplier-name").text(awards.suppliers.name);
+     $("#awards-value-amount").text(awards.value.amount);
     
+     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
+   
+     winningSupplier = getPartyByID(parties, awards.suppliers.id ); 
 
+     $("#awards-supplier-taxid").text( winningSupplier[0].taxid );
+     $("#awards-supplier-address").text( winningSupplier[0].address.streetAddress );
 
 
 }
