@@ -1,317 +1,455 @@
 {
-    "version": "1.1",
-    "uri": "https://github.com/open-contracting/sample-data/raw/1.1/fictional-example/ocds-afzrfb-000-00001-01-planning.json",
-    "publishedDate": "2009-03-15T14:45:00Z",
-    "publisher": {
-        "name": "BIRMS Integrated Management System"
-    },
-    "license": "http://opendatacommons.org/licenses/pddl/1.0/",
-    "publicationPolicy": "https://github.com/open-contracting/sample-data/",
-    "releases": [ {
-        "ocid": "ocds-afzrfb-3662192",
-        "id": "ocds-afzrfb-3662192-planning",
-        "language": "en",
-        "date": "2016-04-04T00:00:00Z",
-        "initiationType": "tender",
-        "tag": [ "planning" ],
-        "parties": [ {
-            "id": "12",
-            "name": "Kota Bandung",
-            "roles": [ "reviewBody" ],
-            "identifier": {
-                "scheme": "BDG",
-                "id": "1",
-                "legalName": "Pemerintah Kota Bandung"
-            },
-            "address": {
-                "streetAddress": "Jl. Wastukencana No.2",
-                "locality": "Babakan Ciamis",
-                "region": "Sumur Bandung",
-                "postalCode": "40117",
-                "countryName": "Indonesia"
-            },
-            "contactPoint": {
-                "name": "Information Technology Officer",
-                "email": "info@birms.go.id",
-                "url": "http://birms.bandung.go.id"
-            }
-        }, {
+  "version": "1.1",
+  "uri": "https://github.com/open-contracting/sample-data/raw/1.1/fictional-example/ocds-afzrfb-000-00001-01-planning.json",
+  "publishedDate": "2009-03-15T14:45:00Z",
+  "publisher": {
+    "name": "BIRMS Integrated Management System"
+  },
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://github.com/open-contracting/sample-data/",
+  "releases": [
+    {
+      "ocid": "ocds-afzrfb-3662192",
+      "id": "ocds-afzrfb-3662192-planning",
+      "language": "en",
+      "date": "2016-04-04T00:00:00Z",
+      "initiationType": "tender",
+      "tag": [
+        "planning"
+      ],
+      "parties": [
+        {
+          "id": "12",
+          "name": "Kota Bandung",
+          "roles": [
+            "reviewBody"
+          ],
+          "identifier": {
+            "scheme": "BDG",
             "id": "1",
-            "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK",
-            "roles": [ "buyer" ],
-            "identifier": {
-                "scheme": "BDG",
-                "id": "2",
-                "legalName": "DINAS PEMAKAMAN  DAN  PERTAMANAN"
-            },
-            "address": {
-                "streetAddress": "Jl. Wastukencana No.2",
-                "locality": "Babakan Ciamis",
-                "region": "Sumur Bandung",
-                "postalCode": "40117",
-                "countryName": "Indonesia"
-            },
-            "contactPoint": {
-                "name": "Information Technology Officer",
-                "email": "info@birms.go.id",
-                "url": "http://birms.bandung.go.id"
-            }
-        } ],
-        "buyer": {
-            "id": "GB-LAC-E09000003",
-            "name": "London Borough of Barnet"
+            "legalName": "Pemerintah Kota Bandung"
+          },
+          "address": {
+            "streetAddress": "Jl. Wastukencana No.2",
+            "locality": "Babakan Ciamis",
+            "region": "Sumur Bandung",
+            "postalCode": "40117",
+            "countryName": "Indonesia"
+          },
+          "contactPoint": {
+            "name": "Information Technology Officer",
+            "email": "info@birms.go.id",
+            "url": "http://birms.bandung.go.id"
+          }
         },
-        "planning": {
-            "budget": {
-                "id": "APBD",
-                "description": "Anggaran Pendapatan dan Belanja Daerah",
-                "amount": {
-                    "amount": 298400000,
-                    "currency": "IDR"
-                },
-                "project": "Program Peningkatan Kualitas Hidup dan Perlindungan Perempuan",
-                "projectID": "347",
-                "uri": "https://sirup.lkpp.go.id/sirup/rup/detailPaketPenyedia2017/11180775"
-            },
-            "rationale": "Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.",
-            "forecasts": [ {
-                "id": "completionPercent",
-                "title": "Physical progress (percent)",
-                "observations": [ {
-                    "period": {
-                        "startDate": "2017-01-01T00:00:00Z",
-                        "endDate": "2017-02-01T23:59:59Z"
-                    },
-                    "measure": "30",
-                    "unit": {
-                        "name": "percent",
-                        "id": "P1",
-                        "scheme": "UNCEFACT"
-                    }
-                }, {
-                    "period": {
-                        "startDate": "2017-02-01T00:00:00Z",
-                        "endDate": "2017-03-01T23:59:59Z"
-                    },
-                    "measure": "10",
-                    "unit": {
-                        "name": "percent",
-                        "id": "P1",
-                        "scheme": "UNCEFACT"
-                    }
-                } ]
-            } ],
-            "milestones": [ {
-                "id": "1",
-                "type": "financing",
-                "title": "Financing timeline for January",
-                "status": "scheduled",
-                "dueDate": "2017-02-01T00:00:00Z"
-            }, {
-                "id": "2",
-                "type": "financing",
-                "title": "Financing timeline for February",
-                "status": "scheduled",
-                "dueDate": "2017-02-28T00:00:00Z"
-            }, {
-                "id": "3",
-                "type": "financing",
-                "title": "Financing timeline for March",
-                "status": "scheduled",
-                "dueDate": "2017-03-30T00:00:00Z"
-            }, {
-                "id": "4",
-                "type": "financing",
-                "title": "Financing timeline for April",
-                "status": "scheduled",
-                "dueDate": "2017-04-30T00:00:00Z"
-            }, {
-                "id": "5",
-                "type": "financing",
-                "title": "Financing timeline for May",
-                "status": "scheduled",
-                "dueDate": "2017-05-30T00:00:00Z"
-            }, {
-                "id": "6",
-                "type": "financing",
-                "title": "Financing timeline for June",
-                "status": "scheduled",
-                "dueDate": "2017-06-30T00:00:00Z"
-            }, {
-                "id": "7",
-                "type": "financing",
-                "title": "Financing timeline for July",
-                "status": "scheduled",
-                "dueDate": "2017-07-30T00:00:00Z"
-            }, {
-                "id": "8",
-                "type": "financing",
-                "title": "Financing timeline for August",
-                "status": "scheduled",
-                "dueDate": "2017-08-30T00:00:00Z"
-            }, {
-                "id": "9",
-                "type": "financing",
-                "title": "Financing timeline for September",
-                "status": "scheduled",
-                "dueDate": "2017-09-30T00:00:00Z"
-            }, {
-                "id": "10",
-                "type": "financing",
-                "title": "Financing timeline for October",
-                "status": "scheduled",
-                "dueDate": "2017-10-30T00:00:00Z"
-            } ]
+        {
+          "id": "2",
+          "name": "Pokja ULP / Pejabat Pengadaan",
+          "roles": [
+            "procuringEntity"
+          ]
         },
-        "tender": {
-            "id": "ocds-afzrfb-3662192-01-planning",
-            "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
-            "mainProcurementCategory": "works",
-            "status": "planned",
-            "minValue": {
-                "amount": 500000,
-                "currency": "GBP"
-            },
-            "value": {
-                "amount": 1000000,
-                "currency": "GBP"
-            },
-            "procurementMethod": "open",
-            "procurementMethodDetails": "In open procedures, any interested economic operator may submit a tender in response to a contract notice. ",
-            "procurementMethodRationale": "An open competitive tender is required by EU Rules",
-            "awardCriteria": "bestProposal",
-            "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-            "tenderPeriod": {
-                "startDate": "2017-02-01T00:00:00Z",
-                "endDate": "2017-06-01T00:00:00Z"
-            },
-            "enquiryPeriod": {
-                "durationInDays": 14
-            },
-            "contractPeriod": {
-                "startDate": "2010-06-01T00:00:00Z",
-                "endDate": "2011-05-31T23:59:00Z",
-                "durationInDays": 365
-            },
-            "procuringEntity": {
-                "id": "GB-LAC-E09000003",
-                "name": "London Borough of Barnet"
-            },
-            "milestones": [ {
-                "id": "2163260-2",
-                "type": "approval",
-                "title": "Download dokumen pemilihan dan kualifikasi",
-                "description": "Download election and qualification documents",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-3",
-                "type": "engagement",
-                "title": "Penjelasan dokumen lelang",
-                "description": "Explanation of auction documents",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-4",
-                "type": "preProcurement",
-                "title": "Upload Dokumen Penawaran",
-                "description": "Upload Offer Document",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-5",
-                "type": "approval",
-                "title": "Evaluasi penawaran",
-                "description": "Offer evaluation",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-6",
-                "type": "preProcurement",
-                "title": "Evaluasi dokumen kualifikasi dan pembuktian kualifikasi",
-                "description": "Evaluation of qualification documents and qualification verification",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-7",
-                "type": "preProcurement",
-                "title": "Pembuktian kualifikasi",
-                "description": "Proof of qualification",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-8",
-                "type": "approval",
-                "title": "Pembukaan file dokumen penawaran (dokumen penawaran harga, administrasi dan teknis) serta dokumen kualifikasi",
-                "description": "Opening of offer document file (offering price document, administration and technical) as well as qualification document",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-9",
-                "type": "preProcurement",
-                "title": "Upload berita acara hasil pelelangan",
-                "description": "Upload the auction event news",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-9",
-                "type": "approval",
-                "title": "Penetapan pemenang",
-                "description": "Determination of the winner",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            }, {
-                "id": "2163260-9",
-                "type": "approval",
-                "title": "Pengumuman pemenang",
-                "description": "Determination of the winner",
-                "status": "scheduled",
-                "dueDate": "2009-05-01T09:00:00Z"
-            } ],
-            "documents": [ {
-                "id": "3.0",
-                "documentType": "x_consultationDocument",
-                "title": "Consultation on cycle provision",
-                "description": "A consultation document inviting citizen input into cycle provision.",
-                "url": "http://example.com/consultations/cycle-provision/",
-                "datePublished": "2010-02-15T00:00:00Z",
-                "format": "text/html",
-                "language": "en"
-            }, {
-                "id": "4.0",
-                "documentType": "x_map",
-                "title": "Map of affected areas",
-                "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
-                "datePublished": "2010-02-15T00:00:00Z",
-                "format": "offline/print",
-                "language": "en"
-            } ],
-            "items": [ {
-                "id": "1.0",
-                "description": "Cycle lane improvements",
-                "classification": {
-                    "scheme": "CPV",
-                    "id": "45233130.0",
-                    "description": "Construction work for highways",
-                    "uri": "http://cpv.data.ac.uk/code-45233130"
+        {
+          "id": "3",
+          "name": "Satuan Kerja Perangkat Daerah (SKPD)",
+          "roles": [
+            "implementationUnit"
+          ]
+        },
+        {
+          "id": "1",
+          "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK",
+          "roles": [
+            "buyer"
+          ],
+          "identifier": {
+            "scheme": "BDG",
+            "id": "2",
+            "legalName": "DINAS PEMAKAMAN  DAN  PERTAMANAN"
+          },
+          "address": {
+            "streetAddress": "Jl. Wastukencana No.2",
+            "locality": "Babakan Ciamis",
+            "region": "Sumur Bandung",
+            "postalCode": "40117",
+            "countryName": "Indonesia"
+          },
+          "contactPoint": {
+            "name": "Information Technology Officer",
+            "email": "info@birms.go.id",
+            "url": "http://birms.bandung.go.id"
+          }
+        }
+      ],
+      "buyer": {
+        "id": "GB-LAC-E09000003",
+        "name": "London Borough of Barnet"
+      },
+      "planning": {
+        "budget": {
+          "id": "4.03.4.03.01.17.03.5.2.2.17.01",
+          "description": "APBD (Anggaran Pendapatan dan Belanja Daerah)",
+          "amount": {
+            "amount": 298400000,
+            "currency": "IDR"
+          },
+          "project": "Program Peningkatan Kualitas Hidup dan Perlindungan Perempuan",
+          "projectID": "347",
+          "uri": "https://sirup.lkpp.go.id/sirup/rup/detailPaketPenyedia2017/11180775"
+        },
+        "rationale": "Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.",
+        "forecasts": [
+          {
+            "id": "physicalProgress",
+            "title": "Physical progress (percent)",
+            "observations": [
+              {
+                "period": {
+                  "startDate": "2017-02-01T01:00:00Z",
+                  "endDate": "2017-02-01T23:59:59Z"
                 },
-                "quantity": 10,
+                "measure": "10",
                 "unit": {
-                    "name": "Miles",
-                    "id": "SMI",
-                    "scheme": "UNCEFACT",
-                    "value": {
-                        "amount": 100000,
-                        "currency": "GBP"
-                    }
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-03-01T00:00:00Z",
+                  "endDate": "2017-04-01T23:59:59Z"
                 },
-                "additionalClassifications": [ {
-                    "scheme": "CPV",
-                    "id": "45233162-2",
-                    "description": "Cycle path construction work",
-                    "uri": "http://cpv.data.ac.uk/code-45233162.html"
-                } ]
-            } ]
-        } 
-    } ]
+                "measure": "30",
+                "unit": {
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-04-01T00:00:00Z",
+                  "endDate": "2017-05-01T23:59:59Z"
+                },
+                "measure": "30",
+                "unit": {
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-05-01T00:00:00Z",
+                  "endDate": "2017-06-01T23:59:59Z"
+                },
+                "measure": "30",
+                "unit": {
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              }
+            ]
+          },
+          {
+            "id": "financialProgress",
+            "title": "Financial progress (Millions of IDR)",
+            "observations": [
+              {
+                "period": {
+                  "startDate": "2017-02-01T01:00:00Z",
+                  "endDate": "2017-02-01T23:59:59Z"
+                },
+                "measure": "1.5",
+                "unit": {
+                  "name": "IDR",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-03-01T00:00:00Z",
+                  "endDate": "2017-04-01T23:59:59Z"
+                },
+                "measure": "2",
+                "unit": {
+                  "name": "IDR",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-04-01T00:00:00Z",
+                  "endDate": "2017-05-01T23:59:59Z"
+                },
+                "measure": "3.2",
+                "unit": {
+                  "name": "IDR",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              },
+              {
+                "period": {
+                  "startDate": "2017-05-01T00:00:00Z",
+                  "endDate": "2017-06-01T23:59:59Z"
+                },
+                "measure": "4.2",
+                "unit": {
+                  "name": "percent",
+                  "id": "P1",
+                  "scheme": "UNCEFACT"
+                }
+              }
+            ]
+          }
+        ],
+        "milestones": [
+          {
+            "id": "1",
+            "type": "financing",
+            "title": "Financing timeline for January",
+            "status": "scheduled",
+            "dueDate": "2017-02-01T00:00:00Z"
+          },
+          {
+            "id": "2",
+            "type": "financing",
+            "title": "Financing timeline for February",
+            "status": "scheduled",
+            "dueDate": "2017-02-28T00:00:00Z"
+          },
+          {
+            "id": "3",
+            "type": "financing",
+            "title": "Financing timeline for March",
+            "status": "scheduled",
+            "dueDate": "2017-03-30T00:00:00Z"
+          },
+          {
+            "id": "4",
+            "type": "financing",
+            "title": "Financing timeline for April",
+            "status": "scheduled",
+            "dueDate": "2017-04-30T00:00:00Z"
+          },
+          {
+            "id": "5",
+            "type": "financing",
+            "title": "Financing timeline for May",
+            "status": "scheduled",
+            "dueDate": "2017-05-30T00:00:00Z"
+          },
+          {
+            "id": "6",
+            "type": "financing",
+            "title": "Financing timeline for June",
+            "status": "scheduled",
+            "dueDate": "2017-06-30T00:00:00Z"
+          },
+          {
+            "id": "7",
+            "type": "financing",
+            "title": "Financing timeline for July",
+            "status": "scheduled",
+            "dueDate": "2017-07-30T00:00:00Z"
+          },
+          {
+            "id": "8",
+            "type": "financing",
+            "title": "Financing timeline for August",
+            "status": "scheduled",
+            "dueDate": "2017-08-30T00:00:00Z"
+          },
+          {
+            "id": "9",
+            "type": "financing",
+            "title": "Financing timeline for September",
+            "status": "scheduled",
+            "dueDate": "2017-09-30T00:00:00Z"
+          },
+          {
+            "id": "10",
+            "type": "financing",
+            "title": "Financing timeline for October",
+            "status": "scheduled",
+            "dueDate": "2017-10-30T00:00:00Z"
+          }
+        ]
+      },
+      "tender": {
+        "id": "ocds-afzrfb-3662192-01-planning",
+        "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
+        "status": "planned",
+        "minValue": {
+          "amount": 500000,
+          "currency": "GBP"
+        },
+        "value": {
+          "amount": 1000000,
+          "currency": "GBP"
+        },
+        "mainProcurementCategory": "services",
+        "additionalProcurementCategories": "Jasa Konsultans",
+        "procurementMethod": "open",
+        "procurementMethodDetails": "Sayembara Kontes",
+        "procurementMethodRationale": "Based on the Indonesian law of procurement number 482",
+        "awardCriteria": "bestProposal",
+        "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
+        "tenderPeriod": {
+          "startDate": "2017-02-01T00:00:00Z",
+          "endDate": "2017-06-01T00:00:00Z"
+        },
+        "enquiryPeriod": {
+          "durationInDays": 14
+        },
+        "contractPeriod": {
+          "startDate": "2010-06-01T00:00:00Z",
+          "endDate": "2011-05-31T23:59:00Z",
+          "durationInDays": 365
+        },
+        "procuringEntity": {
+          "id": "GB-LAC-E09000003",
+          "name": "London Borough of Barnet"
+        },
+        "milestones": [
+          {
+            "id": "2163260-2",
+            "type": "approval",
+            "title": "Download dokumen pemilihan dan kualifikasi",
+            "description": "Download election and qualification documents",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-3",
+            "type": "engagement",
+            "title": "Penjelasan dokumen lelang",
+            "description": "Explanation of auction documents",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-4",
+            "type": "preProcurement",
+            "title": "Upload Dokumen Penawaran",
+            "description": "Upload Offer Document",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-5",
+            "type": "approval",
+            "title": "Evaluasi penawaran",
+            "description": "Offer evaluation",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-6",
+            "type": "preProcurement",
+            "title": "Evaluasi dokumen kualifikasi dan pembuktian kualifikasi",
+            "description": "Evaluation of qualification documents and qualification verification",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-7",
+            "type": "preProcurement",
+            "title": "Pembuktian kualifikasi",
+            "description": "Proof of qualification",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-8",
+            "type": "approval",
+            "title": "Pembukaan file dokumen penawaran (dokumen penawaran harga, administrasi dan teknis) serta dokumen kualifikasi",
+            "description": "Opening of offer document file (offering price document, administration and technical) as well as qualification document",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-9",
+            "type": "preProcurement",
+            "title": "Upload berita acara hasil pelelangan",
+            "description": "Upload the auction event news",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-9",
+            "type": "approval",
+            "title": "Penetapan pemenang",
+            "description": "Determination of the winner",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          },
+          {
+            "id": "2163260-9",
+            "type": "approval",
+            "title": "Pengumuman pemenang",
+            "description": "Determination of the winner",
+            "status": "scheduled",
+            "dueDate": "2009-05-01T09:00:00Z"
+          }
+        ],
+        "documents": [
+          {
+            "id": "3.0",
+            "documentType": "x_consultationDocument",
+            "title": "Consultation on cycle provision",
+            "description": "A consultation document inviting citizen input into cycle provision.",
+            "url": "http://example.com/consultations/cycle-provision/",
+            "datePublished": "2010-02-15T00:00:00Z",
+            "format": "text/html",
+            "language": "en"
+          },
+          {
+            "id": "4.0",
+            "documentType": "x_map",
+            "title": "Map of affected areas",
+            "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
+            "datePublished": "2010-02-15T00:00:00Z",
+            "format": "offline/print",
+            "language": "en"
+          }
+        ],
+        "items": [
+          {
+            "id": "1.0",
+            "description": "Cycle lane improvements",
+            "classification": {
+              "scheme": "CPV",
+              "id": "45233130.0",
+              "description": "Construction work for highways",
+              "uri": "http://cpv.data.ac.uk/code-45233130"
+            },
+            "quantity": 10,
+            "unit": {
+              "name": "Miles",
+              "id": "SMI",
+              "scheme": "UNCEFACT",
+              "value": {
+                "amount": 100000,
+                "currency": "GBP"
+              }
+            },
+            "additionalClassifications": [
+              {
+                "scheme": "CPV",
+                "id": "45233162-2",
+                "description": "Cycle path construction work",
+                "uri": "http://cpv.data.ac.uk/code-45233162.html"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -33,11 +33,22 @@ section , div  {
   display: none;
 }
 
-.month {
-  border-bottom: 1px solid lightgray;
-
+.capitalize {
+  text-transform: capitalize;
 }
+
+.month {
+  font-weight: normal;
+  background-color: gray;
+  color: #fff;
+  padding: 5px;
  
+}
+
+.month.active {
+  background-color: #000;
+}
+
 
 #add-to-csv.active {
   color: #b13a3a;
@@ -290,6 +301,11 @@ ul.project-links li a  {
 
  .padding-left-small {
   padding-left: 15px;
+ }
+
+ .planning-progress {
+    font-size: 1.2em;
+    padding-top: 15px;
  }
 
 

@@ -189,7 +189,7 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
                                         <div>
                                             <div>Status</div>
-                                            <div class="mdc-typography--body2">Tender / Active</div>
+                                            <div class="mdc-typography--body2"> <span class="contracting-stage"></span>  / Active</div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Planned Procurement Start</div>
@@ -200,31 +200,31 @@
                                             <div id="tender-tenderPeriod-endDate" class="mdc-typography--body2">01.01.2017</div>
                                         </div>
                                         <div class="padding-top-large">
-                                            <div><span id="contracting-stage"></span> Amount</div>
+                                            <div><span class="contracting-stage"></span> Amount</div>
                                             <div class="mdc-typography--body2">12.9 M IDR</div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Budget Source</div>
-                                            <div id="planning-budget-id" class="mdc-typography--body2"></div>
+                                            <div id="planning-budget-description" class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <!-- end of span 4 -->
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>
                                             <div>Procurement Category</div>
-                                            <div class="mdc-typography--body2">Goods / Works / Services</div>
+                                            <div id="tender-mainProcurementCategory" class="capitalize mdc-typography--body2">Goods / Works / Services</div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Procurement Method</div>
-                                            <div class="mdc-typography--body2">Open / Selective / Limited / Direct</div>
+                                            <div  id="tender-procurementMethod" class="capitalize mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-large">
-                                            <div>Implementation Unit</div>
-                                            <div class="mdc-typography--body2">Satuan Kerja Perangkat Daerah (SKPD)</div>
+                                            <div>Implementation Unit  </div>
+                                            <div id="parties-name-implementationUnit" class="mdc-typography--body2"> </div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Procuring Entity</div>
-                                            <div class="mdc-typography--body2">Pokja ULP / Pejabat Pengadaan</div>
+                                            <div id="parties-name-procuringEntity" class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <!-- end of span 4 -->
@@ -267,22 +267,22 @@
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Planning </span>
                 </a>
                         </li>
-                        <li class="padding-right-large">
-                            <a href="#"> 
+                        <li class="tender-stage hidden padding-right-large">
+                            <a href="#tender"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Tender </span>
                 </a>
                         </li>
-                        <li class="padding-right-large">
+                        <li class="awards-stage hidden padding-right-large">
                             <a href="#"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Award </span>
                  </a>
                         </li>
-                        <li class="padding-right-large">
+                        <li class="contract-stage hidden padding-right-large">
                             <a href="#"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Contract </span>
                 </a>
                         </li>
-                        <li class="padding-right-large">
+                        <li class="implementation-stage hidden padding-right-large">
                             <a href="#"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Implementation </span>
                 </a>
@@ -433,30 +433,30 @@
                                         </div>
                                         <div class="padding-top-small">
                                             <div>Budget Code</div>
-                                            <div class="mdc-typography--body2">4.03.4.03.01.17.03.5.2.2.17.01</div>
+                                            <div id="planning-budget-id" class="mdc-typography--body2"> </div>
                                         </div>
                                         <div class="padding-top-small">
                                             <div>Budget Year</div>
-                                            <div class="mdc-typography--body2">2016</div>
+                                            <div id="planning-budget-year" class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Planned Dates</u></div>
-                                        <div class="padding-top-small">
+                                        <div class="tender-stage hidden padding-top-small">
                                             <div>Tender Start</div>
-                                            <div class="mdc-typography--body2">10 May 2015</div>
+                                            <div  class="tender-tenderPeriod-startDate mdc-typography--body2"></div>
                                         </div>
-                                        <div class="padding-top-small">
+                                        <div class="tender-stage hidden padding-top-small">
                                             <div>Tender End Date</div>
-                                            <div class="mdc-typography--body2">20 June 2015</div>
+                                            <div class="tender-tenderPeriod-endDate mdc-typography--body2"> </div>
                                         </div>
-                                        <div class="padding-top-small">
+                                        <div class="contract-stage hidden padding-top-small">
                                             <div>Contract Start</div>
-                                            <div class="mdc-typography--body2">30 June 2016</div>
+                                            <div class="contract-tenderPeriod-startDate mdc-typography--body2"> </div>
                                         </div>
-                                        <div class="padding-top-small">
+                                        <div class="implementation-stage hidden padding-top-small">
                                             <div>Completion Date</div>
-                                            <div class="mdc-typography--body2">01 January 2018</div>
+                                            <div class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
@@ -472,72 +472,156 @@
                                     </div>
                                 </div>
                                 <div id="planning-schedule-inner" class="hidden mdc-layout-grid__inner ">
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                                        <span class="mdc-typography--subheading2"><i class="material-icons">linear_scale</i> Physical Progress </span>
-                                    </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                        <span class="mdc-typography--subheading2"><i class="material-icons">insert_chart</i> Physical Progress </span>
+                                     
                                         <span class="mdc-typography--subheading2"><i class="material-icons">attach_money</i> Financial Progress</span>
                                     </div>
-                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
-                                        <div class="month">January</div>
+                                   
+                                    <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
+                                        <div  class="month">January</div>
+                                        <div class="planning-progress ">
+                                            <i class="hidden material-icons">insert_chart</i>
+                                            <span mn="01" class="planning-physicalProgress">   </span>
+                                         </div>
                                         <div class="planning-progress">
-                                            <i class="material-icons">linear_scale</i> 30%</div>
-                                        <div class="planning-progress"><i class="material-icons">attach_money</i> 2.8M</div>
+                                            <i class="hidden material-icons">attach_money</i>
+                                            <span mn="01" class="planning-financialProgress">   </span>
+                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">February</div>
-                                        <div class="planning-progress"><i class="material-icons">linear_scale</i> 30%</div>
-                                        <div class="planning-progress"><i class="material-icons">attach_money</i> 2.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                             <span mn="02" class="planning-physicalProgress">    </span>
+                                        </div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">attach_money</i> 
+                                            <span mn="02" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">March</div>
-                                        <div class="planning-progress"><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div class="planning-progress"><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="03" class="planning-physicalProgress">   </span>
+                                        </div>
+                                        <div class="planning-progress">
+                                             <i class="hidden material-icons">attach_money</i> 
+                                             <span mn="03" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">April</div>
-                                        <div class="planning-progress"><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div class="planning-progress"><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="04" class="planning-physicalProgress">   </span>
+                                        </div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">attach_money</i> 
+                                             <span mn="04" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">May</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                       
+                                       <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="05" class="planning-physicalProgress">   </span>
+                                        </div>
+
+                                        <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="05" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">June</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                       
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="06" class="planning-physicalProgress">   </span>
+                                        </div>
+
+                                         <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="06" class="planning-financialProgress">   </span>
+                                        </div>
+
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">July</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="07" class="planning-physicalProgress">   </span>
+                                        </div>
+
+                                        <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="07" class="planning-financialProgress">   </span>
+                                        </div>
+
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">August</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="08" class="planning-physicalProgress">   </span>
+                                        </div>
+                                       
+                                       <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="08" class="planning-financialProgress">   </span>
+                                        </div>
+
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">September</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="09" class="planning-physicalProgress">   </span>
+                                        </div>
+
+                                       
+                                        <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="09" class="planning-financialProgress">   </span>
+                                        </div>
+
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">October</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="10" class="planning-physicalProgress">   </span>
+                                        </div>
+                                        <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="10" class="planning-financialProgress">   </span>
+                                        </div>
+
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">November</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="11" class="planning-physicalProgress">   </span>
+                                        </div>
+                                        <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="11" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">December</div>
-                                        <div><i class="material-icons">linear_scale</i> 20%</div>
-                                        <div><i class="material-icons">attach_money</i> 1.8M</div>
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <span mn="12" class="planning-physicalProgress">   </span>
+                                        </div>
+                                       <div class="planning-progress">
+                                             <i class="hidden  material-icons">attach_money</i> 
+                                             <span mn="12" class="planning-financialProgress">   </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -549,12 +633,12 @@
     </section>
     <hr>
     <!--  tender section -->
-    <section id="tender-stage" class="hidden">
+    <section class="tender-stage hidden ">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1 padding-right-large border-right">Tender</li>
+                        <li class="mdc-typography--display1 padding-right-large border-right"><a name="tender">Tender</a></li>
                         <li>
                             <div class="mdc-toolbar__section--table-style-wrapper">
                                 <nav class="mdc-tab-bar ">
@@ -693,7 +777,7 @@
     </section>
     <hr>
     <!-- Award section -->
-    <section id="awards-stage" class="hidden">
+    <section  class="awards-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -824,7 +908,7 @@
     </section>
     <hr>
     <!-- Contract section -->
-    <section id="contract-stage" class="hidden">
+    <section  class="contract-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -924,7 +1008,7 @@
     </section>
     <hr>
     <!-- Implementation section -->
-    <section id="implementation-stage" class=hidden>
+    <section  class="implementation-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
