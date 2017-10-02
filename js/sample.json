@@ -207,9 +207,8 @@
               }
             ]
           }
-        ] 
+        ]
       },
-
       "tender": {
         "id": "ocds-afzrfb-3662192-01-planning",
         "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
@@ -353,13 +352,22 @@
               }
             ]
           }
+        ],
+        "tenderers": [
+          {
+            "id": "2161260",
+            "name": ""
+          },
+          {
+            "id": "GB-COH-22222222",
+            "name": "Lelang Sudah Selesai"
+          }
         ]
-      } , 
-      "implementation" : {
-        "a": "b"
+      },
+      "awards": {
+        "id": "KodeLelang-2161260",
+        "title": "Belanja Bahan Makanan Dan Minuman Pasien Bulan Januari - Juni 2015"
       }
-
-
     }
   ]
 }

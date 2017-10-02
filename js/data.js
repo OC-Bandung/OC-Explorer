@@ -120,6 +120,7 @@ function load_data(data) {
    
     var html = "";
     for (i=0;i<tender.milestones.length; i++) {
+      
         html = "<li>";
         html += "<span class='mdc-typography--body2 border-right padding-right-small'>" + tender.milestones[i].dueDate.substring(0, 10) + "</span>";
         html += "<span class='mdc-typography--body2 padding-left-small'>" + tender.milestones[i].title + "</span>"; 
@@ -130,7 +131,7 @@ function load_data(data) {
     }
  
     
-    
+
 
 
 }
