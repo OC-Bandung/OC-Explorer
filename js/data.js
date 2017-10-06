@@ -136,12 +136,16 @@ function load_data(data) {
 
     }
 
-    $("#awards-supplier-name").text(awards.suppliers.name);
-    $("#awards-value-amount").text(awards.value.amount);
+    
+    $("#awards-supplier-name").text(awards[0].suppliers[0].name);
+    $("#awards-value-amount").text(awards[0].value.amount);
 
     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
 
-    winningSupplier = getPartyByID(parties, awards.suppliers.id);
+
+    winningSupplier = getPartyByID(parties, awards[0].suppliers[0].id);
+
+    
 
     $("#awards-supplier-taxid").text(winningSupplier[0].taxid);
     $("#awards-supplier-address").text(winningSupplier[0].address.streetAddress);
