@@ -33,9 +33,9 @@ $("#planning-details").click(function(e) {
 });
 
 
+
 $("#tender-schedule").click(function(e) {
     e.preventDefault();
-    console.log("sced");
     $("#tender-schedule-inner").removeClass("hidden");
     $("#tender-details-inner").addClass("hidden");
 
@@ -46,6 +46,30 @@ $("#tender-details").click(function(e) {
     console.log("sced");
     $("#tender-schedule-inner").addClass("hidden");
     $("#tender-details-inner").removeClass("hidden");
+
+});
+
+$("#awards-details").click(function(e) {
+    e.preventDefault();
+    $("#awards-winner-inner").addClass("hidden");
+    $("#awards-bidders-inner").addClass("hidden");
+    $("#awards-details-inner").removeClass("hidden");
+
+});
+
+$("#awards-winner").click(function(e) {
+    e.preventDefault();
+    $("#awards-details-inner").addClass("hidden");
+    $("#awards-bidders-inner").addClass("hidden");
+    $("#awards-winner-inner").removeClass("hidden");
+
+});
+
+$("#awards-bidders").click(function(e) {
+    e.preventDefault();
+    $("#awards-winner-inner").addClass("hidden");
+    $("#awards-details-inner").addClass("hidden");
+    $("#awards-bidders-inner").removeClass("hidden");
 
 });
 

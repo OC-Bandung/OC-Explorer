@@ -14,10 +14,10 @@ var jqxhr = $.getJSON("js/sample.json", function(data) {
     });
 
 
-function getPartyByID(data,id) {
-  return data.filter(
-      function(data){ return data.id == id }
-  );
+function getPartyByID(data, id) {
+    return data.filter(
+        function(data) { return data.id == id }
+    );
 }
 
 
@@ -72,17 +72,17 @@ function load_data(data) {
     $(".tender-tenderPeriod-startDate").text(tender.tenderPeriod.startDate);
     $(".tender-tenderPeriod-endDate").text(tender.tenderPeriod.endDate);
 
-    $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")" );
-   
-    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")" );
+    $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
 
-    var party=[];
+    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
 
-    for (i = 0; i < parties.length; i++) { 
-            party[parties[i].roles] = parties[i].name 
+    var party = [];
+
+    for (i = 0; i < parties.length; i++) {
+        party[parties[i].roles] = parties[i].name
     }
-   
-   
+
+
     $("#parties-name-procuringEntity").text(party["procuringEntity"]);
     $("#parties-name-implementationUnit").text(party["implementationUnit"]);
 
@@ -94,58 +94,94 @@ function load_data(data) {
 
     $("#planning-budget-year").text(d.getFullYear());
 
-   
+
     // progress
-    var month_data=[];
-    var mn ;
+    var month_data = [];
+    var mn;
 
-    for (i=0 ; i< planning.forecasts.length; i++) {
-       
-           
-            for (j=0; j<planning.forecasts[i].observations.length; j++) {
-                mn = planning.forecasts[i].observations[j].period.startDate.substr(5,2);
-                month_data[mn] =  planning.forecasts[i].observations[j].measure;
-                if(planning.forecasts[i].id=="physicalProgress") { 
-                    $(".planning-physicalProgress[mn='" + mn +  "']").text( month_data[mn] + "%" );
-                    $(".planning-physicalProgress[mn='" + mn +  "']").prev().removeClass("hidden");
-                    $(".planning-physicalProgress[mn='" + mn +  "']").parent().prev().addClass("active");
-                  } 
-                 else  if(planning.forecasts[i].id=="financialProgress") {
-                     
-                    $(".planning-financialProgress[mn='" + mn +  "']").text( month_data[mn] + "M IDR" );
-                    $(".planning-financialProgress[mn='" + mn +  "']").prev().removeClass("hidden");
+    for (i = 0; i < planning.forecasts.length; i++) {
 
-                 }
+
+        for (j = 0; j < planning.forecasts[i].observations.length; j++) {
+            mn = planning.forecasts[i].observations[j].period.startDate.substr(5, 2);
+            month_data[mn] = planning.forecasts[i].observations[j].measure;
+            if (planning.forecasts[i].id == "physicalProgress") {
+                $(".planning-physicalProgress[mn='" + mn + "']").text(month_data[mn] + "%");
+                $(".planning-physicalProgress[mn='" + mn + "']").prev().removeClass("hidden");
+                $(".planning-physicalProgress[mn='" + mn + "']").parent().prev().addClass("active");
+            } else if (planning.forecasts[i].id == "financialProgress") {
+
+                $(".planning-financialProgress[mn='" + mn + "']").text(month_data[mn] + "M IDR");
+                $(".planning-financialProgress[mn='" + mn + "']").prev().removeClass("hidden");
 
             }
-       
+
+        }
+
     }
- 
+
     $("#tender-status").text(tender.status);
     $("#tender-amount-value").text(tender.value.amount);
     $("#tender-awardCriteria").text(tender.awardCriteriaDetails);
-   
+
     var html = "";
-    for (i=0;i<tender.milestones.length; i++) {
-      
+    for (i = 0; i < tender.milestones.length; i++) {
+
         html = "<li>";
         html += "<span class='mdc-typography--body2 border-right padding-right-small'>" + tender.milestones[i].dueDate.substring(0, 10) + "</span>";
-        html += "<span class='mdc-typography--body2 padding-left-small'>" + tender.milestones[i].title + "</span>"; 
+        html += "<span class='mdc-typography--body2 padding-left-small'>" + tender.milestones[i].title + "</span>";
         html += "</li>";
 
         $("ul#tender-milestones").append(html);
-      
+
     }
+
+    $("#awards-supplier-name").text(awards.suppliers.name);
+    $("#awards-value-amount").text(awards.value.amount);
+
+    $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
+
+    winningSupplier = getPartyByID(parties, awards.suppliers.id);
+
+    $("#awards-supplier-taxid").text(winningSupplier[0].taxid);
+    $("#awards-supplier-address").text(winningSupplier[0].address.streetAddress);
+
+    html = "";
+    delete winningSupplier[0].roles;
+    var details = JSON.stringify(winningSupplier[0], null, 4);
+    details = details.replace(/["'{]/g, "");
+    details = details.replace(/[},]/g, "<br>");
+    html += "<br>";
+    html += details;
+
+    $("#awards-winner-info").html(html);
+
  
-     $("#awards-supplier-name").text(awards.suppliers.name);
-     $("#awards-value-amount").text(awards.value.amount);
-    
-     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
-   
-     winningSupplier = getPartyByID(parties, awards.suppliers.id ); 
+    var html = "";
+    for (i = 0; i < tender.tenderers.length; i++) {
 
-     $("#awards-supplier-taxid").text( winningSupplier[0].taxid );
-     $("#awards-supplier-address").text( winningSupplier[0].address.streetAddress );
+        html = "<div>";
+        html += tender.tenderers[i].name;
+        supplierDetails = getPartyByID(parties, tender.tenderers[i].id);
 
+        for (j = 0; j < supplierDetails.length; j++) {
+
+            delete supplierDetails[j].roles;
+
+            var details = JSON.stringify(supplierDetails[j], null, 4);
+            details = details.replace(/["'{]/g, "");
+            details = details.replace(/[},]/g, "<br>");
+            html += "<br>";
+            html += details;
+        }
+
+
+        html += "<br> ";
+        html += "</div>";
+
+
+        $("div#awards-bidders-info").append(html);
+
+    }
 
 }

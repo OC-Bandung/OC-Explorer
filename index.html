@@ -807,9 +807,9 @@
                             <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
                                 <div class="mdc-toolbar__section--table-style-wrapper">
                                     <nav class="mdc-tab-bar ">
-                                        <a class="mdc-tab mdc-tab--active" href="#one">Details</a>
-                                        <a class="mdc-tab" href="#two">Winning Bidder</a>
-                                        <a class="mdc-tab" href="#three">List of bidders</a>
+                                        <a id="awards-details"  class="mdc-tab mdc-tab--active" href="#">Details</a>
+                                        <a id="awards-winner" class="mdc-tab" href="#">Winning Bidder</a>
+                                        <a id="awards-bidders" class="mdc-tab" href="#">List of bidders</a>
                                         <span class="mdc-tab-bar__indicator"></span>
                                     </nav>
                                 </div>
@@ -845,7 +845,7 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="mdc-card__supporting-text">
+                        <section  id="awards-details-inner"  class="mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
                                 <div class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
@@ -879,6 +879,30 @@
                                 </div>
                             </div>
                         </section>
+
+                        <section id="awards-winner-inner" class="hidden mdc-card__supporting-text">
+                            <div class="mdc-layout-grid">
+                                <div  class="mdc-layout-grid__inner">
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12 padding-right-large">
+                                        <div id="awards-winner-info"></div>
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section  id="awards-bidders-inner" class="mdc-card__supporting-text hidden">
+                            <div class="mdc-layout-grid">
+                                <div  class=" mdc-layout-grid__inner">
+                                     
+                                     
+                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12 padding-right-large">
+                                        <div id="awards-bidders-info"> </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline">

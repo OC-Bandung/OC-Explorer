@@ -84,6 +84,11 @@
             "streetAddress": "Jl. AH. Nasution no 304"
 
           },
+           "contactPoint": {
+              "name": "Sales Team",
+              "email": "salesteam@bidder.com",
+              "url": "http://website.com/contact/"
+                    },
           "roles": [
             "supplier"  
           ]
