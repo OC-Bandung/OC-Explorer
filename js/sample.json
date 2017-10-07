@@ -363,31 +363,23 @@
         "items": [
           {
             "id": "1.0",
-            "description": "Cycle lane improvements",
+            "description": "Dinding",
             "classification": {
               "scheme": "CPV",
               "id": "45233130.0",
-              "description": "Construction work for highways",
+              "description": "Dinding",
               "uri": "http://cpv.data.ac.uk/code-45233130"
             },
             "quantity": 10,
             "unit": {
-              "name": "Miles",
+              "name": "m2",
               "id": "SMI",
               "scheme": "UNCEFACT",
               "value": {
                 "amount": 100000,
                 "currency": "GBP"
               }
-            },
-            "additionalClassifications": [
-              {
-                "scheme": "CPV",
-                "id": "45233162-2",
-                "description": "Cycle path construction work",
-                "uri": "http://cpv.data.ac.uk/code-45233162.html"
-              }
-            ]
+            } 
           }
         ],
         "numberOfTenderers": 3,

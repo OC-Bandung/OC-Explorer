@@ -5,6 +5,7 @@ function initMap() {
     var infowindow;
 
 
+
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: { lat: -6.917884, lng: 107.602221 }
@@ -12,60 +13,57 @@ function initMap() {
 
     map.setOptions({ styles: styles['silver'] });
 
-
-
+    // Load the GeoJson
     // NOTE: This uses cross-domain XHR, and may not work on older browsers.
     map.data.loadGeoJson('geojson/kota-bandung-level-kecamatan.json');
-
-
 
     map.data.setStyle({
         fillColor: '#7ccdbd',
         strokeWeight: 1
     });
- 
 
-    marker.setMap(map);
+    var marker = new google.maps.Marker;
 
+    //set where the search is happening
     var bandung = new google.maps.LatLng(-6.917884, 107.602221);
 
+    loc = $("#location").text();
+
+    console.log(loc);
     var request = {
         location: bandung,
         radius: '500',
-        query: 'RS Khusus Ibu dan Anak Kota Bandung'
+        query: loc
     };
 
     service = new google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
 
 
-  function callback(results, status) {
-    if (status !== google.maps.places.PlacesServiceStatus.OK) {
-        console.error(status);
-        return;
+    function callback(results, status) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK) {
+            console.error(status);
+            return;
+        }
+        for (var i = 0, result; result = results[i]; i++) {
+            addMarker(result);
+        }
     }
-    for (var i = 0, result; result = results[i]; i++) {
-        addMarker(result);
+
+    function addMarker(place) {
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location,
+            icon: {
+                url: 'img/marker.png',
+                scaledSize: new google.maps.Size(20, 29)
+            }
+        });
+
+
+
     }
 }
-
-function addMarker(place) {
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location,
-    icon: {
-      url: 'img/marker.png',
-      scaledSize: new google.maps.Size(20, 29)
-    }
-  });
-
-
-
-}
-}
-
-
-
 
 
 
