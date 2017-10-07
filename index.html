@@ -59,7 +59,7 @@
                             <span class="inline-left">Download CSVs</span>
                             </span>
                             <div data-count="0" class="checkout">
-                                <a class="checkout__button" href="#">   </a>
+                                <a class="checkout__button" href="#"> Download CSV   </a>
                                 <div class="checkout__order">
                                     <div class="checkout__order-inner">
                                         <table class="checkout__summary">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
-                        <a id="add-to-csv" class="active" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text" href="#">   add to downloads </a>
+                        <a id="add-to-csv"  class=" active" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text" class="active" href="#">   add to downloads </a>
                         <div id="tender-title" class="mdc-typography--display1"></div>
                     </div>
                     <div>
@@ -1058,17 +1058,7 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="mdc-typography--display1 padding-right-large">Implementation</li>
-                        <li class="border-right">
-                            <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                                <div class="mdc-toolbar__section--table-style-wrapper">
-                                    <nav class="mdc-tab-bar ">
-                                        <a class="mdc-tab mdc-tab--active" href="#one">Details</a>
-                                        <a class="mdc-tab" href="#two">Statistics</a>
-                                        <span class="mdc-tab-bar__indicator"></span>
-                                    </nav>
-                                </div>
-                            </div>
-                        </li>
+                         
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
                         </li>
@@ -1215,9 +1205,15 @@
     window.mdc.autoInit();
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGnhhccwog6j_hFmAo8zg1VaYWE_m7Ak&callback=initMap&libraries=places">
+    </script>
+
     <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
+
+    <script type="text/javascript" src="js/map.js"></script>
     
     
 </body>

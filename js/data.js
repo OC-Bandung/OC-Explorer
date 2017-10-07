@@ -33,17 +33,15 @@ function load_data(data) {
 
     // award = release.award;
 
-    if (release.hasOwnProperty('implementation')) {
-        stage = "Implementation";
+   if (release.hasOwnProperty('contract')) {
+        stage = "Contract";
         $(".tender-stage").removeClass("hidden");
         $(".awards-stage").removeClass("hidden");
         $(".contract-stage").removeClass("hidden");
-        $(".implementation-stage").removeClass("hidden");
-    } else if (release.hasOwnProperty('contract')) {
-        stage = "Contract"
-        $(".tender-stage").removeClass("hidden");
-        $(".awards-stage").removeClass("hidden");
-        $(".contract-stage").removeClass("hidden");
+        if (release.contract[0].hasOwnProperty('implementation')) {
+            stage="Implementation";
+             $(".implementation-stage").removeClass("hidden");
+        }
 
     } else if (release.hasOwnProperty('awards')) {
         stage = "Award"
