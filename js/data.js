@@ -29,6 +29,7 @@ function load_data(data) {
     tender = release.tender;
     parties = release.parties;
     awards = release.awards;
+    contract = release.contract;
 
     // award = release.award;
 
@@ -187,5 +188,14 @@ function load_data(data) {
         $("div#awards-bidders-info").append(html);
 
     }
+
+    console.log(contract[0].dateSigned);
+
+    $("#contract-dateSigned").text(contract[0].dateSigned);
+    $("#contract-value-amount").text(contract[0].value.amount);
+    $("#contract-period-endDate").text(contract[0].period.endDate);
+    $("#contract-period-startDate").text(contract[0].period.startDate);
+
+    $("#contract-id").text(contract[0].id);
 
 }

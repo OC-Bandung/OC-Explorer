@@ -234,7 +234,7 @@
                                             <span class="mdc-typography--body2">RS Khusus Ibu dan Anak Kota Bandung </span>
                                             <span class="pull-right"> <img src="img/icon-view-interactive-map.png" alt="view map"> <a class="accent-color-text" href="#"> view interactive map </a></span>
                                         </div>
-                                        <img class="img-responsive" alt="map" src="map/bandung-map.png">
+                                         <div id="map"></div>
                                     </div>
                                 </div>
                             </div>
@@ -975,15 +975,15 @@
                                 <div class="mdc-layout-grid__inner ">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large ">
                                         <div> Signature Date</div>
-                                        <div class="mdc-typography--title">01/04/2018</div>
+                                        <div id="contract-dateSigned" class="mdc-typography--title"></div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div> Contract Amount </div>
-                                        <div class="mdc-typography--title">Rp 19.16 M </div>
+                                        <div id="contract-value-amount" class="mdc-typography--title"></div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>Expected Completion date</div>
-                                        <div class="mdc-typography--subheading2">12</div>
+                                        <div id="contract-period-endDate" class="mdc-typography--subheading2"></div>
                                     </div>
                                 </div>
                             </div>
@@ -995,11 +995,11 @@
                                         <div><u>Key Informationx</u></div>
                                         <div class="padding-top-small">
                                             <div>Start Date</div>
-                                            <div id="contract-contractPeriod-startDate" class="mdc-typography--body2"></div>
+                                            <div id="contract-period-startDate" class="mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-small">
                                             <div>Contract Id</div>
-                                            <div class="mdc-typography--body2">238567</div>
+                                            <div id="contract-id" class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
@@ -1218,6 +1218,8 @@
     <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
+    
+    
 </body>
 
 </html>
