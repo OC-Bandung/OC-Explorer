@@ -5,12 +5,13 @@
 }
 
 .tooltip-wrapper .tooltip {
-  background: #eff9e6;
- 
+  background: #fff;
+  border: 1px solid #b13a3a;
+   border-radius: 5px;
   top: 100%;
   color: black;
   display: block;
-  left: -25px;
+  left: -20px;
   margin-top: 15px;
   opacity: 0;
   padding: 20px;
@@ -49,7 +50,7 @@
 .tooltip-wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
-  border-bottom: solid #eff9e6 10px;
+  border-bottom: solid #b13a3a 10px;
   top: -10px;
   content: " ";
   height: 0;
@@ -61,7 +62,7 @@
   
 .tooltip-wrapper:hover .tooltip {
   opacity: 1;
-  width: 200px;
+  width: 250px;
   pointer-events: auto;
   -webkit-transform: translateY(0px);
      -moz-transform: translateY(0px);
