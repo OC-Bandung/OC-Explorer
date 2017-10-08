@@ -9,8 +9,14 @@
    
 }
 
-ul#timeline {
-  
+div.timestamp {
+    max-width: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word;
+    text-align: center;
+    vertical-align: middle;
+    display: grid;
 }
 
 .li {

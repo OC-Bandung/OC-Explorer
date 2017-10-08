@@ -17,7 +17,7 @@
 
 <body>
     <!-- breadcrumbs -->
-    <section>
+    <section class="hidden">
         <div class="mdc-layout-grid no-padding">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
@@ -32,7 +32,7 @@
         </div>
     </section>
     <!-- floating bar -->
-    <div class="nudge-to-boundary">
+    <div class="nudge-to-boundary hidden">
         <div class="mdc-layout-grid mdc-theme--primary-bg ">
             <div class="mdc-layout-grid__inner mdc-theme--accent">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-1-tablet">
@@ -254,7 +254,7 @@
                     <span class="mdc-typography--display1">Progress Timeline</span>
                     <div class="pull-right">
                         <ul class="list-inline">
-                            <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on time"> <span> On Time </span></li>
+                            <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on-time"> <span> On Time </span></li>
                             <li class="icons padding-right-large"><img src="img/icon-late.png" alt="late"> <span>  Late </span></li>
                             <li class="icons padding-right-large"><img src="img/icon-next-milestone.png" alt="next milestone"> <span> Next Milestone </span></li>
                         </ul>
@@ -263,7 +263,7 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="padding-right-large">
-                            <a href="#"> 
+                            <a href="#planning"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Planning </span>
                 </a>
                         </li>
@@ -273,17 +273,17 @@
                 </a>
                         </li>
                         <li class="awards-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#award"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Award </span>
                  </a>
                         </li>
                         <li class="contract-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#contract"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Contract </span>
                 </a>
                         </li>
                         <li class="implementation-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#implementation"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Implementation </span>
                 </a>
                         </li>
@@ -315,31 +315,31 @@
                                 <div class="timestamp">
                                     <span>SIRUP publication</span>
                                 </div>
-                                <div class="status"></div>
+                                <div class="status on-time"></div>
                             </li>
                             <li class="li complete">
                                 <div class="timestamp">
                                     <span>Tender</span>
                                 </div>
-                                <div class="status"> </div>
+                                <div class="status late"> </div>
                             </li>
                             <li class="li complete">
                                 <div class="timestamp">
                                     <span>Invitation published</span>
                                 </div>
-                                <div class="status"> </div>
+                                <div class="status on-time"> </div>
                             </li>
                             <li class="li complete">
                                 <div class="timestamp">
                                     <span>Submission deadline</span>
                                 </div>
-                                <div class="status"></div>
+                                <div class="status on-time"></div>
                             </li>
-                            <li class="li">
+                            <li class="li complete">
                                 <div class="timestamp">
                                     <span>Award Decision</span>
                                 </div>
-                                <div class="status"></div>
+                                <div class="status late"></div>
                             </li>
                             <li class="li">
                                 <div class="timestamp">
@@ -361,7 +361,7 @@
                             </li>
                             <li class="li">
                                 <div class="timestamp">
-                                    <span>Completion/Delivery</span>
+                                    <span>Completion</span>
                                 </div>
                                 <div class="status"></div>
                             </li>
@@ -802,7 +802,7 @@
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1  padding-right-large ">Award</li>
+                        <li class="mdc-typography--display1  padding-right-large "><a name="award">Award</a></li>
                         <li class="border-right">
                             <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
                                 <div class="mdc-toolbar__section--table-style-wrapper">
@@ -957,7 +957,7 @@
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1 border-right padding-right-large">Contract</li>
+                        <li class="mdc-typography--display1 border-right padding-right-large"><a name="contract">Contract</a></li>
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
                         </li>
@@ -1057,7 +1057,7 @@
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1 padding-right-large">Implementation</li>
+                        <li class="mdc-typography--display1 padding-right-large"><a name="implementation">Implementation</a></li>
                          
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
