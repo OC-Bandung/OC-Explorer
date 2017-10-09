@@ -279,8 +279,8 @@ function buildTimeline(timeline_stage) {
             html +=   ' </li>';                                          
      }                                      
                           
-    $("ul#timeline").html(html);
-    console.log(html);
+    $("ul#main-timeline").html(html);
+ 
 
 }
 
