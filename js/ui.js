@@ -5,6 +5,26 @@ $(".mdc-tab").click(function() {
 
 });
 
+$(".status").hover(function() {
+    status = $(this).attr("class");
+    bgcolor = "#000";
+
+    if ( status.indexOf("on-time") >= 0 ) {
+        
+        bgcolor = "#a8da71";
+    } 
+
+    if ( status.indexOf("late") >= 0 ) {
+      
+        bgcolor = "#b13a3a";
+    } 
+
+
+
+     $(".timeline-status").css("background-color" , bgcolor);
+
+});
+
 $("#add-to-csv, #add-to-csv-text").click(function() {
 
     if ($("#add-to-csv").hasClass("active")) {

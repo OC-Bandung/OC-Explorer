@@ -29,7 +29,6 @@ function initMap() {
 
     loc = $("#location").text();
 
-    console.log(loc);
     var request = {
         location: bandung,
         radius: '500',

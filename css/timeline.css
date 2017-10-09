@@ -69,15 +69,15 @@ div.timestamp {
 
 
 
-.li.complete .status {
+.li.met .status {
     border-top: 4px solid #a8da71;
 }
 
-.li.complete .status:before {
+.li.met .status:before {
     transition: all 200ms ease-in;
 }
 
-.li.complete .status h4 {
+.li.met .status h4 {
     color: #a8da71;
 }
 

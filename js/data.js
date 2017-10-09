@@ -4,13 +4,13 @@ var jqxhr = $.getJSON("js/sample.json", function(data) {
 
     })
     .done(function() {
-        console.log("done")
+        
     })
     .fail(function() {
         console.log("error");
     })
     .always(function() {
-        console.log("complete");
+         
     });
 
 
@@ -20,6 +20,9 @@ function getPartyByID(data, id) {
     );
 }
 
+function custom_sort(a, b) {
+    return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
+}
 
 function load_data(data) {
 
@@ -187,7 +190,7 @@ function load_data(data) {
 
     }
 
-    console.log(contract[0].dateSigned);
+     
 
     $("#contract-dateSigned").text(contract[0].dateSigned);
     $("#contract-value-amount").text(contract[0].value.amount);
@@ -195,5 +198,90 @@ function load_data(data) {
     $("#contract-period-startDate").text(contract[0].period.startDate);
 
     $("#contract-id").text(contract[0].id);
+
+   
+
+   
+    
+    var html = "";
+
+    buildTimeline(planning);
+    buildTimeline(tender);
+    buildTimeline(awards[0]);
+    buildTimeline(contract[0]);
+    buildTimeline(contract[0].implementation);
+   
+        
+
+function buildTimeline(timeline_stage) {
+
+    var timeline_stage = timeline_stage.milestones.filter(function(x){ return x.code == "timeline"; });
+    timeline_stage.sort(custom_sort);
+
+    for (i=0; i< timeline_stage.length; i++) {
+
+            var dueDate = new Date (timeline_stage[i].dueDate);
+               var oneDay = 24*60*60*1000;
+                var diffDays;
+
+            if (timeline_stage[i].status == "met") {
+                var dateMet = new Date (timeline_stage[i].dateMet);
+                
+
+                 
+             
+
+                diffDays = Math.round(((dateMet.getTime() - dueDate.getTime())/(oneDay)));
+
+                if (diffDays == "0") {
+                    timing_code = "on-time";
+                    timing_title = "On Time";
+                    timing_icon = "check_circle";
+                    timing_color = "#a8da71";
+                } else if (diffDays < 0 ) {
+                    timing_code = "on-time";
+                    timing_title = "Early";
+                    timing_icon = "check_circle";
+                    timing_color = "#a8da71";
+                } else if (diffDays > 0 ) {
+                    timing_code = "late";
+                    timing_title = "Late";
+                    timing_icon="assignment_late";
+                    timing_color = "#b13a3a";
+                }
+            } else {
+                diffDays = Math.round(((Math.floor(Date.now())- dueDate.getTime())/(oneDay)));
+                timing_code = "scheduled";
+                timing_title = "Scheduled";
+                timing_icon = "date_range";
+                
+            }
+           
+
+           
+
+            html += '<li class="li ' + timeline_stage[i].status +  '">';
+            html +=     '<div class="timestamp">';
+            html +=         '<span>' +    timeline_stage[i].title  + '</span>';
+            html +=     '</div>';
+            html +=     '<div class="status ' + timing_code + ' tooltip-wrapper">';
+            html +=         '<div class="tooltip">';
+            html +=             '<div class="mdc-typography--body2">Completed on ' + dateMet +  '</div>';
+            html +=              '<div>';
+            html +=                 '<button class="timeline-status mdc-button mdc-button--unelevated" style="background-color:' +  timing_color+ '">';                  
+            html +=                     ' <i class="material-icons mdc-button__icon">' + timing_icon + '</i>';
+            html +=                      timing_title;            
+            html +=                  '</button> ';    
+            html +=                 ' <button class="mdc-button mdc-button--stroked mdc-button--compact" > ' + diffDays + ' days </button>';                               
+            html +=               '</div>'  ;                                  
+            html +=          '</div>';                                          
+            html +=       '</div>' ;                                        
+            html +=   ' </li>';                                          
+     }                                      
+                          
+    $("ul#timeline").html(html);
+    console.log(html);
+
+}
 
 }

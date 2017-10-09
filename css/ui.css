@@ -45,6 +45,11 @@ section , div  {
 
 }
 
+.mdc-button.mdc-button--stroked  {
+  color: #000;
+  border-color: #000;
+}
+
 .month.active {
   background-color: #000;
  
