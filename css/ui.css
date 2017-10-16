@@ -10,6 +10,7 @@ section {
 
 a , a.visited {
 	text-decoration: none;
+  vertical-align: top;
 
 }
 
@@ -36,6 +37,16 @@ section , div  {
 .capitalize {
   text-transform: capitalize;
 }
+
+.floating-bar   {
+   
+  width: 200px;
+  right: 0;
+  padding: 10px;
+
+}
+
+ 
 
 .month {
   font-weight: normal;

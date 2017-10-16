@@ -24,6 +24,7 @@ function custom_sort(a, b) {
     return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
 }
 
+
 function load_data(data) {
 
     var stage;
@@ -38,9 +39,12 @@ function load_data(data) {
 
    if (release.hasOwnProperty('contract')) {
         stage = "Contract";
+        $("#process-status").text(release.contract[0].status); 
+        
         $(".tender-stage").removeClass("hidden");
         $(".awards-stage").removeClass("hidden");
         $(".contract-stage").removeClass("hidden");
+          $("#stage-amount").text(contract[0].value.amount);
         if (release.contract[0].hasOwnProperty('implementation')) {
             stage="Implementation";
              $(".implementation-stage").removeClass("hidden");
@@ -50,11 +54,20 @@ function load_data(data) {
         stage = "Award"
         $(".tender-stage").removeClass("hidden");
         $(".awards-stage").removeClass("hidden");
+        $("#process-status").text(release.awards[0].status); 
+         $("#stage-amount").text(awards[0].value.amount);
+
+
     } else if (release.hasOwnProperty('tender')) {
         stage = "Tender"
         $(".tender-stage").removeClass("hidden");
+         $("#process-status").text(release.tender.status); 
+           $("#stage-amount").text(tender.value.amount);
+
     } else if (release.hasOwnProperty('planning')) {
-        stage = "Planning"
+        stage = "Planning";
+        $("#stage-amount").text(release.planning.budget.amount.amount);
+
     }
 
 
@@ -67,13 +80,19 @@ function load_data(data) {
     $("#planning-rationale").text(planning.rationale);
     $("#planning-budget-description").text(planning.budget.description);
     $("#planning-budget-amount-amount").text(release.planning.budget.amount.amount);
+    
+     
+
     $("#planning-budget-project-id").text(planning.budget.projectID);
     $("#planning-budget-project-name").text(planning.budget.project);
 
     $("#tender-title").text(tender.title);
-    $(".tender-tenderPeriod-startDate").text(tender.tenderPeriod.startDate);
-    $(".tender-tenderPeriod-endDate").text(tender.tenderPeriod.endDate);
 
+     
+    $(".tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
+    $(".tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));
+    
+     
     $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
 
     $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
@@ -93,7 +112,7 @@ function load_data(data) {
     $("#planning-budget-id").text(planning.budget.id);
 
     var d = new Date(tender.tenderPeriod.startDate);
-
+ 
     $("#planning-budget-year").text(d.getFullYear());
 
 
@@ -141,7 +160,7 @@ function load_data(data) {
     
     $("#awards-supplier-name").text(awards[0].suppliers[0].name);
     $("#awards-value-amount").text(awards[0].value.amount);
-
+   
     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
 
 
@@ -192,14 +211,21 @@ function load_data(data) {
 
      
 
+    if (stage=="contract" || stage =="implementation") {
+
+
     $("#contract-dateSigned").text(contract[0].dateSigned);
     $("#contract-value-amount").text(contract[0].value.amount);
+
+
+    
+
     $("#contract-period-endDate").text(contract[0].period.endDate);
     $("#contract-period-startDate").text(contract[0].period.startDate);
 
     $("#contract-id").text(contract[0].id);
 
-   
+   }
 
    
     
@@ -266,7 +292,7 @@ function buildTimeline(timeline_stage) {
             html +=     '</div>';
             html +=     '<div class="status ' + timing_code + ' tooltip-wrapper">';
             html +=         '<div class="tooltip">';
-            html +=             '<div class="mdc-typography--body2">Completed on ' + dateMet +  '</div>';
+            html +=             '<div class="mdc-typography--body2">Completed on ' + moment(dateMet).format('ll') +  '</div>';
             html +=              '<div>';
             html +=                 '<button class="timeline-status mdc-button mdc-button--unelevated" style="background-color:' +  timing_color+ '">';                  
             html +=                     ' <i class="material-icons mdc-button__icon">' + timing_icon + '</i>';

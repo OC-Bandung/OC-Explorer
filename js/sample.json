@@ -139,7 +139,7 @@
             "code": "timeline",
             "title": "HPS Issued",
             "type": "preProcurement",
-            "dueDate": "2017-03-01T01:00:00Z",
+            "dueDate": "2017-01-01T01:00:00Z",
             "dateMet": "2017-01-30T02:01:00Z",
             "status": "met"
           },
@@ -169,8 +169,8 @@
             "observations": [
               {
                 "period": {
-                  "startDate": "2017-02-01T01:00:00Z",
-                  "endDate": "2017-02-01T23:59:59Z"
+                  "startDate": "2017-02-01T00:00:00+07:00",
+                  "endDate": "2017-02-01T00:00:00+07:00"
                 },
                 "measure": "10",
                 "unit": {
@@ -223,7 +223,7 @@
             "observations": [
               {
                 "period": {
-                  "startDate": "2017-02-01T01:00:00Z",
+                  "startDate": "2017-02-03T00:00:00Z",
                   "endDate": "2017-02-01T23:59:59Z"
                 },
                 "measure": "1.5",
