@@ -12,11 +12,16 @@
     <link rel=stylesheet href="css/checkout.css">
     <link rel=stylesheet href="css/tooltip.css">
     <link rel=stylesheet href="css/glossary.css">
+    <link rel=stylesheet href="css/charts.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
 <body>
  
+
+ <div class="sticky-help">
+    <i class="material-icons">help</i>
+</div>
     
     <!-- Contract name and details -->
     <section>
@@ -41,11 +46,7 @@
 
                         <a id="add-to-csv"  class=" active" href="#"><i class="material-icons">code</i> </a> <a id="add-to-csv-text" class="active" href="#">  connect to json </a>
 
-                         
-                            <a class="pull-right">
-                                <i class="material-icons">help</i>
-                            </a>
-
+  
                         <div id="tender-title" class="mdc-typography--display1"></div>
                     </div>
                     <div>
@@ -126,7 +127,7 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
                                         <div>Location</div>
                                         <div>
-                                            <span id="location" class="mdc-typography--body2">RS Khusus Ibu dan Anak Kota Bandung </span>
+                                            <span id="location" class="mdc-typography--body2"></span>
                                             <span class="pull-right"> <img src="img/icon-view-interactive-map.png" alt="view map"> <a class="accent-color-text" href="#"> view interactive map </a></span>
                                         </div>
                                          <div id="map"></div>
@@ -220,7 +221,7 @@
                         <li class="padding-small">
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
-                        <li class="pull-right"><img src="img/icon-information.png" alt="information"></li>
+                        <li class="pull-right"><i class="material-icons">mail_outline</i></li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -478,8 +479,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                           <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -524,7 +524,24 @@
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
-                                        <img src="img/temp-chart-tender.jpg" alt="chart tender">
+                                        <div class="list-inline text-center">
+                                            <div class="padding-right-large "> 
+                                                <div class=" mdc-typography--subheading2"> +13% </div>
+                                                <div class="mdc-typography--caption"> Estimated Cost</div>
+                                                <div class="pretty-border"></div>
+                                            </div>
+                                            <div> 
+                                                 <div class="text-center mdc-typography--subheading2"> +21% </div>
+                                                <div class="mdc-typography--caption"> Budget Amounts</div>
+                                                  <div class="pretty-border"></div>
+                                            </div>
+                                        </div>
+                                         
+                                            <ul id="vertical-chart">
+                                                <li   id="expected"></li>
+                                                <li   id="actual"></li>
+                                            </ul>
+                                        
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Project Links</u></div>
@@ -645,8 +662,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -773,6 +789,7 @@
             </div>
         </div>
     </section>
+
     <hr>
     <!-- Contract section -->
     <section  class="contract-stage hidden">
@@ -788,8 +805,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                           <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -826,7 +842,29 @@
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
-                                        <img src="img/temp-chart-contract.png">
+                                        <div id="horizontal-chart">
+                                            <div class="chart-contract">
+                                                <div class="mdc-typography--caption">CONTRACT AMOUNT</div>
+                                                <div id="chart-contract-amount"> </div>
+                                            </div>
+
+                                            <div class="chart-awards">
+                                                <div class="mdc-typography--caption">AWARD AMOUNT</div>
+                                                <div id="chart-awards-amount"> </div>
+                                            </div>
+
+                                            
+                                            <div class="chart-tender">
+                                                <div class="mdc-typography--caption">TENDER AMOUNT</div>
+                                                <div id="chart-tender-amount"> </div>
+                                            </div>
+
+                                            <div class="chart-budget">
+                                                <div class="mdc-typography--caption">BUDGET AMOUNT</div>
+                                                <div id="chart-budget-amount"> </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Project Links</u></div>
@@ -889,8 +927,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                           <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -1035,6 +1072,7 @@
     <script src="js/classie.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/moment.js"></script>
+    <script src="js/charts.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
 
     <script type="text/javascript" src="js/map.js"></script>

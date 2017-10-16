@@ -29,10 +29,21 @@ section , div  {
   vertical-align: middle;
 }
 
+.pretty-border {
+  height: 10px;
+  width: 50%;
+  margin-top:15px;
+  left:0;
+  right: 0;
+  margin: auto;
+  border-bottom: 2px solid #ffd012;
+
+}
 
 .hidden {
   display: none;
 }
+
 
 .capitalize {
   text-transform: capitalize;
@@ -46,7 +57,15 @@ section , div  {
 
 }
 
- 
+
+.sticky-help {
+  top:3%;
+  position: fixed;
+  right: 0;
+  background: #000;
+  color:#fff;
+  padding:10px;
+}
 
 .month {
   font-weight: normal;

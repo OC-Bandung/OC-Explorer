@@ -25,89 +25,15 @@ function custom_sort(a, b) {
 }
 
 
-function load_data(data) {
+function load_planning(planning) {
 
-    var stage;
-    release = data.releases[0];
-    planning = release.planning;
-    tender = release.tender;
-    parties = release.parties;
-    awards = release.awards;
-    contract = release.contract;
-
-    // award = release.award;
-
-   if (release.hasOwnProperty('contract')) {
-        stage = "Contract";
-        $("#process-status").text(release.contract[0].status); 
-        
-        $(".tender-stage").removeClass("hidden");
-        $(".awards-stage").removeClass("hidden");
-        $(".contract-stage").removeClass("hidden");
-          $("#stage-amount").text(contract[0].value.amount);
-        if (release.contract[0].hasOwnProperty('implementation')) {
-            stage="Implementation";
-             $(".implementation-stage").removeClass("hidden");
-        }
-
-    } else if (release.hasOwnProperty('awards')) {
-        stage = "Award"
-        $(".tender-stage").removeClass("hidden");
-        $(".awards-stage").removeClass("hidden");
-        $("#process-status").text(release.awards[0].status); 
-         $("#stage-amount").text(awards[0].value.amount);
-
-
-    } else if (release.hasOwnProperty('tender')) {
-        stage = "Tender"
-        $(".tender-stage").removeClass("hidden");
-         $("#process-status").text(release.tender.status); 
-           $("#stage-amount").text(tender.value.amount);
-
-    } else if (release.hasOwnProperty('planning')) {
-        stage = "Planning";
-        $("#stage-amount").text(release.planning.budget.amount.amount);
-
-    }
-
-
-    parties = release.parties;
-    //loop in parties, get the role
-
-    $("#ocid").text(release.ocid);
-    $(".contracting-stage").text(stage);
 
     $("#planning-rationale").text(planning.rationale);
     $("#planning-budget-description").text(planning.budget.description);
-    $("#planning-budget-amount-amount").text(release.planning.budget.amount.amount);
-    
-     
+    $("#planning-budget-amount-amount").text(planning.budget.amount.amount);
 
     $("#planning-budget-project-id").text(planning.budget.projectID);
     $("#planning-budget-project-name").text(planning.budget.project);
-
-    $("#tender-title").text(tender.title);
-
-     
-    $(".tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
-    $(".tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));
-    
-     
-    $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
-
-    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
-
-    var party = [];
-
-    for (i = 0; i < parties.length; i++) {
-        party[parties[i].roles] = parties[i].name
-    }
-
-
-    $("#parties-name-procuringEntity").text(party["procuringEntity"]);
-    $("#parties-name-implementationUnit").text(party["implementationUnit"]);
-
-
 
     $("#planning-budget-id").text(planning.budget.id);
 
@@ -140,6 +66,107 @@ function load_data(data) {
         }
 
     }
+
+
+}
+
+
+function load_awards(data) {
+
+}
+
+
+function load_contract(data) {
+       
+        $("#process-status").text(data.status); 
+        
+        $(".tender-stage").removeClass("hidden");
+        $(".awards-stage").removeClass("hidden");
+        $(".contract-stage").removeClass("hidden");
+        $("#stage-amount").text(data.value.amount);
+}
+
+function load_implementation(data) {
+
+
+}
+
+
+
+function load_data(data) {
+
+    var stage;
+    release = data.releases[0];
+    planning = release.planning;
+    tender = release.tender;
+    parties = release.parties;
+    awards = release.awards;
+    contract = release.contract;
+
+    // award = release.award;
+
+   if (release.hasOwnProperty('contract')) {
+        stage = "Contract";
+        load_contract(release.contracts[0]);
+
+        if (release.contracts[0].hasOwnProperty('implementation')) {
+            stage="Implementation";
+             $(".implementation-stage").removeClass("hidden");
+        }
+
+    } else if (release.hasOwnProperty('awards')) {
+        stage = "Award"
+        $(".tender-stage").removeClass("hidden");
+        $(".awards-stage").removeClass("hidden");
+        $("#process-status").text(release.awards[0].status); 
+         $("#stage-amount").text(awards[0].value.amount);
+
+
+    } else if (release.hasOwnProperty('tender')) {
+        stage = "Tender"
+        $(".tender-stage").removeClass("hidden");
+         $("#process-status").text(release.tender.status); 
+           $("#stage-amount").text(tender.value.amount);
+
+    } else if (release.hasOwnProperty('planning')) {
+        stage = "Planning";
+        $("#stage-amount").text(release.planning.budget.amount.amount);
+
+    }
+
+
+    parties = release.parties;
+    //loop in parties, get the role
+
+    $("#ocid").text(release.ocid);
+    $(".contracting-stage").text(stage);
+
+    load_planning(release.planning);
+
+    $("#tender-title").text(tender.title);
+
+     
+    $(".tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
+    $(".tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));
+    
+     
+    $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
+
+    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
+
+    var party = [];
+
+    for (i = 0; i < parties.length; i++) {
+        party[parties[i].roles] = parties[i].name
+    }
+
+
+    $("#parties-name-procuringEntity").text(party["procuringEntity"]);
+    $("#parties-name-implementationUnit").text(party["implementationUnit"]);
+
+
+
+   
 
     $("#tender-status").text(tender.status);
     $("#tender-amount-value").text(tender.value.amount);
@@ -214,32 +241,37 @@ function load_data(data) {
     if (stage=="contract" || stage =="implementation") {
 
 
-    $("#contract-dateSigned").text(contract[0].dateSigned);
-    $("#contract-value-amount").text(contract[0].value.amount);
+    $("#contract-dateSigned").text(contracts[0].dateSigned);
+    $("#contract-value-amount").text(contracts[0].value.amount);
 
 
     
 
-    $("#contract-period-endDate").text(contract[0].period.endDate);
-    $("#contract-period-startDate").text(contract[0].period.startDate);
+    $("#contract-period-endDate").text(contracts[0].period.endDate);
+    $("#contract-period-startDate").text(contracts[0].period.startDate);
 
-    $("#contract-id").text(contract[0].id);
+    $("#contract-id").text(contracts[0].id);
 
    }
 
    
     
-    var html = "";
-
+    
     buildTimeline(planning);
     buildTimeline(tender);
     buildTimeline(awards[0]);
-    buildTimeline(contract[0]);
-    buildTimeline(contract[0].implementation);
+    buildTimeline(contracts[0]);
+    buildTimeline(contracts[0].implementation);
    
-        
+    
+
+}
+
+
 
 function buildTimeline(timeline_stage) {
+
+    html = $("ul#main-timeline").html();
 
     var timeline_stage = timeline_stage.milestones.filter(function(x){ return x.code == "timeline"; });
     timeline_stage.sort(custom_sort);
@@ -305,9 +337,6 @@ function buildTimeline(timeline_stage) {
             html +=   ' </li>';                                          
      }                                      
                           
-    $("ul#main-timeline").html(html);
- 
-
-}
+    $("ul#main-timeline").html(html);    
 
 }

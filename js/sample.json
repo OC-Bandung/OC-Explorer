@@ -1,578 +1,586 @@
-{
-  "version": "1.1",
-  "uri": "https://github.com/open-contracting/sample-data/raw/1.1/fictional-example/ocds-afzrfb-000-00001-01-planning.json",
-  "publishedDate": "2009-03-15T14:45:00Z",
-  "publisher": {
-    "name": "BIRMS Integrated Management System"
-  },
-  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
-  "publicationPolicy": "http://opendatacommons.org",
-  "releases": [
-    {
-      "ocid": "ocds-afzrfb-3662192",
-      "id": "ocds-afzrfb-3662192-planning",
-      "language": "en",
-      "date": "2016-04-04T00:00:00Z",
-      "initiationType": "tender",
-      "tag": [
-        "planning"
-      ],
-      "parties": [
-        {
-          "id": "12",
-          "name": "Kota Bandung",
-          "roles": [
-            "reviewBody"
-          ],
-          "identifier": {
-            "scheme": "BDG",
-            "id": "1",
-            "legalName": "Pemerintah Kota Bandung"
-          },
-          "address": {
-            "streetAddress": "Jl. Wastukencana No.2",
-            "locality": "Babakan Ciamis",
-            "region": "Sumur Bandung",
-            "postalCode": "40117",
-            "countryName": "Indonesia"
-          },
-          "contactPoint": {
-            "name": "Information Technology Officer",
-            "email": "info@birms.go.id",
-            "url": "http://birms.bandung.go.id"
-          }
-        },
-        {
-          "id": "2",
-          "name": "Pokja ULP / Pejabat Pengadaan",
-          "roles": [
-            "procuringEntity"
-          ]
-        },
-        {
-          "id": "3",
-          "name": "Satuan Kerja Perangkat Daerah (SKPD)",
-          "roles": [
-            "implementationUnit"
-          ]
-        },
-        {
-          "id": "288",
-          "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)",
-          "taxid": "027/1.6/01.08/PBJ/2013",
-          "roles": [
-            "supplier"
-          ]
-        },
-        {
-          "id": "5",
-          "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON",
-          "taxid": "027/1.6/01.08/PBJ/2013",
-          "address": {
-            "streetAddress": "Jl. Terusan Jakarta No. 109"
-          },
-          "roles": [
-            "supplier"
-          ]
-        },
-        {
-          "id": "s1",
-          "name": "CV. Warna Maripari",
-          "taxid": "027/1.6/01.08/PBJ/2013",
-          "address": {
-            "streetAddress": "Jl. AH. Nasution no 304"
-          },
-          "contactPoint": {
-            "name": "Sales Team",
-            "email": "salesteam@bidder.com",
-            "url": "http://website.com/contact/"
-          },
-          "roles": [
-            "supplier"
-          ]
-        },
-        {
-          "id": "1",
-          "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK",
-          "roles": [
-            "buyer"
-          ],
-          "identifier": {
-            "scheme": "BDG",
-            "id": "2",
-            "legalName": "DINAS PEMAKAMAN  DAN  PERTAMANAN"
-          },
-          "address": {
-            "streetAddress": "Jl. Wastukencana No.2",
-            "locality": "Babakan Ciamis",
-            "region": "Sumur Bandung",
-            "postalCode": "40117",
-            "countryName": "Indonesia"
-          },
-          "contactPoint": {
-            "name": "Information Technology Officer",
-            "email": "info@birms.go.id",
-            "url": "http://birms.bandung.go.id"
-          }
-        }
-      ],
-      "buyer": {
-        "id": "1",
-        "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK"
-      },
-      "planning": {
-        "budget": {
-          "id": "4.03.4.03.01.17.03.5.2.2.17.01",
-          "description": "APBD (Anggaran Pendapatan dan Belanja Daerah)",
-          "amount": {
-            "amount": 298400000,
-            "currency": "IDR"
-          },
-          "project": "Program Peningkatan Kualitas Hidup dan Perlindungan Perempuan",
-          "projectID": "347",
-          "uri": "https://sirup.lkpp.go.id/sirup/rup/detailPaketPenyedia2017/11180775"
-        },
-        "rationale": "Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.",
-        "milestones": [
-          {
-            "id": "milestone-1",
-            "code": "timeline",
-            "title": "HPS Issued",
-            "type": "preProcurement",
-            "dueDate": "2017-01-01T01:00:00Z",
-            "dateMet": "2017-01-30T02:01:00Z",
-            "status": "met"
-          },
-          {
-            "id": "milestone-2",
-            "code": "timeline",
-            "title": "DPA Issued",
-            "type": "preProcurement",
-            "dueDate": "2017-03-01T01:00:00Z",
-            "dateMet": "2017-05-15T01:00:00Z",
-            "status": "met"
-          },
-          {
-            "id": "milestone-3",
-            "code": "timeline",
-            "title": "SIRUP Application",
-            "type": "preProcurement",
-            "dueDate": "2017-04-16T01:00:00Z",
-            "dateMet": "2017-04-25T01:00:00Z",
-            "status": "met"
-          }
+  {
+    "version": "1.1",
+    "uri": "https://github.com/open-contracting/sample-data/raw/1.1/fictional-example/ocds-afzrfb-000-00001-01-planning.json",
+    "publishedDate": "2009-03-15T14:45:00Z",
+    "publisher": {
+      "name": "BIRMS Integrated Management System"
+    },
+    "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+    "publicationPolicy": "http://opendatacommons.org",
+    "extensions":[
+      "https://raw.githubusercontent.com/open-contracting/ocds_metrics_extension/master/extension.json",
+      "https://raw.githubusercontent.com/open-contracting/ocds_location_extension/master/extension.json"
+    ],
+    "releases": [
+      {
+        "ocid": "ocds-afzrfb-3662192",
+        "id": "ocds-afzrfb-3662192-planning",
+        "language": "en",
+        "date": "2016-04-04T00:00:00Z",
+        "initiationType": "tender",
+        "tag": [
+          "implementation"
         ],
-        "forecasts": [
+        "parties": [
           {
-            "id": "physicalProgress",
-            "title": "Physical progress (percent)",
-            "observations": [
-              {
-                "period": {
-                  "startDate": "2017-02-01T00:00:00+07:00",
-                  "endDate": "2017-02-01T00:00:00+07:00"
-                },
-                "measure": "10",
-                "unit": {
-                  "name": "percent",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-03-01T00:00:00Z",
-                  "endDate": "2017-04-01T23:59:59Z"
-                },
-                "measure": "30",
-                "unit": {
-                  "name": "percent",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-04-01T00:00:00Z",
-                  "endDate": "2017-05-01T23:59:59Z"
-                },
-                "measure": "30",
-                "unit": {
-                  "name": "percent",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-05-01T00:00:00Z",
-                  "endDate": "2017-06-01T23:59:59Z"
-                },
-                "measure": "30",
-                "unit": {
-                  "name": "percent",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              }
-            ]
-          },
-          {
-            "id": "financialProgress",
-            "title": "Financial progress (Millions of IDR)",
-            "observations": [
-              {
-                "period": {
-                  "startDate": "2017-02-03T00:00:00Z",
-                  "endDate": "2017-02-01T23:59:59Z"
-                },
-                "measure": "1.5",
-                "unit": {
-                  "name": "IDR",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-03-01T00:00:00Z",
-                  "endDate": "2017-04-01T23:59:59Z"
-                },
-                "measure": "2",
-                "unit": {
-                  "name": "IDR",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-04-01T00:00:00Z",
-                  "endDate": "2017-05-01T23:59:59Z"
-                },
-                "measure": "3.2",
-                "unit": {
-                  "name": "IDR",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              },
-              {
-                "period": {
-                  "startDate": "2017-05-01T00:00:00Z",
-                  "endDate": "2017-06-01T23:59:59Z"
-                },
-                "measure": "4.2",
-                "unit": {
-                  "name": "percent",
-                  "id": "P1",
-                  "scheme": "UNCEFACT"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "tender": {
-        "id": "ocds-afzrfb-3662192-01-planning",
-        "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
-        "status": "planned",
-        "minValue": {
-          "amount": 500000,
-          "currency": "GBP"
-        },
-        "value": {
-          "amount": 1000000,
-          "currency": "GBP"
-        },
-        "mainProcurementCategory": "services",
-        "additionalProcurementCategories": [
-          "Jasa Konsultans"
-        ],
-        "procurementMethod": "open",
-        "procurementMethodDetails": "Sayembara Kontes",
-        "procurementMethodRationale": "Based on the Indonesian law of procurement number 482",
-        "awardCriteria": "bestProposal",
-        "awardCriteriaDetails": "Best Proposal",
-        "tenderPeriod": {
-          "startDate": "2017-02-01T00:00:00Z",
-          "endDate": "2017-06-01T00:00:00Z"
-        },
-        "enquiryPeriod": {
-          "durationInDays": 14
-        },
-        "contractPeriod": {
-          "startDate": "2010-06-01T00:00:00Z",
-          "endDate": "2011-05-31T23:59:00Z",
-          "durationInDays": 365
-        },
-        "procuringEntity": {
-          "id": "12",
-          "name": "Pokja ULP / Pejabat Pengadaan"
-        },
-        "milestones": [
-          {
-            "id": "milestone-4",
-            "title": "Tender Issued",
-            "code": "timeline",
-            "type": "preProcurement",
-            "status": "met",
-            "dueDate": "2009-05-01T09:00:00Z",
-            "dateMet": "2009-05-01T09:00:00Z"
-          },
-          {
-            "id": "milestone-5",
-            "title": "Invitation Published",
-            "code": "timeline",
-            "type": "preProcurement",
-            "status": "met",
-            "dueDate": "2009-06-01T09:00:00Z",
-            "dateMet": "2009-06-01T09:00:00Z"
-          },
-          {
-            "id": "milestone-6",
-            "title": "Submission Deadline",
-            "code": "timeline",
-            "type": "preProcurement",
-            "status": "met",
-            "dueDate": "2009-06-30T09:00:00Z",
-            "dateMet": "2009-06-30T09:00:00Z"
-          },
-          {
-            "id": "2163260-2",
-            "type": "approval",
-            "title": "Pengumuman pascakualifikasi",
-            "description": "Download election and qualification documents",
-            "status": "scheduled",
-            "dueDate": "2009-05-01T09:00:00Z"
-          },
-          {
-            "id": "2163260-3",
-            "type": "engagement",
-            "title": "Download dokumen pemilihan dan kualifikasi",
-            "description": "Explanation of auction documents",
-            "status": "scheduled",
-            "dueDate": "2009-05-02T09:00:00Z"
-          },
-          {
-            "id": "2163260-4",
-            "type": "preProcurement",
-            "title": "Upload Dokumen Penawaran",
-            "description": "Upload Offer Document",
-            "status": "scheduled",
-            "dueDate": "2009-05-01T09:00:00Z"
-          },
-          {
-            "id": "2163260-5",
-            "type": "approval",
-            "title": "Evaluasi penawaran",
-            "description": "Offer evaluation",
-            "status": "scheduled",
-            "dueDate": "2009-06-01T09:00:00Z"
-          },
-          {
-            "id": "2163260-6",
-            "type": "preProcurement",
-            "title": "Evaluasi dokumen kualifikasi dan pembuktian kualifikasi",
-            "description": "Evaluation of qualification documents and qualification verification",
-            "status": "scheduled",
-            "dueDate": "2009-07-01T09:00:00Z"
-          },
-          {
-            "id": "2163260-7",
-            "type": "preProcurement",
-            "title": "Pembuktian kualifikasi",
-            "description": "Proof of qualification",
-            "status": "scheduled",
-            "dueDate": "2009-08-01T09:00:00Z"
-          },
-          {
-            "id": "2163260-8",
-            "type": "approval",
-            "title": "Pembukaan file dokumen penawaran (dokumen penawaran harga, administrasi dan teknis) serta dokumen kualifikasi",
-            "description": "Opening of offer document file (offering price document, administration and technical) as well as qualification document",
-            "status": "scheduled",
-            "dueDate": "2009-09-01T09:00:00Z"
-          }
-        ],
-        "documents": [
-          {
-            "id": "3.0",
-            "documentType": "x_consultationDocument",
-            "title": "Consultation on cycle provision",
-            "description": "A consultation document inviting citizen input into cycle provision.",
-            "url": "http://example.com/consultations/cycle-provision/",
-            "datePublished": "2010-02-15T00:00:00Z",
-            "format": "text/html",
-            "language": "en"
-          },
-          {
-            "id": "4.0",
-            "documentType": "x_map",
-            "title": "Map of affected areas",
-            "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
-            "datePublished": "2010-02-15T00:00:00Z",
-            "format": "offline/print",
-            "language": "en"
-          }
-        ],
-        "items": [
-          {
-            "id": "1.0",
-            "description": "Dinding",
-            "classification": {
-              "scheme": "CPV",
-              "id": "45233130.0",
-              "description": "Dinding",
-              "uri": "http://cpv.data.ac.uk/code-45233130"
+            "id": "12",
+            "name": "Kota Bandung",
+            "roles": [
+              "reviewBody"
+            ],
+            "identifier": {
+              "scheme": "BDG",
+              "id": "1",
+              "legalName": "Pemerintah Kota Bandung"
             },
-            "quantity": 10,
-            "unit": {
-              "name": "m2",
-              "id": "SMI",
-              "scheme": "UNCEFACT",
-              "value": {
-                "amount": 100000,
-                "currency": "GBP"
-              }
+            "address": {
+              "streetAddress": "Jl. Wastukencana No.2",
+              "locality": "Babakan Ciamis",
+              "region": "Sumur Bandung",
+              "postalCode": "40117",
+              "countryName": "Indonesia"
+            },
+            "contactPoint": {
+              "name": "Information Technology Officer",
+              "email": "info@birms.go.id",
+              "url": "http://birms.bandung.go.id"
             }
-          }
-        ],
-        "numberOfTenderers": 3,
-        "tenderers": [
-          {
-            "id": "5",
-            "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON"
           },
           {
-            "id": "supplier-1",
-            "name": "CV. Warna Maripari",
-            "taxid": "027/1.6/01.08/PBJ/2013"
+            "id": "2",
+            "name": "Pokja ULP / Pejabat Pengadaan",
+            "roles": [
+              "procuringEntity"
+            ]
+          },
+          {
+            "id": "3",
+            "name": "Satuan Kerja Perangkat Daerah (SKPD)",
+            "roles": [
+              "implementationUnit"
+            ]
           },
           {
             "id": "288",
-            "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)"
-          }
-        ]
-      },
-      "awards": [
-        {
-          "id": "KodeLelang-2161260",
-          "title": "Belanja Bahan Makanan Dan Minuman Pasien Bulan Januari - Juni 2015",
-          "status": "active",
-          "date": "2017-04-04T00:00:00Z",
-          "value": {
-            "amount": 2300000,
-            "currency": "IDR"
+            "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)",
+            "taxid": "027/1.6/01.08/PBJ/2013",
+            "roles": [
+              "supplier"
+            ]
           },
-          "suppliers": [
-            {
-              "id": "s1",
-              "name": "CV. Warna Maripari"
+          {
+            "id": "5",
+            "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON",
+            "taxid": "027/1.6/01.08/PBJ/2013",
+            "address": {
+              "streetAddress": "Jl. Terusan Jakarta No. 109"
+            },
+            "roles": [
+              "supplier"
+            ]
+          },
+          {
+            "id": "s1",
+            "name": "CV. Warna Maripari",
+            "taxid": "027/1.6/01.08/PBJ/2013",
+            "address": {
+              "streetAddress": "Jl. AH. Nasution no 304"
+            },
+            "contactPoint": {
+              "name": "Sales Team",
+              "email": "salesteam@bidder.com",
+              "url": "http://website.com/contact/"
+            },
+            "roles": [
+              "supplier"
+            ]
+          },
+          {
+            "id": "1",
+            "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK",
+            "roles": [
+              "buyer"
+            ],
+            "identifier": {
+              "scheme": "BDG",
+              "id": "2",
+              "legalName": "DINAS PEMAKAMAN  DAN  PERTAMANAN"
+            },
+            "address": {
+              "streetAddress": "Jl. Wastukencana No.2",
+              "locality": "Babakan Ciamis",
+              "region": "Sumur Bandung",
+              "postalCode": "40117",
+              "countryName": "Indonesia"
+            },
+            "contactPoint": {
+              "name": "Information Technology Officer",
+              "email": "info@birms.go.id",
+              "url": "http://birms.bandung.go.id"
             }
-          ],
+          }
+        ],
+        "buyer": {
+          "id": "1",
+          "name": "RUMAH SAKIT KHUSUS IBU DAN ANAK"
+        },
+        "planning": {
+          "budget": {
+            "id": "4.03.4.03.01.17.03.5.2.2.17.01",
+            "description": "APBD (Anggaran Pendapatan dan Belanja Daerah)",
+            "amount": {
+              "amount": 298400000,
+              "currency": "IDR"
+            },
+            "project": "Program Peningkatan Kualitas Hidup dan Perlindungan Perempuan",
+            "projectID": "347",
+            "uri": "https://sirup.lkpp.go.id/sirup/rup/detailPaketPenyedia2017/11180775"
+          },
+          "rationale": "Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.",
           "milestones": [
             {
-              "id": "milestone-7",
+              "id": "milestone-1",
               "code": "timeline",
-              "title": "Award Decision",
-              "type": "approval",
+              "title": "HPS Issued",
+              "type": "preProcurement",
+              "dueDate": "2017-01-01T01:00:00Z",
+              "dateMet": "2017-01-30T02:01:00Z",
+              "status": "met"
+            },
+            {
+              "id": "milestone-2",
+              "code": "timeline",
+              "title": "DPA Issued",
+              "type": "preProcurement",
+              "dueDate": "2017-03-01T01:00:00Z",
+              "dateMet": "2017-02-15T01:00:00Z",
+              "status": "met"
+            },
+            {
+              "id": "milestone-3",
+              "code": "timeline",
+              "title": "SIRUP Application",
+              "type": "preProcurement",
+              "dueDate": "2017-04-16T01:00:00Z",
+              "dateMet": "2017-04-25T01:00:00Z",
+              "status": "met"
+            }
+          ],
+          "forecasts": [
+            {
+              "id": "physicalProgress",
+              "title": "Physical progress (percent)",
+              "observations": [
+                {
+                  "period": {
+                    "startDate": "2017-02-01T00:00:00+07:00",
+                    "endDate": "2017-02-01T00:00:00+07:00"
+                  },
+                  "measure": "10",
+                  "unit": {
+                    "name": "percent",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-03-01T00:00:00Z",
+                    "endDate": "2017-04-01T23:59:59Z"
+                  },
+                  "measure": "30",
+                  "unit": {
+                    "name": "percent",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-04-01T00:00:00Z",
+                    "endDate": "2017-05-01T23:59:59Z"
+                  },
+                  "measure": "30",
+                  "unit": {
+                    "name": "percent",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-05-01T00:00:00Z",
+                    "endDate": "2017-06-01T23:59:59Z"
+                  },
+                  "measure": "30",
+                  "unit": {
+                    "name": "percent",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "financialProgress",
+              "title": "Financial progress (Millions of IDR)",
+              "observations": [
+                {
+                  "period": {
+                    "startDate": "2017-02-03T00:00:00Z",
+                    "endDate": "2017-02-01T23:59:59Z"
+                  },
+                  "measure": "1.5",
+                  "unit": {
+                    "name": "IDR",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-03-01T00:00:00Z",
+                    "endDate": "2017-04-01T23:59:59Z"
+                  },
+                  "measure": "2",
+                  "unit": {
+                    "name": "IDR",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-04-01T00:00:00Z",
+                    "endDate": "2017-05-01T23:59:59Z"
+                  },
+                  "measure": "3.2",
+                  "unit": {
+                    "name": "IDR",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                },
+                {
+                  "period": {
+                    "startDate": "2017-05-01T00:00:00Z",
+                    "endDate": "2017-06-01T23:59:59Z"
+                  },
+                  "measure": "4.2",
+                  "unit": {
+                    "name": "percent",
+                    "id": "P1",
+                    "scheme": "UNCEFACT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "tender": {
+          "id": "ocds-afzrfb-3662192-01-planning",
+          "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
+          "status": "planned",
+          "minValue": {
+            "amount": 500000,
+            "currency": "GBP"
+          },
+          "value": {
+            "amount": 1000000,
+            "currency": "GBP"
+          },
+          "mainProcurementCategory": "services",
+          "additionalProcurementCategories": [
+            "Jasa Konsultans"
+          ],
+          "procurementMethod": "open",
+          "procurementMethodDetails": "Sayembara Kontes",
+          "procurementMethodRationale": "Based on the Indonesian law of procurement number 482",
+          "awardCriteria": "bestProposal",
+          "awardCriteriaDetails": "Best Proposal",
+          "tenderPeriod": {
+            "startDate": "2017-02-01T00:00:00Z",
+            "endDate": "2017-06-01T00:00:00Z"
+          },
+          "enquiryPeriod": {
+            "durationInDays": 14
+          },
+          "contractPeriod": {
+            "startDate": "2010-06-01T00:00:00Z",
+            "endDate": "2011-05-31T23:59:00Z",
+            "durationInDays": 365
+          },
+          "procuringEntity": {
+            "id": "12",
+            "name": "Pokja ULP / Pejabat Pengadaan"
+          },
+          "milestones": [
+            {
+              "id": "milestone-4",
+              "title": "Tender Issued",
+              "code": "timeline",
+              "type": "preProcurement",
+              "status": "met",
+              "dueDate": "2009-05-01T09:00:00Z",
+              "dateMet": "2009-05-01T09:00:00Z"
+            },
+            {
+              "id": "milestone-5",
+              "title": "Invitation Published",
+              "code": "timeline",
+              "type": "preProcurement",
+              "status": "met",
+              "dueDate": "2009-06-01T09:00:00Z",
+              "dateMet": "2009-06-01T09:00:00Z"
+            },
+            {
+              "id": "milestone-6",
+              "title": "Submission Deadline",
+              "code": "timeline",
+              "type": "preProcurement",
               "status": "met",
               "dueDate": "2009-06-30T09:00:00Z",
               "dateMet": "2009-06-30T09:00:00Z"
-            }
-          ],
-          "items": [
-            {
-              "id": "311336",
-              "name": "Dinding",
-              "quantity": 13,
-              "unit": {
-                "measure": "m2"
+            },
+              {
+                "id": "milestone-7",
+                "code": "timeline",
+                "title": "Award Decision",
+                "type": "approval",
+                "status": "met",
+                "dueDate": "2009-06-30T09:00:00Z",
+                "dateMet": "2009-06-30T09:00:00Z"
               }
+            ,
+            {
+              "id": "2163260-2",
+              "type": "approval",
+              "title": "Pengumuman pascakualifikasi",
+              "description": "Download election and qualification documents",
+              "status": "scheduled",
+              "dueDate": "2009-05-01T09:00:00Z"
             },
             {
-              "id": "311334",
-              "name": "pintu kamar mandi",
-              "quantity": 31,
-              "unit": {
-                "measure": "unit"
-              }
-            }
-          ],
-          "contractPeriod": {
-            "startDate": "2017-04-04T00:00:00Z",
-            "endDate": "2019-04-04T00:00:00Z"
-          }
-        }
-      ],
-      "contract": [
-        {
-          "id": "0921",
-          "awardID": "KodeLelang-2161260",
-          "title": "Contract Title",
-          "status": "active",
-          "value": {
-            "amount": 2000,
-            "currency": "IDR"
-          },
-          "period": {
-            "startDate": "2019-04-04T00:00:00Z",
-            "endDate": "2019-04-04T00:00:00Z"
-          },
-          "dateSigned": "2017-03-04T00:00:00Z",
-          "milestones": [
-            {
-              "id": "milestone-9",
-              "code": "timeline",
-              "title": "Contract Signing",
-              "type": "approval",
+              "id": "2163260-3",
+              "type": "engagement",
+              "title": "Download dokumen pemilihan dan kualifikasi",
+              "description": "Explanation of auction documents",
               "status": "scheduled",
-              "dueDate": "2017-10-20T09:00:00Z"
+              "dueDate": "2009-05-02T09:00:00Z"
+            },
+            {
+              "id": "2163260-4",
+              "type": "preProcurement",
+              "title": "Upload Dokumen Penawaran",
+              "description": "Upload Offer Document",
+              "status": "scheduled",
+              "dueDate": "2009-05-01T09:00:00Z"
+            },
+            {
+              "id": "2163260-5",
+              "type": "approval",
+              "title": "Evaluasi penawaran",
+              "description": "Offer evaluation",
+              "status": "scheduled",
+              "dueDate": "2009-06-01T09:00:00Z"
+            },
+            {
+              "id": "2163260-6",
+              "type": "preProcurement",
+              "title": "Evaluasi dokumen kualifikasi dan pembuktian kualifikasi",
+              "description": "Evaluation of qualification documents and qualification verification",
+              "status": "scheduled",
+              "dueDate": "2009-07-01T09:00:00Z"
+            },
+            {
+              "id": "2163260-7",
+              "type": "preProcurement",
+              "title": "Pembuktian kualifikasi",
+              "description": "Proof of qualification",
+              "status": "scheduled",
+              "dueDate": "2009-08-01T09:00:00Z"
+            },
+            {
+              "id": "2163260-8",
+              "type": "approval",
+              "title": "Pembukaan file dokumen penawaran (dokumen penawaran harga, administrasi dan teknis) serta dokumen kualifikasi",
+              "description": "Opening of offer document file (offering price document, administration and technical) as well as qualification document",
+              "status": "scheduled",
+              "dueDate": "2009-09-01T09:00:00Z"
             }
           ],
           "documents": [
             {
-              "id": "doc-234",
-              "documentType": "contractNotice",
-              "title": "Contract Notice",
-              "url": "http://bandung.go.id",
-              "datePublished": "2017-03-04T00:00:00Z",
-              "format": "application/pdf",
-              "language": "ind"
+              "id": "3.0",
+              "documentType": "x_consultationDocument",
+              "title": "Consultation on cycle provision",
+              "description": "A consultation document inviting citizen input into cycle provision.",
+              "url": "http://example.com/consultations/cycle-provision/",
+              "datePublished": "2010-02-15T00:00:00Z",
+              "format": "text/html",
+              "language": "en"
             },
             {
-              "id": "doc-234",
-              "documentType": "contractSigned",
-              "title": "Signed Contract",
-              "url": "http://bandung.go.id",
-              "datePublished": "2017-03-04T00:00:00Z",
-              "format": "application/pdf",
-              "language": "ind"
+              "id": "4.0",
+              "documentType": "x_map",
+              "title": "Map of affected areas",
+              "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
+              "datePublished": "2010-02-15T00:00:00Z",
+              "format": "offline/print",
+              "language": "en"
             }
           ],
-          "implementation": {
+          "items": [
+            {
+              "id": "1.0",
+              "description": "Dinding",
+              "classification": {
+                "scheme": "CPV",
+                "id": "45233130.0",
+                "description": "Dinding",
+                "uri": "http://cpv.data.ac.uk/code-45233130"
+              },
+              "deliveryAddress": {
+                "streetAddress": "RS Khusus Ibu dan Anak Kota Bandung",
+                "countryName": "Indonesia"
+              },
+              "quantity": 10,
+              "unit": {
+                "name": "m2",
+                "id": "SMI",
+                "scheme": "UNCEFACT",
+                "value": {
+                  "amount": 100000,
+                  "currency": "GBP"
+                }
+              }
+            }
+          ],
+          "numberOfTenderers": 3,
+          "tenderers": [
+            {
+              "id": "5",
+              "name": "PT. LESTARI AGUNG MULIA/HOTEL NEWTON"
+            },
+            {
+              "id": "supplier-1",
+              "name": "CV. Warna Maripari" 
+             
+            },
+            {
+              "id": "288",
+              "name": "Koperasi Mitra Usaha Sejahtera (KAMUS)"
+            }
+          ]
+        },
+        "awards": [
+          {
+            "id": "KodeLelang-2161260",
+            "title": "Belanja Bahan Makanan Dan Minuman Pasien Bulan Januari - Juni 2015",
+            "status": "active",
+            "date": "2017-04-04T00:00:00Z",
+            "value": {
+              "amount": 2300000,
+              "currency": "IDR"
+            },
+            "suppliers": [
+              {
+                "id": "s1",
+                "name": "CV. Warna Maripari"
+              }
+            ],
+            
+            "items": [
+              {
+                "id": "311336",
+                "description": "Dinding",
+                "quantity": 13,
+                "unit": {
+                  "name": "m2"
+                }
+              },  
+              {
+                "id": "311334",
+                "description": "pintu kamar mandi",
+                "quantity": 31,
+                "unit": {
+                  "name": "unit"
+                }
+              }
+            ],
+            "contractPeriod": {
+              "startDate": "2017-04-04T00:00:00Z",
+              "endDate": "2019-04-04T00:00:00Z"
+            }
+          }
+        ],
+        "contracts": [
+          {
+            "id": "0921",
+            "awardID": "KodeLelang-2161260",
+            "title": "Contract Title",
+            "status": "active",
+            "value": {
+              "amount": 2000,
+              "currency": "IDR"
+            },
+            "period": {
+              "startDate": "2019-04-04T00:00:00Z",
+              "endDate": "2019-04-04T00:00:00Z"
+            },
+            "dateSigned": "2017-03-04T00:00:00Z",
             "milestones": [
               {
-                "id": "milestone-10",
+                "id": "milestone-9",
                 "code": "timeline",
-                "title": "Commencement",
-                "type": "delivery",
+                "title": "Contract Signing",
+                "type": "approval",
                 "status": "scheduled",
-                "dueDate": "2017-11-20T09:00:00Z"
+                "dueDate": "2017-10-20T09:00:00Z"
+              }
+            ],
+            "documents": [
+              {
+                "id": "doc-234",
+                "documentType": "contractNotice",
+                "title": "Contract Notice",
+                "url": "http://bandung.go.id",
+                "datePublished": "2017-03-04T00:00:00Z",
+                "format": "application/pdf",
+                "language": "ind"
               },
               {
-                "id": "milestone-11",
-                "code": "timeline",
-                "title": "Completion",
-                "type": "delivery",
-                "status": "scheduled",
-                "dueDate": "2018-11-20T09:00:00Z"
+                "id": "doc-2345",
+                "documentType": "contractSigned",
+                "title": "Signed Contract",
+                "url": "http://bandung.go.id",
+                "datePublished": "2017-03-04T00:00:00Z",
+                "format": "application/pdf",
+                "language": "ind"
               }
-            ]
+            ],
+            "implementation": {
+              "milestones": [
+                {
+                  "id": "milestone-10",
+                  "code": "timeline",
+                  "title": "Commencement",
+                  "type": "delivery",
+                  "status": "scheduled",
+                  "dueDate": "2017-11-20T09:00:00Z"
+                },
+                {
+                  "id": "milestone-11",
+                  "code": "timeline",
+                  "title": "Completion",
+                  "type": "delivery",
+                  "status": "scheduled",
+                  "dueDate": "2018-11-20T09:00:00Z"
+                }
+              ]
+            }
           }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      }
+    ]
+  }
