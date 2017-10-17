@@ -230,7 +230,7 @@
                     "startDate": "2017-02-03T00:00:00Z",
                     "endDate": "2017-02-01T23:59:59Z"
                   },
-                  "measure": "1.5",
+                  "measure": "150",
                   "unit": {
                     "name": "IDR",
                     "id": "P1",
@@ -242,7 +242,7 @@
                     "startDate": "2017-03-01T00:00:00Z",
                     "endDate": "2017-04-01T23:59:59Z"
                   },
-                  "measure": "2",
+                  "measure": "250",
                   "unit": {
                     "name": "IDR",
                     "id": "P1",
@@ -254,7 +254,7 @@
                     "startDate": "2017-04-01T00:00:00Z",
                     "endDate": "2017-05-01T23:59:59Z"
                   },
-                  "measure": "3.2",
+                  "measure": "400",
                   "unit": {
                     "name": "IDR",
                     "id": "P1",
@@ -266,9 +266,9 @@
                     "startDate": "2017-05-01T00:00:00Z",
                     "endDate": "2017-06-01T23:59:59Z"
                   },
-                  "measure": "4.2",
+                  "measure": "150",
                   "unit": {
-                    "name": "percent",
+                    "name": "IDR",
                     "id": "P1",
                     "scheme": "UNCEFACT"
                   }

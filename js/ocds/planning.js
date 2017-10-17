@@ -32,7 +32,7 @@ function load_planning(planning) {
                 $(".planning-physicalProgress[mn='" + mn + "']").parent().prev().addClass("active");
             } else if (planning.forecasts[i].id == "financialProgress") {
 
-                $(".planning-financialProgress[mn='" + mn + "']").text(month_data[mn] + "M IDR");
+                $(".planning-financialProgress[mn='" + mn + "']").text(month_data[mn] );
                 $(".planning-financialProgress[mn='" + mn + "']").prev().removeClass("hidden");
 
             }
