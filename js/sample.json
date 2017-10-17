@@ -129,7 +129,7 @@
             "id": "4.03.4.03.01.17.03.5.2.2.17.01",
             "description": "APBD (Anggaran Pendapatan dan Belanja Daerah)",
             "amount": {
-              "amount": 298400000,
+              "amount": 920,
               "currency": "IDR"
             },
             "project": "Program Peningkatan Kualitas Hidup dan Perlindungan Perempuan",
@@ -282,11 +282,11 @@
           "title": "Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)",
           "status": "planned",
           "minValue": {
-            "amount": 500000,
+            "amount": 800,
             "currency": "GBP"
           },
           "value": {
-            "amount": 1000000,
+            "amount": 900,
             "currency": "GBP"
           },
           "mainProcurementCategory": "services",
@@ -439,12 +439,13 @@
                 "id": "45233130.0",
                 "description": "Dinding",
                 "uri": "http://cpv.data.ac.uk/code-45233130"
-              },
+               },
+              "quantity": 10,
+
               "deliveryAddress": {
                 "streetAddress": "RS Khusus Ibu dan Anak Kota Bandung",
                 "countryName": "Indonesia"
               },
-              "quantity": 10,
               "unit": {
                 "name": "m2",
                 "id": "SMI",
@@ -480,7 +481,7 @@
             "status": "active",
             "date": "2017-04-04T00:00:00Z",
             "value": {
-              "amount": 2300000,
+              "amount": 750,
               "currency": "IDR"
             },
             "suppliers": [
@@ -521,7 +522,7 @@
             "title": "Contract Title",
             "status": "active",
             "value": {
-              "amount": 2000,
+              "amount": 700,
               "currency": "IDR"
             },
             "period": {

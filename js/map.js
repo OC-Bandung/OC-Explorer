@@ -1,10 +1,15 @@
+
 function initMap() {
+
+    console.log("i waited");
 
     var map;
     var service;
     var infowindow;
+    var loc = "bandung"; //set the default
 
-
+   
+    loc = document.getElementById("tender-deliveryAddress").innerHTML ;
 
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
@@ -27,7 +32,7 @@ function initMap() {
     //set where the search is happening
     var bandung = new google.maps.LatLng(-6.917884, 107.602221);
 
-    loc = $("#location").text();
+   
 
     var request = {
         location: bandung,
