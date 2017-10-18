@@ -31,23 +31,25 @@ function load_awards(awards) {
     var html = "";
     for (i = 0; i < tender.tenderers.length; i++) {
 
-        html = "<div>";
-        html += tender.tenderers[i].name;
+        html = "<div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4 first'>";
         supplierDetails = getPartyByID(parties, tender.tenderers[i].id);
 
         for (j = 0; j < supplierDetails.length; j++) {
 
             delete supplierDetails[j].roles;
+            delete supplierDetails[j].address;
+            
+            for (var key in supplierDetails[j]) {
+              if (supplierDetails[j].hasOwnProperty(key)) {
+                html+= "<strong>" + key + "</strong> : " + supplierDetails[j][key] + "<br>";
+              }
+            }
 
-            var details = JSON.stringify(supplierDetails[j], null, 4);
-            details = details.replace(/["'{]/g, "");
-            details = details.replace(/[},]/g, "<br>");
-            html += "<br>";
-            html += details;
+            
         }
 
 
-        html += "<br> ";
+       
         html += "</div>";
 
 
