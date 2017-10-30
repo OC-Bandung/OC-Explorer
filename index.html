@@ -12,126 +12,13 @@
     <link rel=stylesheet href="css/checkout.css">
     <link rel=stylesheet href="css/tooltip.css">
     <link rel=stylesheet href="css/glossary.css">
+    <link rel=stylesheet href="css/charts.css">
     <link rel=stylesheet href="css/ui.css">
 </head>
 
 <body>
-    <!-- breadcrumbs -->
-    <section>
-        <div class="mdc-layout-grid no-padding">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-                    <ul class="list-inline  mdc-typography--subheading2">
-                        <li class="padding-small"><a href="#">Sector Name </a> > </li>
-                        <li class="padding-small"><a href="#">OPD Name </a> > </li>
-                        <li class="padding-small"><a href="#">Budget Source </a> > </li>
-                        <li class="padding-small"><a href="#">Fiscal Year </a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- floating bar -->
-    <div class="nudge-to-boundary">
-        <div class="mdc-layout-grid mdc-theme--primary-bg ">
-            <div class="mdc-layout-grid__inner mdc-theme--accent">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-1-tablet">
-                    <ul class="list-inline">
-                        <li class="padding-right-large list-inline">
-                            <span class="padding-right-small">
-                        <a href="#"> <i class="material-icons">chrome_reader_mode</i> </a>
-                    </span>
-                            <span>
-                     <a class="js-glossary-toggle">  GLOSSARY </a></span>
-                        </li>
-                        <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"> 
-                      <a href="#">  <i class="material-icons">help</i> </a></span>
-                            <span> <a href="#"> FAQ </a></span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 pull-right">
-                    <ul class="list-inline">
-                        <li class="padding-right-large list-inline">
-                            <span>
-                                <span class="inline-left"> <i class="material-icons">file_download</i></span>
-                            <span class="inline-left">Download CSVs</span>
-                            </span>
-                            <div data-count="0" class="checkout">
-                                <a class="checkout__button" href="#"> Download CSV   </a>
-                                <div class="checkout__order">
-                                    <div class="checkout__order-inner">
-                                        <table class="checkout__summary">
-                                            <thead>
-                                                <tr>
-                                                    <th>Contracts</th>
-                                                    <th>File Size</th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th colspan="2">Total <span class="checkout__total">10 MB</span></th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Contract Name 1 </td>
-                                                    <td>5.90 MB</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Contract Name 2 <span> + files </span></td>
-                                                    <td>1.10 MB</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Contract Name 3</td>
-                                                    <td>1 MB</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Contract Name 4 </td>
-                                                    <td>0.8 MB</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>+ 3 more ...</td>
-                                                    <td>1.1 MB</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- /checkout__summary -->
-                                        <div class="mdc-form-field pull-left">
-                                            <div class="mdc-checkbox">
-                                                <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" />
-                                                <div class="mdc-checkbox__background">
-                                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                        <path class="mdc-checkbox__checkmark__path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                                    </svg>
-                                                    <div class="mdc-checkbox__mixedmark"></div>
-                                                </div>
-                                            </div>
-                                            <label for="my-checkbox">Include supporting documents</label>
-                                        </div>
-                                        <button class="checkout__option checkout__option--silent checkout__cancel"><i class="fa fa-angle-left"></i> Continue Reading</button>
-                                        <button class="checkout__option">Download</button>
-                                        <button class="checkout__close checkout__cancel"><i class="material-icons">close</i></button>
-                                    </div>
-                                    <!-- /checkout__order-inner -->
-                                </div>
-                                <!-- /checkout__order -->
-                            </div>
-                        </li>
-                        <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"> <a href="#"> <i class="material-icons">code</i> </a>
-                            </span>
-                            <span> <a href="#"> Connect to JSON </a></span>
-                        </li>
-                        <li class="padding-right-large list-inline">
-                            <span class="padding-right-small"><a href="#"> <i class="material-icons">rss_feed</i></a></span>
-                            <span> <a href="#">  Subscribe </a></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="sticky-help">
+        <i class="material-icons">help</i>
     </div>
     <!-- Contract name and details -->
     <section>
@@ -150,7 +37,9 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
-                        <a id="add-to-csv"  class=" active" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text" class="active" href="#">   add to downloads </a>
+                        <a id="icon-add-to-csv" class=" active p" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text" class="active padding-right-small" href="#">   add to downloads </a>
+                        <a id="icon-subscribe" class=" active" href="#"><i class="material-icons">rss_feed</i> </a> <a id="add-to-csv-text" class="active padding-right-small" href="#">  subscribe </a>
+                        <a id="icon-connect-to-json" class=" active" href="#"><i class="material-icons">code</i> </a> <a id="add-to-csv-text" class="active" href="#">  connect to json </a>
                         <div id="tender-title" class="mdc-typography--display1"></div>
                     </div>
                     <div>
@@ -158,7 +47,6 @@
                             <span class="mdc-typography--subheading3"> Identification No: </span>
                             <span id="ocid"> </span>
                         </p>
-                     
                         <div class="mdc-typography--subheading3">
                             <span id="planning-city"></span>
                             <span id="planning-buyer"></span>
@@ -189,19 +77,19 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
                                         <div>
                                             <div>Status</div>
-                                            <div class="mdc-typography--body2"> <span class="contracting-stage"></span>  / Active</div>
+                                            <div class="mdc-typography--body2"> <span class="contracting-stage"></span> / <span id="process-status"></span></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Planned Procurement Start</div>
-                                            <div id="tender-tenderPeriod-startDate" class="mdc-typography--body2"></div>
+                                            <div class="mdc-typography--body2 tender-tenderPeriod-startDate"></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Planned Procurement End</div>
-                                            <div id="tender-tenderPeriod-endDate" class="mdc-typography--body2">01.01.2017</div>
+                                            <div class="mdc-typography--body2 tender-tenderPeriod-endDate"></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div><span class="contracting-stage"></span> Amount</div>
-                                            <div class="mdc-typography--body2">12.9 M IDR</div>
+                                            <div id="stage-amount" class="mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Budget Source</div>
@@ -212,14 +100,14 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>
                                             <div>Procurement Category</div>
-                                            <div id="tender-mainProcurementCategory" class="capitalize mdc-typography--body2">Goods / Works / Services</div>
+                                            <div id="tender-mainProcurementCategory" class="capitalize mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-large">
                                             <div>Procurement Method</div>
-                                            <div   class="tender-procurementMethod capitalize mdc-typography--body2"></div>
+                                            <div class="tender-procurementMethod capitalize mdc-typography--body2"></div>
                                         </div>
                                         <div class="padding-top-large">
-                                            <div>Implementation Unit  </div>
+                                            <div>Implementation Unit </div>
                                             <div id="parties-name-implementationUnit" class="mdc-typography--body2"> </div>
                                         </div>
                                         <div class="padding-top-large">
@@ -231,10 +119,10 @@
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
                                         <div>Location</div>
                                         <div>
-                                            <span id="location" class="mdc-typography--body2">RS Khusus Ibu dan Anak Kota Bandung </span>
+                                            <span id="tender-deliveryAddress" class="mdc-typography--body2"> </span>
                                             <span class="pull-right"> <img src="img/icon-view-interactive-map.png" alt="view map"> <a class="accent-color-text" href="#"> view interactive map </a></span>
                                         </div>
-                                         <div id="map"></div>
+                                        <div id="map"></div>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +142,7 @@
                     <span class="mdc-typography--display1">Progress Timeline</span>
                     <div class="pull-right">
                         <ul class="list-inline">
-                            <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on time"> <span> On Time </span></li>
+                            <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on-time"> <span> On Time </span></li>
                             <li class="icons padding-right-large"><img src="img/icon-late.png" alt="late"> <span>  Late </span></li>
                             <li class="icons padding-right-large"><img src="img/icon-next-milestone.png" alt="next milestone"> <span> Next Milestone </span></li>
                         </ul>
@@ -263,7 +151,7 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="padding-right-large">
-                            <a href="#"> 
+                            <a href="#planning"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Planning </span>
                 </a>
                         </li>
@@ -273,17 +161,17 @@
                 </a>
                         </li>
                         <li class="awards-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#award"> 
                   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Award </span>
                  </a>
                         </li>
                         <li class="contract-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#contract"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Contract </span>
                 </a>
                         </li>
                         <li class="implementation-stage hidden padding-right-large">
-                            <a href="#"> 
+                            <a href="#implementation"> 
                 <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Implementation </span>
                 </a>
                         </li>
@@ -291,80 +179,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <div>
-                        <ul class="timeline" id="timeline">
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>HPS issued</span>
-                                </div>
-                                <div class="status on-time tooltip-wrapper">
-                                    <div class="tooltip">
-                                        <div>Date:01/01/2016</div>
-                                        <div>Status: Late by 3 days.</div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>DPA issued</span>
-                                </div>
-                                <div class="status late tooltip-wrapper">
-                                    <div class="tooltip">I am a tooltip! lorem</div>
-                                </div>
-                            </li>
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>SIRUP publication</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>Tender</span>
-                                </div>
-                                <div class="status"> </div>
-                            </li>
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>Invitation published</span>
-                                </div>
-                                <div class="status"> </div>
-                            </li>
-                            <li class="li complete">
-                                <div class="timestamp">
-                                    <span>Submission deadline</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li">
-                                <div class="timestamp">
-                                    <span>Award Decision</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li">
-                                <div class="timestamp">
-                                    <span>Contract Signing</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li">
-                                <div class="timestamp">
-                                    <span>Implementation</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li">
-                                <div class="timestamp">
-                                    <span>Commencement</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
-                            <li class="li">
-                                <div class="timestamp">
-                                    <span>Completion/Delivery</span>
-                                </div>
-                                <div class="status"></div>
-                            </li>
+                        <ul class="timeline" id="main-timeline">
                         </ul>
                     </div>
                 </div>
@@ -397,7 +212,7 @@
                         <li class="padding-small">
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
-                        <li class="pull-right"><img src="img/icon-information.png" alt="information"></li>
+                        <li class="pull-right"><i class="material-icons">mail_outline</i></li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -409,7 +224,7 @@
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div> Budget </div>
-                                        <div id="planning-budget-amount-amount" class="mdc-typography--title">19.16</div>
+                                        <div id="planning-budget-amount-amount" class="mdc-typography--title"></div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>Implementation</div>
@@ -444,7 +259,7 @@
                                         <div><u>Planned Dates</u></div>
                                         <div class="tender-stage hidden padding-top-small">
                                             <div>Tender Start</div>
-                                            <div  class="tender-tenderPeriod-startDate mdc-typography--body2"></div>
+                                            <div class="tender-tenderPeriod-startDate mdc-typography--body2"></div>
                                         </div>
                                         <div class="tender-stage hidden padding-top-small">
                                             <div>Tender End Date</div>
@@ -452,11 +267,11 @@
                                         </div>
                                         <div class="contract-stage hidden padding-top-small">
                                             <div>Contract Start</div>
-                                            <div class="contract-tenderPeriod-startDate mdc-typography--body2"> </div>
+                                            <div id="tender-contractPeriod-startDate" class=" mdc-typography--body2"> </div>
                                         </div>
                                         <div class="implementation-stage hidden padding-top-small">
                                             <div>Completion Date</div>
-                                            <div class="mdc-typography--body2"></div>
+                                            <div id="tender-contractPeriod-endDate" class="mdc-typography--body2"></div>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
@@ -474,153 +289,138 @@
                                 <div id="planning-schedule-inner" class="hidden mdc-layout-grid__inner ">
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                                         <span class="mdc-typography--subheading2"><i class="material-icons">insert_chart</i> Physical Progress </span>
-                                     
                                         <span class="mdc-typography--subheading2"><i class="material-icons">attach_money</i> Financial Progress</span>
                                     </div>
-                                   
                                     <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
-                                        <div  class="month">January</div>
+                                        <div class="month">January</div>
                                         <div class="planning-progress ">
                                             <i class="hidden material-icons">insert_chart</i>
                                             <span mn="01" class="planning-physicalProgress">   </span>
-                                         </div>
+                                        </div>
                                         <div class="planning-progress">
                                             <i class="hidden material-icons">attach_money</i>
                                             <span mn="01" class="planning-financialProgress">   </span>
-                                         </div>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">February</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
-                                             <span mn="02" class="planning-physicalProgress">    </span>
+                                            <i class="hidden material-icons">insert_chart</i>
+                                            <span mn="02" class="planning-physicalProgress">    </span>
                                         </div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">attach_money</i> 
+                                            <i class="hidden material-icons">attach_money</i>
                                             <span mn="02" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">March</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="03" class="planning-physicalProgress">   </span>
                                         </div>
                                         <div class="planning-progress">
-                                             <i class="hidden material-icons">attach_money</i> 
-                                             <span mn="03" class="planning-financialProgress">   </span>
+                                            <i class="hidden material-icons">attach_money</i>
+                                            <span mn="03" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">April</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="04" class="planning-physicalProgress">   </span>
                                         </div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">attach_money</i> 
-                                             <span mn="04" class="planning-financialProgress">   </span>
+                                            <i class="hidden material-icons">attach_money</i>
+                                            <span mn="04" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">May</div>
-                                       
-                                       <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                        <div class="planning-progress">
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="05" class="planning-physicalProgress">   </span>
                                         </div>
-
                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="05" class="planning-financialProgress">   </span>
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="05" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">June</div>
-                                       
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="06" class="planning-physicalProgress">   </span>
                                         </div>
-
-                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="06" class="planning-financialProgress">   </span>
+                                        <div class="planning-progress">
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="06" class="planning-financialProgress">   </span>
                                         </div>
-
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">July</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="07" class="planning-physicalProgress">   </span>
                                         </div>
-
                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="07" class="planning-financialProgress">   </span>
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="07" class="planning-financialProgress">   </span>
                                         </div>
-
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">August</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="08" class="planning-physicalProgress">   </span>
                                         </div>
-                                       
-                                       <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="08" class="planning-financialProgress">   </span>
+                                        <div class="planning-progress">
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="08" class="planning-financialProgress">   </span>
                                         </div>
-
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">September</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="09" class="planning-physicalProgress">   </span>
                                         </div>
-
-                                       
                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="09" class="planning-financialProgress">   </span>
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="09" class="planning-financialProgress">   </span>
                                         </div>
-
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">October</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="10" class="planning-physicalProgress">   </span>
                                         </div>
                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="10" class="planning-financialProgress">   </span>
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="10" class="planning-financialProgress">   </span>
                                         </div>
-
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">November</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="11" class="planning-physicalProgress">   </span>
                                         </div>
                                         <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="11" class="planning-financialProgress">   </span>
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="11" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 calendar">
                                         <div class="month">December</div>
                                         <div class="planning-progress">
-                                            <i class="hidden material-icons">insert_chart</i> 
+                                            <i class="hidden material-icons">insert_chart</i>
                                             <span mn="12" class="planning-physicalProgress">   </span>
                                         </div>
-                                       <div class="planning-progress">
-                                             <i class="hidden  material-icons">attach_money</i> 
-                                             <span mn="12" class="planning-financialProgress">   </span>
+                                        <div class="planning-progress">
+                                            <i class="hidden  material-icons">attach_money</i>
+                                            <span mn="12" class="planning-financialProgress">   </span>
                                         </div>
                                     </div>
                                 </div>
@@ -655,8 +455,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -680,7 +479,7 @@
                         </section>
                         <section id="tender-details-inner" class="mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
-                                <div   class="mdc-layout-grid__inner">
+                                <div class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Key Information</u></div>
                                         <div class="padding-top-small">
@@ -701,7 +500,22 @@
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
-                                        <img src="img/temp-chart-tender.jpg" alt="chart tender">
+                                        <div class="list-inline text-center">
+                                            <div class="padding-right-large ">
+                                                <div class=" mdc-typography--subheading2"> +13% </div>
+                                                <div class="mdc-typography--caption"> Estimated Cost</div>
+                                                <div class="pretty-border"></div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center mdc-typography--subheading2"> +21% </div>
+                                                <div class="mdc-typography--caption"> Budget Amounts</div>
+                                                <div class="pretty-border"></div>
+                                            </div>
+                                        </div>
+                                        <ul id="vertical-chart">
+                                            <li id="expected"></li>
+                                            <li id="actual"></li>
+                                        </ul>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Project Links</u></div>
@@ -719,28 +533,20 @@
                                 </div>
                             </div>
                         </section>
-
-                         <section>
-
-                            <div id="tender-schedule-inner"  class=" hidden mdc-layout-grid">
+                        <section>
+                            <div id="tender-schedule-inner" class=" hidden mdc-layout-grid">
                                 <div class=" mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12">
                                         <ul id="tender-milestones" class="mdc-list">
-                                        
-                                             
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
-
-                            
                         </section>
-
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline-tender">
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">assignment_late</i>
                                             <span class="date">11/15/2014</span>
@@ -749,7 +555,7 @@
                                             <p>Tender announcement</p>
                                         </div>
                                     </li>
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date"> 11/15/2014</span>
@@ -758,7 +564,7 @@
                                             <p> Prequalitifaction notice</p>
                                         </div>
                                     </li>
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date">11/15/2014</span>
@@ -788,8 +594,6 @@
                                 </ul>
                             </div>
                         </section>
-
-                       
                     </div>
                 </div>
             </div>
@@ -797,17 +601,17 @@
     </section>
     <hr>
     <!-- Award section -->
-    <section  class="awards-stage hidden">
+    <section class="awards-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1  padding-right-large ">Award</li>
+                        <li class="mdc-typography--display1  padding-right-large "><a name="award">Award</a></li>
                         <li class="border-right">
                             <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
                                 <div class="mdc-toolbar__section--table-style-wrapper">
                                     <nav class="mdc-tab-bar ">
-                                        <a id="awards-details"  class="mdc-tab mdc-tab--active" href="#">Details</a>
+                                        <a id="awards-details" class="mdc-tab mdc-tab--active" href="#">Details</a>
                                         <a id="awards-winner" class="mdc-tab" href="#">Winning Bidder</a>
                                         <a id="awards-bidders" class="mdc-tab" href="#">List of bidders</a>
                                         <span class="mdc-tab-bar__indicator"></span>
@@ -822,8 +626,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -840,12 +643,12 @@
                                     </div>
                                     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
                                         <div>Number of Bidders</div>
-                                        <div id="tender-numberOfTenderers" class="mdc-typography--subheading2"></div>
+                                        <div id="tender-numberOfTenderers" class="mdc-typography--title"></div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <section  id="awards-details-inner"  class="mdc-card__supporting-text">
+                        <section id="awards-details-inner" class="mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
                                 <div class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
@@ -879,34 +682,26 @@
                                 </div>
                             </div>
                         </section>
-
                         <section id="awards-winner-inner" class="hidden mdc-card__supporting-text">
                             <div class="mdc-layout-grid">
-                                <div  class="mdc-layout-grid__inner">
+                                <div class="mdc-layout-grid__inner">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12 padding-right-large">
                                         <div id="awards-winner-info"></div>
-                                         
                                     </div>
                                 </div>
                             </div>
                         </section>
-
-                        <section  id="awards-bidders-inner" class="mdc-card__supporting-text hidden">
+                        <section id="awards-bidders-inner" class="mdc-card__supporting-text hidden">
                             <div class="mdc-layout-grid">
-                                <div  class=" mdc-layout-grid__inner">
-                                     
-                                     
-                                    <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12 padding-right-large">
-                                        <div id="awards-bidders-info"> </div> 
-                                    </div>
+                                <div id="awards-bidders-info" class=" mdc-layout-grid__inner">
+                                    
                                 </div>
                             </div>
                         </section>
-
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
-                                <ul class="timeline" id="timeline">
-                                    <li class="li complete">
+                                <ul class="timeline" id="timeline-awards">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date">11/15/2014</span>
@@ -915,21 +710,21 @@
                                             <p>Award Date</p>
                                         </div>
                                     </li>
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
-                                            <i class="material-icons">check_circle</i>
+                                            <i class="material-icons">assignment_late</i>
                                             <span class="date"> 11/15/2014</span>
                                         </div>
                                         <div class="status late">
                                             <p> Standstill period end date</p>
                                         </div>
                                     </li>
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date">11/15/2014</span>
                                         </div>
-                                        <div class="status">
+                                        <div class="status on-time">
                                             <p> Negotiation end date </p>
                                         </div>
                                     </li>
@@ -952,12 +747,12 @@
     </section>
     <hr>
     <!-- Contract section -->
-    <section  class="contract-stage hidden">
+    <section class="contract-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1 border-right padding-right-large">Contract</li>
+                        <li class="mdc-typography--display1 border-right padding-right-large"><a name="contract">Contract</a></li>
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
                         </li>
@@ -965,8 +760,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -1003,7 +797,24 @@
                                         </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
-                                        <img src="img/temp-chart-contract.png">
+                                        <div id="horizontal-chart">
+                                            <div class="chart-contract">
+                                                <div class="mdc-typography--caption">CONTRACT AMOUNT</div>
+                                                <div id="chart-contract-amount"> </div>
+                                            </div>
+                                            <div class="chart-awards">
+                                                <div class="mdc-typography--caption">AWARD AMOUNT</div>
+                                                <div id="chart-awards-amount"> </div>
+                                            </div>
+                                            <div class="chart-tender">
+                                                <div class="mdc-typography--caption">TENDER AMOUNT</div>
+                                                <div id="chart-tender-amount"> </div>
+                                            </div>
+                                            <div class="chart-budget">
+                                                <div class="mdc-typography--caption">BUDGET AMOUNT</div>
+                                                <div id="chart-budget-amount"> </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-4 padding-right-large">
                                         <div><u>Project Links</u></div>
@@ -1024,7 +835,7 @@
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline">
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date">11/15/2014</span>
@@ -1052,13 +863,12 @@
     </section>
     <hr>
     <!-- Implementation section -->
-    <section  class="implementation-stage hidden">
+    <section class="implementation-stage hidden">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
-                        <li class="mdc-typography--display1 padding-right-large">Implementation</li>
-                         
+                        <li class="mdc-typography--display1 padding-right-large"><a name="implementation">Implementation</a></li>
                         <li class="padding-small">
                             <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
                         </li>
@@ -1066,8 +876,7 @@
                             <span class="icon-medium-label"> FLAGS </span>
                         </li>
                         <li class="pull-right">
-                            <img src="img/icon-information.png" alt="information">
-                            <img src="img/icon-message.png" alt="information">
+                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -1076,7 +885,7 @@
                                 <div class="mdc-layout-grid__inner ">
                                     <div class="mdc-layout-grid__cell  mdc-layout-grid__cell--span-12 padding-right-large  text-center">
                                         <img class="icon-large padding-right-small" src="img/icon-complete.png">
-                                        <span class="mdc-typography--display1">COMPLETE</span>
+                                        <span class="mdc-typography--display1">Complete</span>
                                     </div>
                                 </div>
                             </div>
@@ -1160,7 +969,7 @@
                         <section class="mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline">
-                                    <li class="li complete">
+                                    <li class="li met">
                                         <div class="timestamp">
                                             <i class="material-icons">check_circle</i>
                                             <span class="date">11/15/2014</span>
@@ -1201,21 +1010,35 @@
         </div>
     </section>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
     <script>
     window.mdc.autoInit();
     </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/classie.js"></script>
+        <script src="js/moment.js"></script>
+
+
+        <script type="text/javascript" src="js/ocds/shared.js"></script>
+        <script type="text/javascript" src="js/ocds/parties.js"></script>
+    
+    <script type="text/javascript" src="js/ocds/planning.js"></script>
+    
+    <script type="text/javascript" src="js/ocds/awards.js"></script>
+    <script type="text/javascript" src="js/ocds/tender.js"></script>
+    <script type="text/javascript" src="js/ocds/contracts.js"></script>
+    <script type="text/javascript" src="js/ocds/implementation.js"></script>
+
+    <script type="text/javascript" src="js/data.js"></script>
+
+    <script src="js/ui.js"></script>
+
+    <script src="js/charts.js"></script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGnhhccwog6j_hFmAo8zg1VaYWE_m7Ak&callback=initMap&libraries=places">
     </script>
-
-    <script src="js/classie.js"></script>
-    <script src="js/ui.js"></script>
-    <script type="text/javascript" src="js/data.js"></script>
-
     <script type="text/javascript" src="js/map.js"></script>
-    
-    
 </body>
 
 </html>

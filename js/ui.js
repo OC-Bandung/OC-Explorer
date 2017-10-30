@@ -5,6 +5,8 @@ $(".mdc-tab").click(function() {
 
 });
 
+
+
 $("#add-to-csv, #add-to-csv-text").click(function() {
 
     if ($("#add-to-csv").hasClass("active")) {

@@ -10,6 +10,7 @@ section {
 
 a , a.visited {
 	text-decoration: none;
+  vertical-align: top;
 
 }
 
@@ -27,14 +28,44 @@ section , div  {
 .calendar i {
   vertical-align: middle;
 }
+ 
 
+.pretty-border {
+  height: 10px;
+  width: 50%;
+  margin-top:15px;
+  left:0;
+  right: 0;
+  margin: auto;
+  border-bottom: 2px solid #ffd012;
+
+}
 
 .hidden {
   display: none;
 }
 
+
 .capitalize {
   text-transform: capitalize;
+}
+
+.floating-bar   {
+   
+  width: 200px;
+  right: 0;
+  padding: 10px;
+
+}
+
+
+.sticky-help {
+  top:3%;
+  position: fixed;
+  right: 0;
+  background: #000;
+  color:#fff;
+  padding:10px;
 }
 
 .month {
@@ -43,6 +74,11 @@ section , div  {
   color: #fff;
   padding: 5px;
 
+}
+
+.mdc-button.mdc-button--stroked  {
+  color: #000;
+  border-color: #000;
 }
 
 .month.active {
