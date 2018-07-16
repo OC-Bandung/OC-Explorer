@@ -1,16 +1,26 @@
-var jqxhr = $.getJSON("js/sample.json", function(data) {
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
+var $url="http://localhost:8000/api/newcontract/"+getParameterByName("ocid")+"?callback=?";
+
+var jqxhr = $.getJSON($url, function(data) {
         load_data(data);
-
     })
     .done(function() {
-
+        console.log("error");
     })
     .fail(function() {
         console.log("error");
     })
     .always(function() {
-
+        console.log("aaa");
     });
 
 
@@ -25,13 +35,12 @@ function custom_sort(a, b) {
 function load_data(data) {
 
     var stage;
-    release = data.releases[0];
+    release = data;
     planning = release.planning;
     tender = release.tender;
     parties = release.parties;
     awards = release.awards;
     contracts = release.contracts;
-    implementation = release.contracts[0].implementation;
 
 
 
@@ -58,15 +67,19 @@ function load_data(data) {
 
     load_planning(release.planning);
     load_tender(release.tender);
-    load_contracts(release.contracts);
-    load_awards(release.awards);
-    load_implementation(release.contracts[0].implementation);
+
+    if(release.hasOwnProperty('awards' && release.awards>0)) {
+        load_awards(release.awards);
+    }
+
+    if(release.hasOwnProperty('contracts' && release.contracts>0)) {
+        load_contracts(release.contracts);
+        load_implementation(release.contracts[0].implementation);
+        buildTimeline(contracts[0], stage);
+    }
    
     buildTimeline(planning, stage);
-    buildTimeline(tender, stage);   
-    buildTimeline(contracts[0], stage);
-    buildTimeline(implementation, stage);
-  
+    buildTimeline(tender, stage);
 }
 
 
@@ -74,6 +87,10 @@ function load_data(data) {
 function buildTimeline(timeline_stage, stage) {
 
     html = $("ul#main-timeline").html();
+
+    if(!timeline_stage.hasOwnProperty('milestones')) {
+        return;
+    }
 
     var timeline_stage = timeline_stage.milestones.filter(function(x) { return x.code == "timeline"; });
     timeline_stage.sort(custom_sort);

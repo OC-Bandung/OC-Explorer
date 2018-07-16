@@ -4,16 +4,19 @@ function load_tender(tender) {
 	
     $("#tender-title").text(tender.title);
     $("#tender-status").text(tender.status);
-    $("#tender-amount-value").text(tender.value.amount);
+    if(tender.hasOwnProperty('value')) {
+        $("#tender-amount-value").text(tender.value.amount);
+        $("#stage-amount").text(tender.value.amount);
+    }
     
      $(".tender-stage").removeClass("hidden");
-        $("#process-status").text(release.tender.status);
-        $("#stage-amount").text(tender.value.amount);
+     $("#process-status").text(tender.status);
 
 
-    deliveryAddress = tender.items[0].deliveryAddress.streetAddress;
-    $("#tender-deliveryAddress").text(deliveryAddress);
-    $("#tender-deliveryAddress").attr('deliveryAddress', deliveryAddress);
+    if(tender.hasOwnProperty('items') && tender.items.length>0) {
+        deliveryAddress = tender.items[0].deliveryAddress.streetAddress;
+        $("#tender-deliveryAddress").text(deliveryAddress).attr('deliveryAddress', deliveryAddress);
+    }
 
 
 
@@ -24,6 +27,7 @@ function load_tender(tender) {
 
 
     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
+
 
     $(".tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
     $(".tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));

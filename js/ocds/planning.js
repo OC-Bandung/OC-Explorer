@@ -1,45 +1,48 @@
 function load_planning(planning) {
 
-    $("#stage-amount").text(release.planning.budget.amount.amount);
-    $("#planning-budget-amount-amount").text(planning.budget.amount.amount);
+    if (planning.hasOwnProperty('budget')) {
 
-    $("#planning-rationale").text(planning.rationale);
-    $("#planning-budget-description").text(planning.budget.description);
-  
+        $("#stage-amount").text(release.planning.budget.amount.amount);
+        $("#planning-budget-amount-amount").text(planning.budget.amount.amount);
 
-    $("#planning-budget-project-id").text(planning.budget.projectID);
-    $("#planning-budget-project-name").text(planning.budget.project);
-
-    $("#planning-budget-id").text(planning.budget.id);
-
-    var d = new Date(tender.tenderPeriod.startDate);
-
-    $("#planning-budget-year").text(d.getFullYear());
+        $("#planning-rationale").text(planning.rationale);
+        $("#planning-budget-description").text(planning.budget.description);
 
 
-    // progress
-    var month_data = [];
-    var mn;
+        $("#planning-budget-project-id").text(planning.budget.projectID);
+        $("#planning-budget-project-name").text(planning.budget.project);
 
-    for (i = 0; i < planning.forecasts.length; i++) {
+        $("#planning-budget-id").text(planning.budget.id);
 
-        for (j = 0; j < planning.forecasts[i].observations.length; j++) {
-            mn = planning.forecasts[i].observations[j].period.startDate.substr(5, 2);
-            month_data[mn] = planning.forecasts[i].observations[j].measure;
-            if (planning.forecasts[i].id == "physicalProgress") {
-                $(".planning-physicalProgress[mn='" + mn + "']").text(month_data[mn] + "%");
-                $(".planning-physicalProgress[mn='" + mn + "']").prev().removeClass("hidden");
-                $(".planning-physicalProgress[mn='" + mn + "']").parent().prev().addClass("active");
-            } else if (planning.forecasts[i].id == "financialProgress") {
+        // var d = new Date(tender.tenderPeriod.startDate);
+        //
+        // $("#planning-budget-year").text(d.getFullYear());
 
-                $(".planning-financialProgress[mn='" + mn + "']").text(month_data[mn] );
-                $(".planning-financialProgress[mn='" + mn + "']").prev().removeClass("hidden");
+
+        // progress
+        var month_data = [];
+        var mn;
+
+        if (planning.hasOwnProperty('forecasts')) {
+            for (i = 0; i < planning.forecasts.length; i++) {
+
+                for (j = 0; j < planning.forecasts[i].observations.length; j++) {
+                    mn = planning.forecasts[i].observations[j].period.startDate.substr(5, 2);
+                    month_data[mn] = planning.forecasts[i].observations[j].measure;
+                    if (planning.forecasts[i].id == "physicalProgress") {
+                        $(".planning-physicalProgress[mn='" + mn + "']").text(month_data[mn] + "%");
+                        $(".planning-physicalProgress[mn='" + mn + "']").prev().removeClass("hidden");
+                        $(".planning-physicalProgress[mn='" + mn + "']").parent().prev().addClass("active");
+                    } else if (planning.forecasts[i].id == "financialProgress") {
+
+                        $(".planning-financialProgress[mn='" + mn + "']").text(month_data[mn]);
+                        $(".planning-financialProgress[mn='" + mn + "']").prev().removeClass("hidden");
+
+                    }
+
+                }
 
             }
-
         }
-
     }
-
-
 }
