@@ -24,22 +24,9 @@
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--span-1-tablet ">
-                    <ul class=" list-inline">
-                        <li class="border-bottom padding-small">
-                            <img class="icon-large" src="img/flag.svg" alt="flag">
-                        </li>
-                        <li class="border-bottom padding-small">
-                            <span id="total-flags" class="icon-large-label warning"> 3 </span>
-                        </li>
-                    </ul>
-                    <div class="text-center padding-top-small ">FLAGS </div>
-                </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11 mdc-layout-grid__cell--span-6-tablet border-left padding-left-large">
                     <div>
-                        <a id="icon-add-to-csv" class=" active p" href="#"><i class="material-icons">playlist_add</i> </a> <a id="add-to-csv-text" class="active padding-right-small" href="#">   add to downloads </a>
-                        <a id="icon-subscribe" class=" active" href="#"><i class="material-icons">rss_feed</i> </a> <a id="add-to-csv-text" class="active padding-right-small" href="#">  subscribe </a>
-                        <a id="icon-connect-to-json" class=" active" href="#"><i class="material-icons">code</i> </a> <a id="add-to-csv-text" class="active" href="#">  connect to json </a>
+                        <a id="icon-connect-to-json" class=" active" href="#"><i class="material-icons">code</i> </a> <a id="add-to-csv-text" class="active" href="#" target="_blank">Download JSON</a>
                         <div id="tender-title" class="mdc-typography--display1"></div>
                     </div>
                     <div>
@@ -69,7 +56,7 @@
                             <div class="mdc-typography--subheading1">Key Information</div>
                         </section>
                         <section class="mdc-card__supporting-text">
-                            <div class="mdc-theme--secondary-bg padding-large nudge-to-boundary-15">
+                            <div class="hidden mdc-theme--secondary-bg padding-large nudge-to-boundary-15">
                                 A future contracting process is being considered. Early information about the process may be provided in the tender section. A process with this status may provide information on early engagement or consultation opportunities, during which the details of a subsequent tender can be shaped.
                             </div>
                             <div class="mdc-layout-grid">
@@ -203,16 +190,6 @@
                                 </nav>
                             </div>
                         </li>
-                        <li class="padding-small">
-                            <img class="icon-medium" src="img/flag.svg" alt="flag">
-                        </li>
-                        <li class="padding-small">
-                            <span id="total-flags-planning" class="icon-medium-label warning"> 3 </span>
-                        </li>
-                        <li class="padding-small">
-                            <span class="icon-medium-label"> FLAGS </span>
-                        </li>
-                        <li class="pull-right"><i class="material-icons">mail_outline</i></li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -448,15 +425,6 @@
                                 </nav>
                             </div>
                         </li>
-                        <li class="padding-small">
-                            <span id="total-flags-tender" class="icon-medium-label warning"> 0 </span>
-                        </li>
-                        <li class="padding-small">
-                            <span class="icon-medium-label"> FLAGS </span>
-                        </li>
-                        <li class="pull-right">
-                            <i class="material-icons">mail_outline</i>
-                        </li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -490,11 +458,11 @@
                                             <div>Procurement Method</div>
                                             <div class="tender-procurementMethod capitalize mdc-typography--body2"></div>
                                         </div>
-                                        <div class="padding-top-small">
+                                        <div class="hidden padding-top-small">
                                             <div>Item Classification</div>
                                             <div class="mdc-typography--body2">7263515</div>
                                         </div>
-                                        <div class="padding-top-small">
+                                        <div class="hidden padding-top-small">
                                             <div>Item Description</div>
                                             <div class="mdc-typography--body2">Highway and Road paving service</div>
                                         </div>
@@ -543,7 +511,7 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="mdc-card__actions">
+                        <section class="hidden mdc-card__actions">
                             <div class="timeline-container">
                                 <ul class="timeline" id="timeline-tender">
                                     <li class="li met">
@@ -618,15 +586,6 @@
                                     </nav>
                                 </div>
                             </div>
-                        </li>
-                        <li class="padding-small">
-                            <span id="total-flags-award" class="icon-medium-label warning"> 0 </span>
-                        </li>
-                        <li class="padding-small">
-                            <span class="icon-medium-label"> FLAGS </span>
-                        </li>
-                        <li class="pull-right">
-                            <i class="material-icons">mail_outline</i>
                         </li>
                     </ul>
                     <div class="mdc-card">
@@ -753,15 +712,6 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="mdc-typography--display1 border-right padding-right-large"><a name="contract">Contract</a></li>
-                        <li class="padding-small">
-                            <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
-                        </li>
-                        <li class="padding-small">
-                            <span class="icon-medium-label"> FLAGS </span>
-                        </li>
-                        <li class="pull-right">
-                            <i class="material-icons">mail_outline</i>
-                        </li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">
@@ -869,15 +819,6 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <ul class="list-inline">
                         <li class="mdc-typography--display1 padding-right-large"><a name="implementation">Implementation</a></li>
-                        <li class="padding-small">
-                            <span id="total-flags-planning" class="icon-medium-label warning"> 0 </span>
-                        </li>
-                        <li class="padding-small">
-                            <span class="icon-medium-label"> FLAGS </span>
-                        </li>
-                        <li class="pull-right">
-                            <i class="material-icons">mail_outline</i>
-                        </li>
                     </ul>
                     <div class="mdc-card">
                         <section class="mdc-card__primary mdc-theme--primary-bg">

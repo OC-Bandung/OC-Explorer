@@ -6,24 +6,6 @@ $(".mdc-tab").click(function() {
 });
 
 
-
-$("#add-to-csv, #add-to-csv-text").click(function() {
-
-    if ($("#add-to-csv").hasClass("active")) {
-        var cnt = $(".checkout").attr("data-count");
-        cnt = parseInt(cnt);
-        $(".checkout").attr("data-count", cnt + 1);
-    }
-
-    $("#add-to-csv").html('<i class="material-icons">playlist_add_check</i>');
-    $("#add-to-csv").removeClass('active');
-    $("#add-to-csv").addClass('added');
-    $("#add-to-csv-text").text("contract was added");
-    $("#add-to-csv-text").css("color", "darkgray");
-    
-
-});
-
 $("#planning-schedule").click(function(e) {
     e.preventDefault();
     $("#planning-schedule-inner").removeClass("hidden");

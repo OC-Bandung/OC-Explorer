@@ -8,9 +8,12 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-var $url="http://localhost:8000/api/newcontract/"+getParameterByName("ocid")+"?callback=?";
+var url="https://birms.bandung.go.id/beta/api/newcontract/"+getParameterByName("ocid");
+var callback_url=url+"?callback=?";
 
-var jqxhr = $.getJSON($url, function(data) {
+$("#add-to-csv-text").attr("href",url);
+
+var jqxhr = $.getJSON(callback_url, function(data) {
         load_data(data);
     })
     .done(function() {
